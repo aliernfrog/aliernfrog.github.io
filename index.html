@@ -10,7 +10,7 @@
       <p1 id="description">Welcome!</p1><br><br>
     </div><br><br>
 
-    <p2 id="social">Loading socials..</p2>
+    <div id="socials" style="text-align:center;">...</div>
 
     <script src="/config/functions.js"></script>
     <script>
@@ -22,8 +22,7 @@
         setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
         document.getElementById("header").style.color = config.colorText;
         document.getElementById("description").style.color = config.colorText;
-        document.getElementById("social").style.color = config.colorText;
-        document.getElementById("social").innerHTML = config.social;
+        setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
         setLinkColors(config.colorLink, []);
       });
     </script>
