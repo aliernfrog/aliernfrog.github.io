@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
   <body style="background-color:black;">
-    <h1 id="header">aliernfrog</h1>
-    <p1 id="description">Welcome!</p1><br><br>
+    <div id="topbar" style="text-align:center;">
+      <h1 id="header" >aliernfrog</h1>
+      <p1 id="description">Welcome!</p1><br><br>
+    </div><br><br>
+
     <p2 id="social">Loading socials..</p2>
 
+    <script src="/config/functions.js"></script>
     <script>
       fetch("config/config.json").then(async response => {
         let config = await response.json();
         if (config.maintenance) window.location = "/maintenance.html";
         document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
+        setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
         document.getElementById("header").style.color = config.colorText;
         document.getElementById("description").style.color = config.colorText;
         document.getElementById("social").style.color = config.colorText;
         document.getElementById("social").innerHTML = config.social;
-        let as = document.getElementsByTagName("a");
-        for (i = 0; i < as.length; i++) {
-          as[i].style.color = config.colorLink;
-        }
+        setLinkColors(config.colorLink, []);
       });
     </script>
   </body>
