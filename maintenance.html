@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>aliernfrog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body style="background-color:black;">
+    <h1 id="header">aliernfrog</h1>
+    <p1 id="description">Loading description..</p1><br><br>
+    <p2 id="social">Loading socials..</p2>
+
+    <script>
+      fetch("config/config.json").then(async response => {
+        let config = await response.json();
+        if (config.maintenance) document.getElementById("description").innerHTML = config.maintenance;
+        document.body.style.background = config.colorBody;
+        document.body.style.fontFamily = config.font;
+        document.getElementById("header").style.color = config.colorText;
+        document.getElementById("description").style.color = config.colorText;
+        document.getElementById("social").style.color = config.colorText;
+        document.getElementById("social").innerHTML = config.social;
+        let as = document.getElementsByTagName("a");
+        for (i = 0; i < as.length; i++) {
+          as[i].style.color = config.colorLink;
+        }
+        if (!config.maintenance) window.location = "/";
+      });
+    </script>
+  </body>
+</html>
