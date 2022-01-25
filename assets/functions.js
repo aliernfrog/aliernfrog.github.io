@@ -7,6 +7,7 @@ function setBgRounded(div, bgColor) {
 function setLinkColors(linkColor, exclude) {
   let as = document.getElementsByTagName("a");
   for (i = 0; i < as.length; i++) {
+    as[i].style.textDecoration = "none";
     if (!exclude.includes(as[i])) as[i].style.color = linkColor;
   }
 }
@@ -17,7 +18,7 @@ function getSocials(div) {
     let finalSocials = [];
     for (i = 0; i < socials.length; i++) {
       let social = socials[i];
-      finalSocials.push(`<a href="${social.url}"><img src="${social.icon}" alt="${social.name}" style="width:32px;height:32px;"</a>`);
+      finalSocials.push(`<a href="${social.url}" style="text-decoration:none;"><img src="${social.icon}" alt="${social.name}" style="width:32px;height:32px;"</a>`);
     }
     div.innerHTML = finalSocials.join(" ");
   });
