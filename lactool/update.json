@@ -1,0 +1,9 @@
+{
+  "latest": 19,
+  "latestFdroid": 18,
+  "download": "https://github.com/aliernfrog/lac-tool/releases/download/19/LacTool_1.9.2-github.apk",
+  "downloadFdroid": "",
+  "changelog": "<b># New features</b><br>+ Start LAC option in home screen<br>+ App now warns you if LAC isn't installed<br>+ You can now hide set thumbnail and remove thumbnail options<br><br><b># Changes</b><br>+ Added a better picker for LAC path options, you can no longer enable multiple<br>+ Updated social media buttons<br>+ Path text in file picker now scrolls automatically<br><br><b># Fixes</b><br>+ Map thumbnails now show properly<br>+ Screenshots now show properly<br>+ In app feedbacks now work",
+  "changelogVersion": "1.9.2",
+  "notes": ""
+}
