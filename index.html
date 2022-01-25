@@ -12,9 +12,9 @@
 
     <div id="socials" style="text-align:center;">...</div>
 
-    <script src="/config/functions.js"></script>
+    <script src="/assets/functions.js"></script>
     <script>
-      fetch("config/config.json").then(async response => {
+      fetch("assets/config.json").then(async response => {
         let config = await response.json();
         if (config.maintenance) window.location = "/maintenance.html";
         document.body.style.background = config.colorBody;
@@ -24,6 +24,7 @@
         document.getElementById("description").style.color = config.colorText;
         setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
         setLinkColors(config.colorLink, []);
+        getSocials(document.getElementById("socials"));
       });
     </script>
   </body>

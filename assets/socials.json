@@ -1,12 +1,12 @@
 [
   {
     "name": "Discord",
-    "icon": "url",
-    "url": "url"
+    "icon": "/assets/images/social_discord.png",
+    "url": "https://discord.gg/SQXqBMs"
   },
   {
     "name": "GitHub",
-    "icon": "url",
-    "url": "url"
+    "icon": "/assets/images/social_github.png",
+    "url": "https://github.com/aliernfrog"
   }
 ]
