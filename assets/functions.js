@@ -18,7 +18,7 @@ function getSocials(div) {
     let finalSocials = [];
     for (i = 0; i < socials.length; i++) {
       let social = socials[i];
-      finalSocials.push(`<a href="${social.url}" style="text-decoration:none;"><img src="${social.icon}" alt="${social.name}" style="width:32px;height:32px;"</a>`);
+      finalSocials.push(`<a href="${social.url}" style="text-decoration:none;margin-left:8px;margin-right:8px;"><img src="${social.icon}" alt="${social.name}" style="width:32px;height:32px;"</a>`);
     }
     div.innerHTML = finalSocials.join("");
   });
