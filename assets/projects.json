@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "ensibot",
+    "name": "Ensi",
+    "icon": "/assets/images/bots_ensi.png",
+    "description": "A cursed chatting bot",
+    "type": "bot",
+    "disabled": false
+  },
+  {
+    "_id": "indinibee",
+    "name": "Ms. Indinibee",
+    "description": "Fun economy bot",
+    "icon": "/assets/images/bots_indinibee.png",
+    "type": "bot",
+    "disabled": "Currently in a rewrite"
+  },
+  {
+    "_id": "gpbot",
+    "name": "Play Store Bot",
+    "icon": "/assets/images/bots_gpbot.png",
+    "description": "Google Play Store related Discord bot with many useful features",
+    "type": "bot",
+    "disabled": false
+  },
+  {
+    "_id": "lactool",
+    "name": "LAC Tool",
+    "icon": "/assets/images/apps_lactool.png",
+    "description": "Do most LAC related stuff without having to mess with files",
+    "type": "app",
+    "disabled": false
+  },
+  {
+    "_id": "ensicord",
+    "name": "Ensicord",
+    "icon": "/assets/images/apps_ensicord.png",
+    "description": "Ensi Bot, but in a separate & offline app",
+    "type": "app",
+    "disabled": false
+  }
+]
