@@ -10,7 +10,7 @@
     <p2 id="social">Loading socials..</p2>
 
     <script>
-      fetch("config/config.json").then(async response => {
+      fetch("/assets/config.json").then(async response => {
         let config = await response.json();
         if (config.maintenance) document.getElementById("description").innerHTML = config.maintenance;
         document.body.style.background = config.colorBody;
