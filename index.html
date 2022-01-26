@@ -6,26 +6,63 @@
   </head>
   <body style="background-color:black;">
     <div id="topbar" style="text-align:center;">
-      <h1 id="header" >aliernfrog</h1>
+      <h1 id="header">aliernfrog</h1>
       <p1 id="description">Welcome!</p1><br><br>
     </div><br><br>
+
+    <div id="bots" style="text-align:center;">...</div><br><br>
+    <div id="apps" style="text-align:center;">...</div><br><br>
 
     <div id="socials" style="text-align:center;">...</div>
 
     <script src="/assets/functions.js"></script>
     <script>
-      fetch("assets/config.json").then(async response => {
-        let config = await response.json();
+      var config = {};
+      fetch("/assets/config.json").then(async response => {
+        config = await response.json();
         if (config.maintenance) window.location = "/maintenance.html";
         document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
         setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
         document.getElementById("header").style.color = config.colorText;
         document.getElementById("description").style.color = config.colorText;
+        setBgRounded(document.getElementById("bots"), config.colorBgPrimary);
+        document.getElementById("bots").style.color = config.colorText;
+        setBgRounded(document.getElementById("apps"), config.colorBgPrimary);
+        document.getElementById("apps").style.color = config.colorText;
         setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
         getSocials(document.getElementById("socials"));
         setLinkColors(config.colorLink, []);
+        loadProjects();
       });
+
+      function loadProjects() {
+        fetch("/assets/projects.json").then(async response => {
+          let projects = await response.json();
+          let finalBots = [];
+          let finalApps = [];
+          for (i = 0; i < projects.length; i++) {
+            let project = projects[i];
+            let redirect = "/"+project._id;
+            if (project.disabled) redirect = "/";
+            if (project.disabled) project.description = project.disabled;
+            let str = `<a href="${redirect}" style="text-decoration:none;"><div id="${project._id}" style="text-align:center;color:${config.colorText}"><img src="${project.icon}" style="width:64px;height:64px;"><h3>${project.name}</h3><p1>${project.description}</p1></div></a>`;
+            if (project.type === "bot") finalBots.push(str);
+            if (project.type === "app") finalApps.push(str);
+          }
+          document.getElementById("bots").innerHTML = "<h2>Bots</h2>"+finalBots.join("<br>");
+          document.getElementById("apps").innerHTML = "<h2>Apps</h2>"+finalApps.join("<br>");
+          setDivs(document.getElementById("bots"));
+          setDivs(document.getElementById("apps"));
+        });
+      }
+
+      function setDivs(parent) {
+        let divs = parent.getElementsByTagName("div");
+        for (i = 0; i < divs.length; i++) {
+          setBgRounded(divs[i], config.colorBgSecondary);
+        }
+      }
     </script>
   </body>
 </html>

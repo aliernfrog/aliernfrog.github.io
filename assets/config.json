@@ -6,5 +6,6 @@
   "colorText": "white",
   "colorLink": "yellow",
   "colorBgPrimary": "#232323",
+  "colorBgSecondary": "#0E0E0E",
   "font": "Open Sans,sans-serif"
 }
