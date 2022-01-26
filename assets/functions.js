@@ -20,6 +20,6 @@ function getSocials(div) {
       let social = socials[i];
       finalSocials.push(`<a href="${social.url}" style="text-decoration:none;"><img src="${social.icon}" alt="${social.name}" style="width:32px;height:32px;"</a>`);
     }
-    div.innerHTML = finalSocials.join(" ");
+    div.innerHTML = finalSocials.join("");
   });
 }

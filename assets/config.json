@@ -1,6 +1,6 @@
 {
-  "maintenanceGlobal": true,
-  "maintenances": "The website is in a maintenance, come back later!",
+  "maintenanceGlobal": false,
+  "maintenance": false,
   "social":"<a href='https://discord.com/invite/SQXqBMs'>Discord</a> - <a href='https://github.com/aliernfrog'>GitHub</a>",
   "colorBody": "black",
   "colorText": "white",
