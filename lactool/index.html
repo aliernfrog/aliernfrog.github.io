@@ -31,12 +31,12 @@
         document.getElementById("header").style.color = config.colorText;
         document.getElementById("description").style.color = config.colorText;
         setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
-        setLinkColors(config.colorLink, []);
       }
 
       function onRawFileRead() {
         document.getElementById("description").innerHTML = getDescriptionFromReadme();
         loadPartsFromReadme(document.getElementById("root"), ["# Building"]);
+        setLinkColors(config.colorLink, []);
       }
     </script>
   </body>
