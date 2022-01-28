@@ -1,3 +1,12 @@
+var config = {};
+
+function loadConfig() {
+  fetch("/assets/config.json").then(async response => {
+    config = await response.json();
+    onConfigLoaded();
+  });
+}
+
 function setBgRounded(div, bgColor) {
   div.style.borderRadius = "25px";
   div.style.padding = "8px"
@@ -23,3 +32,9 @@ function getSocials(div) {
     div.innerHTML = finalSocials.join("");
   });
 }
+
+function randomize(arr) {
+  return arr[Math.floor(Math.random()*arr.length)];
+}
+
+loadConfig();
