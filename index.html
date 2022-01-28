@@ -37,14 +37,14 @@
       function loadDesign() {
         document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
-        setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
+        setBgRounded(document.getElementById("topbar"), config.colorBgPrimary, false);
         document.getElementById("header").style.color = config.colorText;
         document.getElementById("description").style.color = config.colorText;
-        setBgRounded(document.getElementById("bots"), config.colorBgPrimary);
+        setBgRounded(document.getElementById("bots"), config.colorBgPrimary, false);
         document.getElementById("bots").style.color = config.colorText;
-        setBgRounded(document.getElementById("apps"), config.colorBgPrimary);
+        setBgRounded(document.getElementById("apps"), config.colorBgPrimary, false);
         document.getElementById("apps").style.color = config.colorText;
-        setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
+        setBgRounded(document.getElementById("socials"), config.colorBgPrimary, false);
         setLinkColors(config.colorLink, []);
       }
 
@@ -72,7 +72,7 @@
       function setDivs(parent) {
         let divs = parent.getElementsByTagName("div");
         for (i = 0; i < divs.length; i++) {
-          setBgRounded(divs[i], config.colorBgSecondary);
+          setBgRounded(divs[i], config.colorBgSecondary, true);
         }
       }
     </script>
