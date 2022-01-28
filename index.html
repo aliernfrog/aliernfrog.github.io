@@ -17,9 +17,12 @@
 
     <script src="/assets/functions.js"></script>
     <script>
-      var config = {};
-      fetch("/assets/config.json").then(async response => {
-        config = await response.json();
+      function onConfigLoaded() {
+        loadDesign();
+        loadProjects();
+      }
+
+      function loadDesign() {
         if (config.maintenance) window.location = "/maintenance.html";
         document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
@@ -33,8 +36,7 @@
         setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
         getSocials(document.getElementById("socials"));
         setLinkColors(config.colorLink, []);
-        loadProjects();
-      });
+      }
 
       function loadProjects() {
         fetch("/assets/projects.json").then(async response => {
