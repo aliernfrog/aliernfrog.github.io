@@ -7,23 +7,33 @@
   <body style="background-color:black;">
     <div id="topbar" style="text-align:center;">
       <h1 id="header">aliernfrog</h1>
-      <p1 id="description">Welcome!</p1><br><br>
+      <p1 id="description">Please wait..</p1><br><br>
     </div><br><br>
 
-    <div id="bots" style="text-align:center;">...</div><br><br>
-    <div id="apps" style="text-align:center;">...</div><br><br>
+    <div id="bots" style="text-align:center;"></div><br><br>
+    <div id="apps" style="text-align:center;"></div><br><br>
 
-    <div id="socials" style="text-align:center;">...</div>
+    <div id="socials" style="text-align:center;"></div>
 
     <script src="/assets/functions.js"></script>
     <script>
       function onConfigLoaded() {
         loadDesign();
         loadProjects();
+        getWelcomeMessage();
+        getSocials(document.getElementById("socials"));
+      }
+
+      function getWelcomeMessage() {
+        let view = document.getElementById("description");
+        if (config.welcomeWarning) {
+          view.innerHTML = config.welcomeWarning;
+        } else {
+          view.innerHTML = randomize(config.welcomeMessages);
+        }
       }
 
       function loadDesign() {
-        if (config.maintenance) window.location = "/maintenance.html";
         document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
         setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
@@ -34,7 +44,6 @@
         setBgRounded(document.getElementById("apps"), config.colorBgPrimary);
         document.getElementById("apps").style.color = config.colorText;
         setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
-        getSocials(document.getElementById("socials"));
         setLinkColors(config.colorLink, []);
       }
 

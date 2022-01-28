@@ -1,7 +1,6 @@
 {
-  "maintenanceGlobal": false,
-  "maintenance": false,
-  "social":"<a href='https://discord.com/invite/SQXqBMs'>Discord</a> - <a href='https://github.com/aliernfrog'>GitHub</a>",
+  "welcomeMessages": ["Welcome!","Welcome! Scroll down to find my bots and apps","Welcome to my new site!","My socials are located at the bottom of the page"],
+  "welcomeWarning": false,
   "colorBody": "black",
   "colorText": "white",
   "colorLink": "yellow",
