@@ -13,7 +13,7 @@
     "name": "Ms. Indinibee",
     "icon": "/assets/images/bots_indinibee.png",
     "description": "Fun economy bot",
-    "readme": "TODO"
+    "readme": "TODO",
     "type": "bot",
     "disabled": "Currently in a rewrite"
   },
