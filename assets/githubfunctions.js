@@ -47,6 +47,6 @@ function loadPartsFromReadme(div, ignore) {
   document.getElementById("root").innerHTML = finalParts.join("<br>");
   let divs = document.getElementById("root").getElementsByTagName("div");
   for (i = 0; i < divs.length; i++) {
-    setBgRounded(divs[i], config.colorBgPrimary);
+    setBgRounded(divs[i], config.colorBgPrimary, false);
   }
 }
