@@ -7,10 +7,18 @@ function loadConfig() {
   });
 }
 
-function setBgRounded(div, bgColor) {
+function setBgRounded(div, bgColor, hoverEffects) {
   div.style.borderRadius = "25px";
-  div.style.padding = "8px"
+  div.style.padding = "16px"
   div.style.backgroundColor = bgColor;
+  if (hoverEffects) {
+    div.style.transitionDuration = "0.1s";
+    div.onmouseover = () => div.style.transform = "scale(0.9)";
+    div.ontouchstart = () => div.style.transform = "scale(0.9)";
+    div.onmouseout = () => div.style.transform = "scale(1)";
+    div.ontouchend = () => div.style.transform = "scale(1)";
+    div.ontouchcancel = () => div.style.transform = "scale(1)";
+  }
 }
 
 function setLinkColors(linkColor, exclude) {

@@ -8,7 +8,7 @@
     <div id="topbar" style="text-align:center;">
       <img src="/assets/images/apps_lactool.png" alt="LAC Tool" style="width:64px;height:64px;">
       <h1 id="header">LAC Tool</h1>
-      <p1 id="description">Please wait..</p1><br><br>
+      <p1 id="description">Please wait..</p1>
     </div><br><br>
 
     <div id="root" style="text-align:center;"><div><br><br>
@@ -16,12 +16,12 @@
     <div id="socials" style="text-align:center;"></div>
 
     <script src="/assets/functions.js"></script>
-    <script src="/assets/githubfunctions.js"></script>
+    <script src="/assets/functionsWeb.js"></script>
     <script>
       function onConfigLoaded() {
         loadDesign();
-        getRawFile("https://raw.githubusercontent.com/aliernfrog/lac-tool/master/README.md");
         getSocials(document.getElementById("socials"));
+        readRawFile("https://raw.githubusercontent.com/aliernfrog/lac-tool/master/README.md");
       }
 
       function loadDesign() {
@@ -33,9 +33,9 @@
         setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
       }
 
-      function onRawFileRead() {
-        document.getElementById("description").innerHTML = getDescriptionFromReadme();
-        loadPartsFromReadme(document.getElementById("root"), ["# Building"]);
+      function onRawFileRead(rawFile) {
+        document.getElementById("description").innerHTML = getDescriptionFromReadme(rawFile);
+        loadPartsFromReadme(rawFile, document.getElementById("root"), ["# Building"]);
         setLinkColors(config.colorLink, []);
       }
     </script>
