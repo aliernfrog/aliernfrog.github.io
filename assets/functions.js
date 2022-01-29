@@ -9,7 +9,7 @@ function loadConfig() {
 
 function setBgRounded(div, bgColor, hoverEffects) {
   div.style.borderRadius = "25px";
-  div.style.padding = "8px"
+  div.style.padding = "16px"
   div.style.backgroundColor = bgColor;
   if (hoverEffects) {
     div.style.transitionDuration = "0.1s";
