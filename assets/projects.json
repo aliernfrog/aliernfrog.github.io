@@ -4,14 +4,16 @@
     "name": "Ensi",
     "icon": "/assets/images/bots_ensi.png",
     "description": "A cursed chatting bot",
+    "readme": "TODO",
     "type": "bot",
     "disabled": false
   },
   {
     "_id": "indinibee",
     "name": "Ms. Indinibee",
-    "description": "Fun economy bot",
     "icon": "/assets/images/bots_indinibee.png",
+    "description": "Fun economy bot",
+    "readme": "TODO"
     "type": "bot",
     "disabled": "Currently in a rewrite"
   },
@@ -20,6 +22,7 @@
     "name": "Play Store Bot",
     "icon": "/assets/images/bots_gpbot.png",
     "description": "Google Play Store related Discord bot with many useful features",
+    "readme": "TODO",
     "type": "bot",
     "disabled": false
   },
@@ -37,6 +40,7 @@
     "name": "Ensicord",
     "icon": "/assets/images/apps_ensicord.png",
     "description": "Ensi Bot, but in a separate & offline app",
+    "readme": "https://raw.githubusercontent.com/aliernfrog/ensicord/master/README.md",
     "type": "app",
     "disabled": false
   }
