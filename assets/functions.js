@@ -14,7 +14,10 @@ function setBgRounded(div, bgColor, hoverEffects) {
   if (hoverEffects) {
     div.style.transitionDuration = "0.1s";
     div.onmouseover = () => div.style.transform = "scale(0.9)";
+    div.ontouchstart = () => div.style.transform = "scale(0.9)";
     div.onmouseout = () => div.style.transform = "scale(1)";
+    div.ontouchend = () => div.style.transform = "scale(1)";
+    div.ontouchcancel = () => div.style.transform = "scale(1)";
   }
 }
 
