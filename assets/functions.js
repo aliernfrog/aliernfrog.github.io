@@ -1,6 +1,9 @@
 var config = {};
 var projectConfig = {};
 
+document.body.style.marginLeft = "24px";
+document.body.style.marginRight = "24px";
+
 function loadConfig() {
   fetch("/assets/config.json").then(async response => {
     config = await response.json();
@@ -19,7 +22,8 @@ function loadProjectConfig(_id) {
 
 function setBgRounded(div, bgColor, hoverEffects) {
   div.style.borderRadius = "25px";
-  div.style.padding = "16px"
+  div.style.padding = "8px";
+  div.style.margin = "8px";
   div.style.backgroundColor = bgColor;
   if (hoverEffects) {
     div.style.transitionDuration = "0.1s";
