@@ -11,7 +11,7 @@
       <p1 id="description">Please wait..</p1>
     </div><br><br>
 
-    <div id="root" style="text-align:center;"><div><br><br>
+    <div id="partsRoot" style="text-align:center;"></div><br><br>
 
     <div id="socials" style="text-align:center;"></div>
 
@@ -35,7 +35,7 @@
 
       function onRawFileRead(rawFile) {
         document.getElementById("description").innerHTML = getDescriptionFromReadme(rawFile);
-        loadPartsFromReadme(rawFile, document.getElementById("root"), ["# Building"]);
+        loadPartsFromReadme(rawFile, document.getElementById("partsRoot"), ["# Building"]);
         setLinkColors(config.colorLink, []);
       }
     </script>
