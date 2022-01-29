@@ -1,13 +1,11 @@
-var rawFile = "";
-
-function getRawFile(url) {
+function readRawFile(url) {
   fetch(url).then(async response => {
-    rawFile = await response.text();
-    onRawFileRead();
+    let rawFile = await response.text();
+    onRawFileRead(rawFile);
   });
 }
 
-function getDescriptionFromReadme() {
+function getDescriptionFromReadme(rawFile) {
   let split = rawFile.split("\n");
   let description = "";
   for (i = 0; i < split.length; i++) {
@@ -19,7 +17,7 @@ function getDescriptionFromReadme() {
   return description;
 }
 
-function getPartsFromReadme(ignore) {
+function getPartsFromReadme(rawFile, ignore) {
   let split = rawFile.split("\n\n");
   let data = [];
   for (i = 0; i < split.length; i++) {
@@ -36,8 +34,8 @@ function getPartsFromReadme(ignore) {
   return data;
 }
 
-function loadPartsFromReadme(div, ignore) {
-  let parts = getPartsFromReadme(ignore);
+function loadPartsFromReadme(rawFile, div, ignore) {
+  let parts = getPartsFromReadme(rawFile, ignore)
   let finalParts = [];
   for (i = 0; i < parts.length; i++) {
     let part = parts[i];
