@@ -28,6 +28,7 @@
     "name": "LAC Tool",
     "icon": "/assets/images/apps_lactool.png",
     "description": "Do most LAC related stuff without having to mess with files",
+    "readme": "https://raw.githubusercontent.com/aliernfrog/lac-tool/master/README.md",
     "type": "app",
     "disabled": false
   },

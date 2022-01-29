@@ -1,9 +1,19 @@
 var config = {};
+var projectConfig = {};
 
 function loadConfig() {
   fetch("/assets/config.json").then(async response => {
     config = await response.json();
     onConfigLoaded();
+  });
+}
+
+function loadProjectConfig(_id) {
+  fetch("/assets/projects.json").then(async response => {
+    let json = await response.json();
+    let arr = json.filter(project => project._id === _id);
+    projectConfig = arr[0];
+    onProjectConfigLoaded();
   });
 }
 
