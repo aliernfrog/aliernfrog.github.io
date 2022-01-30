@@ -12,6 +12,7 @@
     </div><br><br>
 
     <div id="partsRoot" style="text-align:center;"></div><br><br>
+    <div id="actionsRoot" style="text-align:center;"></div><br><br>
 
     <div id="socials" style="text-align:center;"></div>
 
@@ -31,6 +32,7 @@
       }
 
       function loadDesign() {
+        addHomeButton();
         document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
         setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
@@ -42,6 +44,7 @@
       function onRawFileRead(rawFile) {
         document.getElementById("description").innerHTML = getDescriptionFromReadme(rawFile);
         loadPartsFromReadme(rawFile, document.getElementById("partsRoot"), ["# Building"]);
+        getActionButtons(document.getElementById("actionsRoot"));
         setLinkColors(config.colorLink, []);
       }
     </script>

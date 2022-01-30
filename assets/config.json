@@ -6,9 +6,11 @@
     "Welcome to my new site!",
     "My socials are located at the bottom of the page",
     "Join my Discord to get updates"],
+  "homeIcon": "/assets/images/action_back.png",
   "colorBody": "black",
   "colorText": "white",
   "colorLink": "yellow",
+  "colorBlue": "#005DFF",
   "colorBgPrimary": "#232323",
   "colorBgSecondary": "#0E0E0E",
   "font": "Open Sans,sans-serif"
