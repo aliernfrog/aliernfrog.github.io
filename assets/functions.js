@@ -50,6 +50,29 @@ function setLinkColors(linkColor, exclude) {
   }
 }
 
+function getActionButtons(root) {
+  let actionsArr = projectConfig.actions;
+  if (actionsArr.length === 0) return;
+  let finalActions = [];
+  for (i = 0; i < actionsArr.length; i++) {
+    let action = actionsArr[i];
+    let title = action.title;
+    let hNumber = action.hNumber;
+    let url = action.url;
+    finalActions.push(`<a href="${url}"><div style="text-align:center;color:${config.colorText}"><h3>${title}</h3></div></a>`);
+  }
+  root.innerHTML = finalActions.join("<br>");
+  let divs = root.getElementsByTagName("div");
+  for (i = 0; i < divs.length; i++) {
+    let div = divs[i];
+    let actionColor = actionsArr[i].color;
+    let color = config.colorBgSecondary;
+    if (actionColor === "blue") color = config.colorBlue;
+    setBgRounded(div, color, true);
+  }
+  setBgRounded(root, config.colorBgPrimary);
+}
+
 function getSocials(div) {
   fetch("/assets/socials.json").then(async response => {
     let socials = await response.json();

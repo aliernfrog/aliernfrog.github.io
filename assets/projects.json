@@ -6,7 +6,8 @@
     "description": "A cursed chatting bot",
     "readme": "TODO",
     "type": "bot",
-    "disabled": false
+    "disabled": false,
+    "actions": []
   },
   {
     "_id": "indinibee",
@@ -15,7 +16,8 @@
     "description": "Fun economy bot",
     "readme": "TODO",
     "type": "bot",
-    "disabled": "Currently in a rewrite"
+    "disabled": "Currently in a rewrite",
+    "actions": []
   },
   {
     "_id": "gpbot",
@@ -24,7 +26,8 @@
     "description": "Google Play Store related Discord bot with many useful features",
     "readme": "TODO",
     "type": "bot",
-    "disabled": false
+    "disabled": false,
+    "actions": []
   },
   {
     "_id": "lactool",
@@ -33,7 +36,19 @@
     "description": "Do most LAC related stuff without having to mess with files",
     "readme": "https://raw.githubusercontent.com/aliernfrog/lac-tool/master/README.md",
     "type": "app",
-    "disabled": false
+    "disabled": false,
+    "actions": [
+      {
+        "title": "Download",
+        "color": "blue",
+        "url": "https://github.com/aliernfrog/lac-tool/releases"
+      },
+      {
+        "title": "GitHub repository",
+        "color": "default",
+        "url": "https://github.com/aliernfrog"
+      }
+    ]
   },
   {
     "_id": "ensicord",
@@ -42,6 +57,7 @@
     "description": "Ensi Bot, but in a separate & offline app",
     "readme": "https://raw.githubusercontent.com/aliernfrog/ensicord/master/README.md",
     "type": "app",
-    "disabled": false
+    "disabled": false,
+    "actions": []
   }
 ]

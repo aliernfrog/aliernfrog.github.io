@@ -12,6 +12,7 @@
     </div><br><br>
 
     <div id="partsRoot" style="text-align:center;"></div><br><br>
+    <div id="actionsRoot" style="text-align:center;"></div><br><br>
 
     <div id="socials" style="text-align:center;"></div>
 
@@ -43,6 +44,7 @@
       function onRawFileRead(rawFile) {
         document.getElementById("description").innerHTML = getDescriptionFromReadme(rawFile);
         loadPartsFromReadme(rawFile, document.getElementById("partsRoot"), ["# Building"]);
+        getActionButtons(document.getElementById("actionsRoot"));
         setLinkColors(config.colorLink, []);
       }
     </script>
