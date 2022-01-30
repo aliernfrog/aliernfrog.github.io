@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Please wait..</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body style="background-color:black;">
+    <div id="topbar" style="text-align:center;">
+      <img id="icon" style="width:64px;height:64px;">
+      <h1 id="header">Please wait..</h1>
+      <p1 id="description"></p1>
+    </div><br><br>
+
+    <div id="partsRoot" style="text-align:center;"></div><br><br>
+    <div id="actionsRoot" style="text-align:center;"></div><br><br>
+
+    <div id="socials" style="text-align:center;"></div>
+
+    <script src="/assets/functionsWeb.js"></script>
+    <script>
+      function onConfigLoaded() {
+        loadProjectConfig("gpbot");
+      }
+
+      function onProjectConfigLoaded() {
+        loadDesign();
+        document.title = projectConfig.name;
+        document.getElementById("icon").src = projectConfig.icon;
+        document.getElementById("header").innerHTML = projectConfig.name;
+        getSocials(document.getElementById("socials"));
+        readRawFile(projectConfig.readme);
+      }
+
+      function loadDesign() {
+        addHomeButton();
+        document.body.style.background = config.colorBody;
+        document.body.style.fontFamily = config.font;
+        setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
+        document.getElementById("header").style.color = config.colorText;
+        document.getElementById("description").style.color = config.colorText;
+        setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
+      }
+
+      function onRawFileRead(rawFile) {
+        document.getElementById("description").innerHTML = getDescriptionFromReadme(rawFile);
+        loadPartsFromReadme(rawFile, document.getElementById("partsRoot"), ["# Invite"]);
+        getActionButtons(document.getElementById("actionsRoot"));
+        setLinkColors(config.colorLink, []);
+      }
+    </script>
+    <script src="/assets/functions.js"></script>
+  </body>
+</html>
