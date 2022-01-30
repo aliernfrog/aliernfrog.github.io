@@ -58,6 +58,17 @@
     "readme": "https://raw.githubusercontent.com/aliernfrog/ensicord/master/README.md",
     "type": "app",
     "disabled": false,
-    "actions": []
+    "actions": [
+      {
+        "title": "Download",
+        "color": "blue",
+        "url": "https://github.com/aliernfrog/ensicord/releases"
+      },
+      {
+        "title": "GitHub repository",
+        "color": "default",
+        "url": "https://github.com/aliernfrog/ensicord"
+      }
+    ]
   }
 ]
