@@ -4,10 +4,16 @@
     "name": "Ensi",
     "icon": "/assets/images/bots_ensi.png",
     "description": "A cursed chatting bot",
-    "readme": "TODO",
+    "readme": "/ensibot/README.md",
     "type": "bot",
     "disabled": false,
-    "actions": []
+    "actions": [
+      {
+        "title": "Add to a server",
+        "color": "blue",
+        "url": "https://discord.com/oauth2/authorize?client_id=696151319819321368&permissions=139653925953&scope=bot%20applications.commands"
+      }
+    ]
   },
   {
     "_id": "indinibee",
