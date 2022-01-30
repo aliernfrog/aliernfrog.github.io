@@ -20,6 +20,13 @@ function loadProjectConfig(_id) {
   });
 }
 
+function addHomeButton(url) {
+  if (!url) url = "/";
+  let bodyHtml = document.body.innerHTML;
+  let homeButtonHtml = `<a href="${url}"><img src="${config.homeIcon}" alt="Home" style="width:25px;height:25px;"></a>`;
+  document.body.innerHTML = "\n"+homeButtonHtml+"<br>"+bodyHtml;
+}
+
 function setBgRounded(div, bgColor, hoverEffects) {
   div.style.borderRadius = "25px";
   div.style.padding = "8px";
