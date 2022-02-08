@@ -3,7 +3,7 @@
 A cursed Discord chatting bot!
 
 # Features
-+ Chattting feature
++ Chatting feature
 + Snipe command
 + Some useful commands such as <mark>/userinfo</mark>
 
