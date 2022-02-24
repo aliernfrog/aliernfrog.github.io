@@ -25,7 +25,7 @@ function getPartsFromReadme(rawFile, ignore) {
     let partSplit = part.split("\n");
     let titleStr = partSplit[0];
     let descStr = partSplit.slice(1).join("<br>");
-    if (titleStr.startsWith("#") && descStr != null && descStr != "" && !ignore.includes(titleStr)) {
+    if (titleStr.startsWith("#") && !titleStr.includes("</a>") && descStr != null && descStr != "" && !ignore.includes(titleStr)) {
       let title = titleStr.replace("# ","");
       let description = descStr;
       data.push({title: title, description: description});
