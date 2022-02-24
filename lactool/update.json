@@ -1,9 +1,9 @@
 {
-  "latest": 19,
+  "latest": 20,
   "latestFdroid": 18,
-  "download": "https://github.com/aliernfrog/lac-tool/releases/download/19/LacTool_1.9.2-github.apk",
+  "download": "https://github.com/aliernfrog/lac-tool/releases/download/20/LacTool_2.0-github.apk",
   "downloadFdroid": "",
-  "changelog": "<b># New features</b><br>+ Start LAC option in home screen<br>+ App now warns you if LAC isn't installed<br>+ You can now hide set thumbnail and remove thumbnail options<br><br><b># Changes</b><br>+ Added a better picker for LAC path options, you can no longer enable multiple<br>+ Updated social media buttons<br>+ Path text in file picker now scrolls automatically<br><br><b># Fixes</b><br>+ Map thumbnails now show properly<br>+ Screenshots now show properly<br>+ In app feedbacks now work",
-  "changelogVersion": "1.9.2",
+  "changelog": "<b># Design</b><br>+ Light theme<br>+ Option to change theme<br>+ Back button for toolbars<br>+ Checkboxes, switches and progress bars are now blue when activated<br>+ Rounded corners for bottom dialogs<br>+ All bottom dialogs are now scrollable<br>+ More animations<br><br><b># Merging maps</b><br>+ You can now add maps on top of a map<br>+ Manage maps > Merge maps<br><br><b># Maps management</b><br>+ Activity doesn't restart anymore when deleting maps<br>+ Updated thumbnail look<br>+ Fixed thumbnails not showing correctly<br><br><b># Map options</b><br>+ Title now changes to map name<br>+ Better picker for map types<br>+ Better input for number options<br>+ Server name no longer uses hardcoded value<br>+ Fixed number options having an additional space<br>+ Fixed checkpoints causing error<br><br><b># Map roles</b><br>+ Separate activity for managing map roles<br>+ Role colors now show in app (not all colors are supported)<br>+ You can now copy role name by long pressing on it<br><br><b># Wallpapers management</b><br>+ Deleting wallpapers now also works on Android 11 and above<br>+ Floating save button<br>+ Fixed wallpapers not showing correctly<br><br><b># Changes & fixes</b><br>+ Screenshots can now be deleted<br>+ Imported maps are now in alphabetical order<br>+ LAC now gets detected properly on Android 11 and above<br>+ Fixed some dialogs' titles not being centered<br>+ Fixed app not creating required folders on first launch<br><br><b># Removed features</b><br>- Removed Turkish language<br>- Removed force English language option<br>- Removed colors from debug log",
+  "changelogVersion": "2.0",
   "notes": ""
 }
