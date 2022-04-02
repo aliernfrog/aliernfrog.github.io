@@ -40,7 +40,7 @@ function loadPartsFromReadme(rawFile, partsRoot, ignore) {
   for (i = 0; i < parts.length; i++) {
     let part = parts[i];
     let partId = part.title.toLowerCase().replaceAll(" ", "-");
-    finalParts.push(`<div id="${partId}" class="${partId}" style="text-align:center;color:${config.colorText}"><h3>${part.title}</h3><p1>${part.description}</p1></div>`);
+    finalParts.push(`<div id="${partId}" class="${partId}" style="text-align:left;color:${config.colorText}"><h2>${part.title}</h2><p1>${part.description}</p1></div>`);
   }
   partsRoot.innerHTML = finalParts.join("<br>");
   let divs = partsRoot.getElementsByTagName("div");
