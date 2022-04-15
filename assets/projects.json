@@ -19,11 +19,17 @@
     "_id": "indinibee",
     "name": "Ms. Indinibee",
     "icon": "/assets/images/bots_indinibee.png",
-    "description": "Fun economy bot",
-    "readme": "TODO",
+    "description": "Soon",
+    "readme": "/indinibee/README.md",
     "type": "bot",
-    "disabled": "Currently in a rewrite",
-    "actions": []
+    "disabled": false,
+    "actions": [
+      {
+        "title": "Join Discord for updates",
+        "color": "default",
+        "url": "https://discord.gg/SQXqBMs"
+      }
+    ]
   },
   {
     "_id": "gpbot",
