@@ -1,6 +1,6 @@
 
 # Play Store Discord Bot
-A Google Play Store related Discord bot with many useful features!
+A Google Play Store™️ related Discord bot with many useful features!
 
 # Features
 + Tracking updates of an app
@@ -13,7 +13,7 @@ A Google Play Store related Discord bot with many useful features!
 + You can only track 5 apps per server
 
 # Some useful information
-+ To search in Play Store, use <mark>/app-search</mark> command
++ To search apps, use <mark>/app-search</mark> command
 + To search using app ID, use <mark>/app-info</mark> command
 + To change language, use <mark>/options</mark> command
 
