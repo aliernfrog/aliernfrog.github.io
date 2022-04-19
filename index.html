@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>aliernfrog</title>
+    <meta name="og:title" content="aliernfrog"/>
+    <meta name="og:description" content="Home page of aliernfrog website"/>
+    <meta name="og:image" content="/assets/images/aliernfrog.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
   <body style="background-color:black;">
@@ -18,10 +21,10 @@
     
     <script>
       function onConfigLoaded() {
-        loadDesign();
-        loadProjects();
         getWelcomeMessage();
         getSocials(document.getElementById("socials"));
+        loadProjects();
+        loadDesign();
       }
 
       function getWelcomeMessage() {
