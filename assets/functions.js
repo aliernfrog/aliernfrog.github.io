@@ -34,12 +34,12 @@ function setBgRounded(div, bgColor, hoverEffects) {
   div.style.margin = "8px";
   div.style.backgroundColor = bgColor;
   if (hoverEffects) {
-    div.style.transitionDuration = "0.1s";
-    div.onmouseover = () => div.style.transform = "scale(0.9)";
-    div.ontouchstart = () => div.style.transform = "scale(0.9)";
-    div.onmouseout = () => div.style.transform = "scale(1)";
-    div.ontouchend = () => div.style.transform = "scale(1)";
-    div.ontouchcancel = () => div.style.transform = "scale(1)";
+    div.style.transitionDuration = "0.3s";
+    div.onmouseover = () => div.style.opacity = "0.5";
+    div.ontouchstart = () => div.style.opacity = "0.5";
+    div.onmouseout = () => div.style.opacity = "1";
+    div.ontouchend = () => div.style.opacity = "1";
+    div.ontouchcancel = () => div.style.opacity = "1";
   }
 }
 
