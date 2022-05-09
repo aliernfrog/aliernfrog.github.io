@@ -14,7 +14,7 @@ A cursed Discord chatting bot!
 + You can enable or disable chatting feature by running <mark>/chat enabled:(true/false)</mark>
 
 # Can't see slash commands?
-Don't worry! Just re-invite Ensi using the link in his profile or the link below
+Don't worry! Just re-add Ensi using the link in his profile or the link below
 
 # Invite
 https://discord.com/oauth2/authorize?client_id=696151319819321368&permissions=139653925953&scope=bot%20applications.commands

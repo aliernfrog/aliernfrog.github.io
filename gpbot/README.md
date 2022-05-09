@@ -18,7 +18,7 @@ A Google Play Store™️ related Discord bot with many useful features!
 + To change language, use <mark>/options</mark> command
 
 # Can't see slash commands?
-Try re-inviting the bot using the link in its profile or the link below
+Try re-adding the bot using the link in its profile or the link below
 
 # Invite
 https://discord.com/api/oauth2/authorize?client_id=806615704987762759&permissions=412384349249&scope=bot%20applications.commands
