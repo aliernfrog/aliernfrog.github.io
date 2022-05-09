@@ -9,7 +9,7 @@
     "disabled": false,
     "actions": [
       {
-        "title": "Add to a server",
+        "title": "Add to server",
         "color": "blue",
         "url": "https://discord.com/oauth2/authorize?client_id=696151319819321368&permissions=139653925953&scope=bot%20applications.commands"
       }
@@ -41,7 +41,7 @@
     "disabled": false,
     "actions": [
       {
-        "title": "Add to a server",
+        "title": "Add to server<br><font size=\"2\">Might not work</font>",
         "color": "blue",
         "url": "https://discord.com/api/oauth2/authorize?client_id=806615704987762759&permissions=412384349249&scope=bot%20applications.commands"
       }
