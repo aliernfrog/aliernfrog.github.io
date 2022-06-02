@@ -16,22 +16,6 @@
     ]
   },
   {
-    "_id": "indinibee",
-    "name": "Ms. Indinibee",
-    "icon": "/assets/images/bots_indinibee.png",
-    "description": "Soon",
-    "readme": "/indinibee/README.md",
-    "type": "bot",
-    "disabled": false,
-    "actions": [
-      {
-        "title": "Join Discord for updates",
-        "color": "default",
-        "url": "https://discord.gg/SQXqBMs"
-      }
-    ]
-  },
-  {
     "_id": "gpbot",
     "name": "Play Store Bot",
     "icon": "/assets/images/bots_gpbot.png",
