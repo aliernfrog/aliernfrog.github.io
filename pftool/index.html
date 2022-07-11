@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <h1>PF Tool</h1>
+    <p1 id="description">Redirecting to download..</p1>
+    <script>
+      const redirect = "https://github.com/aliernfrog/pf-tool/releases/latest/download/pftool.apk";
+      document.getElementById("description").innerHTML = `Redirecting to download: <a href="${redirect}">${redirect}</a>`;
+      window.location = redirect;
+    </script>
+  </body>
+</html>
