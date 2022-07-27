@@ -6,14 +6,14 @@ document.body.style.marginLeft = "24px";
 document.body.style.marginRight = "24px";
 
 function loadConfig() {
-  fetch("/assets/config.json").then(async response => {
+  fetch("/assets/values/config.json").then(async response => {
     config = await response.json();
     onConfigLoaded();
   });
 }
 
 function loadProjectConfig(_id) {
-  fetch("/assets/projects.json").then(async response => {
+  fetch("/assets/values/projects.json").then(async response => {
     let json = await response.json();
     let arr = json.filter(project => project._id === _id);
     projectConfig = arr[0];
@@ -75,7 +75,7 @@ function getActionButtons(root) {
 }
 
 function getSocials(div) {
-  fetch("/assets/socials.json").then(async response => {
+  fetch("/assets/values/socials.json").then(async response => {
     let socials = await response.json();
     let finalSocials = [];
     for (i = 0; i < socials.length; i++) {
