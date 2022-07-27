@@ -17,7 +17,7 @@
   },
   {
     "_id": "gpbot",
-    "name": "Play Store Botd",
+    "name": "Play Store Bot",
     "icon": "/assets/images/bots_gpbot.png",
     "description": "Google Play Store™️ scraper Discord bot with many useful features",
     "readme": "/gpbot/README.md",
