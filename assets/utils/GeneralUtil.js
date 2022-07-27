@@ -58,7 +58,6 @@ function getActionButtons(root) {
   for (i = 0; i < actionsArr.length; i++) {
     let action = actionsArr[i];
     let title = action.title;
-    let hNumber = action.hNumber;
     let url = action.url;
     finalActions.push(`<a href="${url}"><div style="text-align:center;color:${config.colorText}"><h3>${title}</h3></div></a>`);
   }
