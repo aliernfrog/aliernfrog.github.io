@@ -1,6 +1,6 @@
 
 # Play Store Discord Bot
-Google Play Store™️ scraper Discord bot with many useful features
+Google Play Store™️ <a href="https://github.com/facundoolano/google-play-scraper">scraper</a> Discord bot with many useful features
 
 # Features
 + Tracking updates of an app
