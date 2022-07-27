@@ -33,14 +33,16 @@ function setBgRounded(div, bgColor, hoverEffects) {
   div.style.padding = "8px";
   div.style.margin = "8px";
   div.style.backgroundColor = bgColor;
-  if (hoverEffects) {
-    div.style.transitionDuration = "0.3s";
-    div.onmouseover = () => div.style.opacity = "0.5";
-    div.ontouchstart = () => div.style.opacity = "0.5";
-    div.onmouseout = () => div.style.opacity = "1";
-    div.ontouchend = () => div.style.opacity = "1";
-    div.ontouchcancel = () => div.style.opacity = "1";
-  }
+  if (hoverEffects) addHoverEffects(div);
+}
+
+function addHoverEffects(div) {
+  div.style.transitionDuration = "0.3s";
+  div.onmouseover = () => div.style.opacity = "0.5";
+  div.ontouchstart = () => div.style.opacity = "0.5";
+  div.onmouseout = () => div.style.opacity = "1";
+  div.ontouchend = () => div.style.opacity = "1";
+  div.ontouchcancel = () => div.style.opacity = "1";
 }
 
 function setLinkColors(linkColor, exclude) {
@@ -82,6 +84,10 @@ function getSocials(div) {
       finalSocials.push(`<a href="${social.url}" style="text-decoration:none;margin-left:8px;margin-right:8px;"><img src="${social.icon}" alt="${social.name}" style="width:32px;height:32px;"</a>`);
     }
     div.innerHTML = finalSocials.join("");
+    const elements = div.getElementsByTagName("img");
+    for (i = 0; i < elements.length; i++) {
+      addHoverEffects(elements[i]);
+    }
   });
 }
 
