@@ -51,7 +51,7 @@
       }
 
       function loadProjects() {
-        fetch("/assets/projects.json").then(async response => {
+        fetch("/assets/values/projects.json").then(async response => {
           let projects = await response.json();
           let finalBots = [];
           let finalApps = [];

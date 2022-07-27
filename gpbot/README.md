@@ -1,6 +1,6 @@
 
 # Play Store Discord Bot
-A Google Play Store™️ related Discord bot with many useful features!
+Google Play Store™️ scraper Discord bot with many useful features
 
 # Features
 + Tracking updates of an app
