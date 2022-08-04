@@ -37,7 +37,7 @@ function setBgRounded(div, bgColor, hoverEffects) {
 }
 
 function addHoverEffects(div) {
-  div.style.transitionDuration = "0.3s";
+  div.style.transitionDuration = "0.18s";
   div.onmouseover = () => div.style.opacity = "0.5";
   div.ontouchstart = () => div.style.opacity = "0.5";
   div.onmouseout = () => div.style.opacity = "1";
