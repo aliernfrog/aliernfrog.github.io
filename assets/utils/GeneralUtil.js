@@ -25,8 +25,13 @@ function loadProjectConfig(_id) {
 function addHomeButton(url) {
   if (!url) url = "/";
   let bodyHtml = document.body.innerHTML;
-  let homeButtonHtml = `<a href="${url}"><img src="${config.homeIcon}" alt="Home" style="width:25px;height:25px;"></a>`;
+  let homeButtonHtml = `<a href=${url}>`+
+  `<div id="home" style="height:20px;display:inline-block">`+
+  `<img src="${config.homeIcon}" alt="Home" style="width:20px">`+
+  `</div>`+
+  `</a>`;
   document.body.innerHTML = "\n"+homeButtonHtml+"<br>"+bodyHtml;
+  setBgRounded(document.getElementById("home"), config.colorBgPrimary);
 }
 
 function setBgRounded(div, bgColor, hoverEffects) {
