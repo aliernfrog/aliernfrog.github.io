@@ -44,6 +44,10 @@ function addHoverEffects(div) {
   div.onmouseout = () => div.style.opacity = "1";
   div.ontouchend = () => div.style.opacity = "1";
   div.ontouchcancel = () => div.style.opacity = "1";
+  div.onclick = () => {
+    div.style.opacity = "0.5";
+    setTimeout(() => div.style.opacity = "1", 180);
+  }
 }
 
 function setLinkColors(linkColor, exclude) {
