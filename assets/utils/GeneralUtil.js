@@ -4,6 +4,7 @@ var projectConfig = {};
 document.documentElement.style.scrollBehavior = "smooth";
 document.body.style.marginLeft = "24px";
 document.body.style.marginRight = "24px";
+document.body.style["-webkit-tap-highlight-color"] = "transparent";
 
 function loadConfig() {
   fetch("/assets/values/config.json").then(async response => {
