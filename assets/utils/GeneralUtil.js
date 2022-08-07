@@ -50,6 +50,7 @@ function setLinkColors(linkColor, exclude) {
   let as = document.getElementsByTagName("a");
   for (i = 0; i < as.length; i++) {
     as[i].style.textDecoration = "none";
+    addHoverEffects(as[i]);
     if (!exclude.includes(as[i])) as[i].style.color = linkColor;
   }
 }
