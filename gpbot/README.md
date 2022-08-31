@@ -9,13 +9,13 @@ Google Play Store™️ <a href="https://github.com/facundoolano/google-play-scr
 + And more!
 
 # Update tracking
-+ To track an app, use <mark>/app-track</mark> command
++ To track an app, use <code>/app-track</code> command
 + You can only track 5 apps per server
 
 # Some useful information
-+ To search apps, use <mark>/app-search</mark> command
-+ To search using app ID, use <mark>/app-info</mark> command
-+ To change language, use <mark>/options</mark> command
++ To search apps, use <code>/app-search</code> command
++ To search using app ID, use <code>/app-info</code> command
++ To change language, use <code>/options</code> command
 
 # Can't see slash commands?
 Try re-adding the bot using the link in its profile or the link below
