@@ -3,7 +3,7 @@
   <head>
     <title>Please wait..</title>
     <meta name="og:title" content="Play Store Discord Bot"/>
-    <meta name="og:description" content="A Google Play Store™️ related Discord bot with many useful features!"/>
+    <meta name="og:description" content="Google Play Store™️ scraper Discord bot with many useful features"/>
     <meta name="og:image" content="/assets/images/bots_gpbot.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
@@ -19,7 +19,7 @@
 
     <div id="socials" style="text-align:center;"></div>
 
-    <script src="/assets/functionsWeb.js"></script>
+    <script src="/assets/utils/WebUtil.js"></script>
     <script>
       function onConfigLoaded() {
         loadProjectConfig("gpbot");
@@ -51,6 +51,6 @@
         setLinkColors(config.colorLink, []);
       }
     </script>
-    <script src="/assets/functions.js"></script>
+    <script src="/assets/utils/GeneralUtil.js"></script>
   </body>
 </html>

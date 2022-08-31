@@ -8,7 +8,7 @@
   "homeIcon": "/assets/images/action_back.png",
   "colorBody": "black",
   "colorText": "white",
-  "colorLink": "yellow",
+  "colorLink": "#005DFF",
   "colorBlue": "#005DFF",
   "colorBgPrimary": "#232323",
   "colorBgSecondary": "#0E0E0E",

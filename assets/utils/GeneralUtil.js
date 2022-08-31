@@ -4,16 +4,17 @@ var projectConfig = {};
 document.documentElement.style.scrollBehavior = "smooth";
 document.body.style.marginLeft = "24px";
 document.body.style.marginRight = "24px";
+document.body.style["-webkit-tap-highlight-color"] = "transparent";
 
 function loadConfig() {
-  fetch("/assets/config.json").then(async response => {
+  fetch("/assets/values/config.json").then(async response => {
     config = await response.json();
     onConfigLoaded();
   });
 }
 
 function loadProjectConfig(_id) {
-  fetch("/assets/projects.json").then(async response => {
+  fetch("/assets/values/projects.json").then(async response => {
     let json = await response.json();
     let arr = json.filter(project => project._id === _id);
     projectConfig = arr[0];
@@ -24,8 +25,13 @@ function loadProjectConfig(_id) {
 function addHomeButton(url) {
   if (!url) url = "/";
   let bodyHtml = document.body.innerHTML;
-  let homeButtonHtml = `<a href="${url}"><img src="${config.homeIcon}" alt="Home" style="width:25px;height:25px;"></a>`;
+  let homeButtonHtml = `<a href=${url}>`+
+  `<div id="home" style="height:20px;display:inline-block">`+
+  `<img src="${config.homeIcon}" alt="Home" style="width:20px">`+
+  `</div>`+
+  `</a>`;
   document.body.innerHTML = "\n"+homeButtonHtml+"<br>"+bodyHtml;
+  setBgRounded(document.getElementById("home"), config.colorBgPrimary);
 }
 
 function setBgRounded(div, bgColor, hoverEffects) {
@@ -33,13 +39,19 @@ function setBgRounded(div, bgColor, hoverEffects) {
   div.style.padding = "8px";
   div.style.margin = "8px";
   div.style.backgroundColor = bgColor;
-  if (hoverEffects) {
-    div.style.transitionDuration = "0.3s";
-    div.onmouseover = () => div.style.opacity = "0.5";
-    div.ontouchstart = () => div.style.opacity = "0.5";
-    div.onmouseout = () => div.style.opacity = "1";
-    div.ontouchend = () => div.style.opacity = "1";
-    div.ontouchcancel = () => div.style.opacity = "1";
+  if (hoverEffects) addHoverEffects(div);
+}
+
+function addHoverEffects(div) {
+  div.style.transitionDuration = "0.18s";
+  div.onmouseover = () => div.style.opacity = "0.5";
+  div.ontouchstart = () => div.style.opacity = "0.5";
+  div.onmouseout = () => div.style.opacity = "1";
+  div.ontouchend = () => div.style.opacity = "1";
+  div.ontouchcancel = () => div.style.opacity = "1";
+  div.onclick = () => {
+    div.style.opacity = "0.5";
+    setTimeout(() => div.style.opacity = "1", 180);
   }
 }
 
@@ -47,6 +59,7 @@ function setLinkColors(linkColor, exclude) {
   let as = document.getElementsByTagName("a");
   for (i = 0; i < as.length; i++) {
     as[i].style.textDecoration = "none";
+    addHoverEffects(as[i]);
     if (!exclude.includes(as[i])) as[i].style.color = linkColor;
   }
 }
@@ -58,7 +71,6 @@ function getActionButtons(root) {
   for (i = 0; i < actionsArr.length; i++) {
     let action = actionsArr[i];
     let title = action.title;
-    let hNumber = action.hNumber;
     let url = action.url;
     finalActions.push(`<a href="${url}"><div style="text-align:center;color:${config.colorText}"><h3>${title}</h3></div></a>`);
   }
@@ -75,7 +87,7 @@ function getActionButtons(root) {
 }
 
 function getSocials(div) {
-  fetch("/assets/socials.json").then(async response => {
+  fetch("/assets/values/socials.json").then(async response => {
     let socials = await response.json();
     let finalSocials = [];
     for (i = 0; i < socials.length; i++) {
@@ -83,6 +95,10 @@ function getSocials(div) {
       finalSocials.push(`<a href="${social.url}" style="text-decoration:none;margin-left:8px;margin-right:8px;"><img src="${social.icon}" alt="${social.name}" style="width:32px;height:32px;"</a>`);
     }
     div.innerHTML = finalSocials.join("");
+    const elements = div.getElementsByTagName("img");
+    for (i = 0; i < elements.length; i++) {
+      addHoverEffects(elements[i]);
+    }
   });
 }
 
