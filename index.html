@@ -60,7 +60,7 @@
             let redirect = "/"+project._id;
             if (project.disabled) redirect = "/";
             if (project.disabled) project.description = project.disabled;
-            let str = `<a href="${redirect}" style="text-decoration:none;"><div id="${project._id}" style="text-align:center;color:${config.colorText}"><img src="${project.icon}" style="width:64px;height:64px;"><h3>${project.name}</h3><p1>${project.description}</p1></div></a>`;
+            let str = `<a href="${redirect}/" style="text-decoration:none;"><div id="${project._id}" style="text-align:center;color:${config.colorText}"><img src="${project.icon}" style="width:64px;height:64px;"><h3>${project.name}</h3><p1>${project.description}</p1></div></a>`;
             if (project.type === "bot") finalBots.push(str);
             if (project.type === "app") finalApps.push(str);
           }
