@@ -43,15 +43,15 @@ function setBgRounded(div, bgColor, hoverEffects) {
 }
 
 function addHoverEffects(div) {
-  div.style.transitionDuration = "0.18s";
-  div.onmouseover = () => div.style.opacity = "0.5";
-  div.ontouchstart = () => div.style.opacity = "0.5";
+  div.style.transitionDuration = "0.2s";
+  div.onmouseover = () => div.style.opacity = "0.3";
+  div.ontouchstart = () => div.style.opacity = "0.3";
   div.onmouseout = () => div.style.opacity = "1";
   div.ontouchend = () => div.style.opacity = "1";
   div.ontouchcancel = () => div.style.opacity = "1";
   div.onclick = () => {
-    div.style.opacity = "0.5";
-    setTimeout(() => div.style.opacity = "1", 180);
+    div.style.opacity = "0.3";
+    setTimeout(() => div.style.opacity = "1", 200);
   }
 }
 
