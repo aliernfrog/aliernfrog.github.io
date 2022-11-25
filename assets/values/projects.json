@@ -2,6 +2,7 @@
   {
     "id": "ensibot",
     "name": "Ensi",
+    "tags": ["bot"],
     "icon": "/assets/images/bots_ensi.png",
     "description": "A cursed chatting bot",
     "url": "/ensibot/",
@@ -19,6 +20,7 @@
   {
     "id": "gpbot",
     "name": "Play Store Bot",
+    "tags": ["bot"],
     "icon": "/assets/images/bots_gpbot.png",
     "description": "Google Play Store™️ scraper Discord bot with many useful features",
     "url": "/gpbot/",
@@ -36,6 +38,7 @@
   {
     "id": "lactool",
     "name": "LAC Tool",
+    "tags": ["app","opensource"],
     "icon": "/assets/images/apps_lactool.png",
     "description": "Do most LAC related stuff without having to mess with files",
     "url": "/lactool/",
@@ -58,6 +61,7 @@
   {
     "id": "ensicord",
     "name": "Ensicord",
+    "tags": ["app","opensource"],
     "icon": "/assets/images/apps_ensicord.png",
     "description": "Ensi Bot, but in a separate & offline app",
     "url": "/",
