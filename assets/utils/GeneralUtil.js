@@ -11,10 +11,10 @@ function loadConfig() {
   });
 }
 
-function loadProjectConfig(_id) {
+function loadProjectConfig(id) {
   fetch("/assets/values/projects.json").then(async response => {
     let json = await response.json();
-    let arr = json.filter(project => project._id === _id);
+    let arr = json.filter(project => project.id === id);
     projectConfig = arr[0];
     onProjectConfigLoaded();
   });
@@ -72,7 +72,7 @@ function getActionButtons(root) {
     let url = action.url;
     finalActions.push(`<a href="${url}"><div style="text-align:center;color:${config.colorText}"><h3>${title}</h3></div></a>`);
   }
-  root.innerHTML = finalActions.join("<br>");
+  root.innerHTML = finalActions.join("");
   let divs = root.getElementsByTagName("div");
   for (i = 0; i < divs.length; i++) {
     let div = divs[i];

@@ -54,8 +54,8 @@
           for (i = 0; i < projects.length; i++) {
             const project = projects[i];
             highlights.push([
-              `<a href="/${project._id}/" style="text-decoration:none;text-align:left;">`,
-              `<div id="${project._id}" style="color:${config.colorText};">`,
+              `<a href="${project.url}" style="text-decoration:none;text-align:left;">`,
+              `<div id="${project.id}" style="color:${config.colorText};">`,
               `<div style="margin-bottom:8px;">`,
               `<img src="${project.icon}" style="width:40px;height:40px;vertical-align:middle;margin-right:8px;">`,
               `<p1 style="vertical-align:middle;"><font size="5px"><b>${project.name}</b></font></p1>`,
