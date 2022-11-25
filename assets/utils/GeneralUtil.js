@@ -63,17 +63,20 @@ function setLinkColors(linkColor, exclude) {
 }
 
 function getActionButtons(root) {
-  let actionsArr = projectConfig.actions;
+  const actionsArr = projectConfig.actions;
   if (actionsArr.length === 0) return;
-  let finalActions = [];
+  const finalActions = [];
   for (i = 0; i < actionsArr.length; i++) {
-    let action = actionsArr[i];
-    let title = action.title;
-    let url = action.url;
-    finalActions.push(`<a href="${url}"><div style="text-align:center;color:${config.colorText}"><h3>${title}</h3></div></a>`);
+    const action = actionsArr[i];
+    finalActions.push([
+      `<a href="${action.url}">`,
+      `<div style="text-align:center;color:${config.colorText};">`,
+      `<p><b>${action.title}</b></p>`,
+      `</div></a>`
+    ].join(""));
   }
   root.innerHTML = finalActions.join("");
-  let divs = root.getElementsByTagName("div");
+  const divs = root.getElementsByTagName("div");
   for (i = 0; i < divs.length; i++) {
     let div = divs[i];
     let actionColor = actionsArr[i].color;
