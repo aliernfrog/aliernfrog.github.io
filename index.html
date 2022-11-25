@@ -12,10 +12,9 @@
       <img src="/assets/images/aliernfrog.png" alt="aliernfrog" style="width:64px;height:64px;">
       <h1 id="header">aliernfrog</h1>
       <p1 id="description">Please wait..</p1>
-    </div><br><br>
+    </div><br>
 
-    <div id="bots" style="text-align:center;"></div><br><br>
-    <div id="apps" style="text-align:center;"></div><br><br>
+    <div id="highlights" style="text-align:center;"></div><br>
 
     <div id="socials" style="text-align:center;"></div>
     
@@ -42,39 +41,39 @@
         setBgRounded(document.getElementById("topbar"), config.colorBgPrimary, false);
         document.getElementById("header").style.color = config.colorText;
         document.getElementById("description").style.color = config.colorText;
-        setBgRounded(document.getElementById("bots"), config.colorBgPrimary, false);
-        document.getElementById("bots").style.color = config.colorText;
-        setBgRounded(document.getElementById("apps"), config.colorBgPrimary, false);
-        document.getElementById("apps").style.color = config.colorText;
+        setBgRounded(document.getElementById("highlights"), config.colorBgPrimary, false);
+        document.getElementById("highlights").style.color = config.colorText;
         setBgRounded(document.getElementById("socials"), config.colorBgPrimary, false);
         setLinkColors(config.colorLink, []);
       }
 
       function loadProjects() {
         fetch("/assets/values/projects.json").then(async response => {
-          let projects = await response.json();
-          let finalBots = [];
-          let finalApps = [];
+          const projects = await response.json();
+          const highlights = [];
           for (i = 0; i < projects.length; i++) {
-            let project = projects[i];
-            let redirect = "/"+project._id;
-            if (project.disabled) redirect = "/";
-            if (project.disabled) project.description = project.disabled;
-            let str = `<a href="${redirect}/" style="text-decoration:none;"><div id="${project._id}" style="text-align:center;color:${config.colorText}"><img src="${project.icon}" style="width:64px;height:64px;"><h3>${project.name}</h3><p1>${project.description}</p1></div></a>`;
-            if (project.type === "bot") finalBots.push(str);
-            if (project.type === "app") finalApps.push(str);
+            const project = projects[i];
+            highlights.push([
+              `<a href="/${project._id}/" style="text-decoration:none;text-align:left;">`,
+              `<div id="${project._id}" style="color:${config.colorText};">`,
+              `<div style="margin-bottom:8px;">`,
+              `<img src="${project.icon}" style="width:40px;height:40px;vertical-align:middle;margin-right:8px;">`,
+              `<p1 style="vertical-align:middle;"><font size="5px"><b>${project.name}</b></font></p1>`,
+              `</div>`,
+              `<p1 style="opacity:70%;">${project.description}</p1>`,
+              `</div></a>`
+            ].join(""));
           }
-          document.getElementById("bots").innerHTML = "<h2>Bots</h2>"+finalBots.join("<br>");
-          document.getElementById("apps").innerHTML = "<h2>Apps</h2>"+finalApps.join("<br>");
-          setDivs(document.getElementById("bots"));
-          setDivs(document.getElementById("apps"));
+          document.getElementById("highlights").innerHTML = "<h2>Highlights</h2>"+highlights.join("");
+          setDivs(document.getElementById("highlights"));
         });
       }
 
       function setDivs(parent) {
         let divs = parent.getElementsByTagName("div");
         for (i = 0; i < divs.length; i++) {
-          setBgRounded(divs[i], config.colorBgSecondary, true);
+          const div = divs[i];
+          if (div.id) setBgRounded(div, config.colorBgSecondary, true);
         }
       }
     </script>
