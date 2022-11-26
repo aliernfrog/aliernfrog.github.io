@@ -24,10 +24,10 @@ function loadProjectConfig(id) {
 function addHomeButton(url) {
   if (!url) url = "/";
   const topbar = document.getElementById("topbar");
-  const homeButtonHtml = `<a href=${url}>`+
-  `<div id="home" style="height:20px;display:inline-block;">`+
-  `<img src="${config.homeIcon}" style="width:20px;vertical-align:middle;">`+
-  `<p1><b>aliernfrog</b></p1>`,
+  const homeButtonHtml = `<a class="ignore-link" href=${url}>`+
+  `<div id="home" style="height:20px;display:inline-block;text-decoration:none;color:${config.colorText}">`+
+  `<img src="${config.homeIcon}" style="width:20px;vertical-align:middle;"> `+
+  `<p1 style="vertical-align:middle;"><b>aliernfrog</b></p1>`+
   `</div>`+
   `</a>`;
   topbar.innerHTML = "\n"+homeButtonHtml+"<br>"+topbar.innerHTML;
@@ -36,7 +36,7 @@ function addHomeButton(url) {
 
 function setAmbientColor(color) {
   const topbar = document.getElementById("topbar");
-  document.body.style.backgroundImage = `linear-gradient(${color}, ${config.colorBody} ${topbar.offsetHeight*2}px)`;
+  document.body.style.backgroundImage = `linear-gradient(${color}, ${config.colorBody} ${topbar.offsetHeight*3}px)`;
   document.body.style.backgroundRepeat = "no-repeat";
 }
 
@@ -61,12 +61,13 @@ function addHoverEffects(div) {
   }
 }
 
-function setLinkColors(linkColor, exclude) {
+function setLinkColors(linkColor) {
   let as = document.getElementsByTagName("a");
   for (i = 0; i < as.length; i++) {
-    as[i].style.textDecoration = "none";
-    addHoverEffects(as[i]);
-    if (!exclude.includes(as[i])) as[i].style.color = linkColor;
+    const element = as[i];
+    element.style.textDecoration = "none";
+    addHoverEffects(element);
+    if (element.className !== "ignore-link") element.style.color = linkColor;
   }
 }
 
