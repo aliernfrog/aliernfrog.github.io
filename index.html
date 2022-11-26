@@ -9,16 +9,16 @@
   </head>
   <body style="background-color:black;">
     <div id="topbar" style="text-align:center;">
-      <div style="margin-bottom:16px;">
+      <div style="margin-bottom:8px;">
         <img src="/assets/images/aliernfrog.png" style="width:64px;height:64px;vertical-align:middle;margin-right:8px;">
         <p1 style="vertical-align:middle;"><font size="5px"><b>aliernfrog</b></font></p1><br>
       </div>
       <p1 id="description">Please wait..</p1>
-    </div><br>
-
-    <div id="highlights"></div><br>
+    </div>
 
     <div id="socials" style="text-align:center;"></div>
+    
+    <div id="highlights"></div><br>
     
     <script>
       function onConfigLoaded() {
@@ -42,7 +42,6 @@
         document.body.style.fontFamily = config.font;
         document.getElementById("topbar").style.color = config.colorText;
         document.getElementById("highlights").style.color = config.colorText;
-        setBgRounded(document.getElementById("socials"), config.colorBgPrimary, false);
         setLinkColors(config.colorLink, []);
       }
 

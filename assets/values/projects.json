@@ -32,6 +32,27 @@
     ]
   },
   {
+    "id": "ensicord",
+    "name": "Ensicord",
+    "tags": ["app","opensource"],
+    "icon": "/assets/images/apps_ensicord.png",
+    "description": "Ensi bot, in a separate & offline app",
+    "url": "/ensicord/",
+    "readme": "https://raw.githubusercontent.com/aliernfrog/ensicord/master/README.md",
+    "actions": [
+      {
+        "title": "Download",
+        "color": "blue",
+        "url": "https://github.com/aliernfrog/ensicord/releases"
+      },
+      {
+        "title": "GitHub repository",
+        "color": "default",
+        "url": "https://github.com/aliernfrog/ensicord"
+      }
+    ]
+  },
+  {
     "id": "lactool",
     "name": "LAC Tool",
     "tags": ["app","opensource"],
@@ -49,27 +70,6 @@
         "title": "GitHub repository",
         "color": "default",
         "url": "https://github.com/aliernfrog/lac-tool"
-      }
-    ]
-  },
-  {
-    "id": "ensicord",
-    "name": "Ensicord",
-    "tags": ["app","opensource"],
-    "icon": "/assets/images/apps_ensicord.png",
-    "description": "Ensi Bot, but in a separate & offline app",
-    "url": "/",
-    "readme": "https://raw.githubusercontent.com/aliernfrog/ensicord/master/README.md",
-    "actions": [
-      {
-        "title": "Download",
-        "color": "blue",
-        "url": "https://github.com/aliernfrog/ensicord/releases"
-      },
-      {
-        "title": "GitHub repository",
-        "color": "default",
-        "url": "https://github.com/aliernfrog/ensicord"
       }
     ]
   }

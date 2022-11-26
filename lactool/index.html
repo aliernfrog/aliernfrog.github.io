@@ -15,7 +15,7 @@
     </div><br>
 
     <div id="partsRoot" style="text-align:center;"></div><br>
-    <div id="actionsRoot" style="text-align:center;"></div><br>
+    <div id="actionsRoot" style="text-align:center;"></div>
 
     <div id="socials" style="text-align:center;"></div>
 
@@ -41,12 +41,11 @@
         setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
         document.getElementById("header").style.color = config.colorText;
         document.getElementById("description").style.color = config.colorText;
-        setBgRounded(document.getElementById("socials"), config.colorBgPrimary);
       }
 
       function onRawFileRead(rawFile) {
         document.getElementById("description").innerHTML = getDescriptionFromReadme(rawFile);
-        loadPartsFromReadme(rawFile, document.getElementById("partsRoot"), ["# Building"]);
+        loadPartsFromReadme(rawFile, document.getElementById("partsRoot"), ["# LAC Tool"]);
         getActionButtons(document.getElementById("actionsRoot"));
         setLinkColors(config.colorLink, []);
       }
