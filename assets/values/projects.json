@@ -7,8 +7,6 @@
     "description": "A cursed chatting bot",
     "url": "/ensibot/",
     "readme": "/ensibot/README.md",
-    "type": "bot",
-    "disabled": false,
     "actions": [
       {
         "title": "Add to server",
@@ -25,8 +23,6 @@
     "description": "Google Play Store™️ scraper Discord bot with many useful features",
     "url": "/gpbot/",
     "readme": "/gpbot/README.md",
-    "type": "bot",
-    "disabled": false,
     "actions": [
       {
         "title": "Add to server<br><font size=\"2\">Might not work</font>",
@@ -43,8 +39,6 @@
     "description": "Do most LAC related stuff without having to mess with files",
     "url": "/lactool/",
     "readme": "/lactool/README.md",
-    "type": "app",
-    "disabled": false,
     "actions": [
       {
         "title": "Download",
@@ -66,8 +60,6 @@
     "description": "Ensi Bot, but in a separate & offline app",
     "url": "/",
     "readme": "https://raw.githubusercontent.com/aliernfrog/ensicord/master/README.md",
-    "type": "app",
-    "disabled": false,
     "actions": [
       {
         "title": "Download",
