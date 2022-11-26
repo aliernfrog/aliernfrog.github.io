@@ -10,7 +10,7 @@
   <body style="background-color:black;">
     <div id="topbar" style="text-align:center;">
       <img src="/assets/images/aliernfrog.png" alt="aliernfrog" style="width:64px;height:64px;">
-      <h1 id="header">aliernfrog</h1>
+      <h1>aliernfrog</h1>
       <p1 id="description">Please wait..</p1>
     </div><br>
 
@@ -38,10 +38,7 @@
       function loadDesign() {
         document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
-        setBgRounded(document.getElementById("topbar"), config.colorBgPrimary, false);
-        document.getElementById("header").style.color = config.colorText;
-        document.getElementById("description").style.color = config.colorText;
-        setBgRounded(document.getElementById("highlights"), config.colorBgPrimary, false);
+        document.getElementById("topbar").style.color = config.colorText;
         document.getElementById("highlights").style.color = config.colorText;
         setBgRounded(document.getElementById("socials"), config.colorBgPrimary, false);
         setLinkColors(config.colorLink, []);
@@ -78,7 +75,7 @@
             finalHtml.push(`</div></a>`);
             highlights.push(finalHtml.join(""));
           }
-          document.getElementById("highlights").innerHTML = `<h2 style="text-align:center;">Highlights</h2>${highlights.join("")}`;
+          document.getElementById("highlights").innerHTML = highlights.join("");
           setDivs(document.getElementById("highlights"));
           setTagDivs(document.getElementById("highlights"));
         });
@@ -88,7 +85,7 @@
         const divs = parent.getElementsByTagName("div");
         for (i = 0; i < divs.length; i++) {
           const div = divs[i];
-          if (div.id && div.className != "tag") setBgRounded(div, config.colorBgSecondary, true);
+          if (div.id && div.className != "tag") setBgRounded(div, config.colorBgPrimary, true);
         }
       }
 
@@ -99,7 +96,7 @@
           div.style.borderRadius = "25px";
           div.style.marginTop = "8px";
           div.style.padding = "3px 8px 3px 8px";
-          div.style.backgroundColor = config.colorBgPrimary;
+          div.style.backgroundColor = config.colorBgSecondary;
           div.style.opacity = "90%"
         }
       }
