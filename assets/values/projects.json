@@ -1,12 +1,13 @@
 [
   {
-    "_id": "ensibot",
+    "id": "ensibot",
     "name": "Ensi",
+    "tags": ["bot"],
     "icon": "/assets/images/bots_ensi.png",
+    "ambientColor": "#2A3249",
     "description": "A cursed chatting bot",
+    "url": "/ensibot/",
     "readme": "/ensibot/README.md",
-    "type": "bot",
-    "disabled": false,
     "actions": [
       {
         "title": "Add to server",
@@ -16,13 +17,14 @@
     ]
   },
   {
-    "_id": "gpbot",
+    "id": "gpbot",
     "name": "Play Store Bot",
+    "tags": ["bot"],
     "icon": "/assets/images/bots_gpbot.png",
+    "ambientColor": "#163C6D",
     "description": "Google Play Store™️ scraper Discord bot with many useful features",
+    "url": "/gpbot/",
     "readme": "/gpbot/README.md",
-    "type": "bot",
-    "disabled": false,
     "actions": [
       {
         "title": "Add to server<br><font size=\"2\">Might not work</font>",
@@ -32,34 +34,14 @@
     ]
   },
   {
-    "_id": "lactool",
-    "name": "LAC Tool",
-    "icon": "/assets/images/apps_lactool.png",
-    "description": "Do most LAC related stuff without having to mess with files",
-    "readme": "/lactool/README.md",
-    "type": "app",
-    "disabled": false,
-    "actions": [
-      {
-        "title": "Download",
-        "color": "blue",
-        "url": "https://github.com/aliernfrog/lac-tool/releases"
-      },
-      {
-        "title": "GitHub repository",
-        "color": "default",
-        "url": "https://github.com/aliernfrog/lac-tool"
-      }
-    ]
-  },
-  {
-    "_id": "ensicord",
+    "id": "ensicord",
     "name": "Ensicord",
+    "tags": ["app","opensource"],
     "icon": "/assets/images/apps_ensicord.png",
-    "description": "Ensi Bot, but in a separate & offline app",
+    "ambientColor": "#002668",
+    "description": "Ensi bot, in a separate & offline app",
+    "url": "/ensicord/",
     "readme": "https://raw.githubusercontent.com/aliernfrog/ensicord/master/README.md",
-    "type": "app",
-    "disabled": false,
     "actions": [
       {
         "title": "Download",
@@ -70,6 +52,28 @@
         "title": "GitHub repository",
         "color": "default",
         "url": "https://github.com/aliernfrog/ensicord"
+      }
+    ]
+  },
+  {
+    "id": "lactool",
+    "name": "LAC Tool",
+    "tags": ["app","opensource"],
+    "icon": "/assets/images/apps_lactool.png",
+    "ambientColor": "#151E2D",
+    "description": "Do most LAC related stuff without having to mess with files",
+    "url": "/lactool/",
+    "readme": "/lactool/README.md",
+    "actions": [
+      {
+        "title": "Download",
+        "color": "blue",
+        "url": "https://github.com/aliernfrog/lac-tool/releases"
+      },
+      {
+        "title": "GitHub repository",
+        "color": "default",
+        "url": "https://github.com/aliernfrog/lac-tool"
       }
     ]
   }

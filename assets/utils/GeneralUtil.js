@@ -2,8 +2,6 @@ var config = {};
 var projectConfig = {};
 
 document.documentElement.style.scrollBehavior = "smooth";
-document.body.style.marginLeft = "24px";
-document.body.style.marginRight = "24px";
 document.body.style["-webkit-tap-highlight-color"] = "transparent";
 
 function loadConfig() {
@@ -13,25 +11,39 @@ function loadConfig() {
   });
 }
 
-function loadProjectConfig(_id) {
+function loadProjectConfig(id) {
   fetch("/assets/values/projects.json").then(async response => {
     let json = await response.json();
-    let arr = json.filter(project => project._id === _id);
+    let arr = json.filter(project => project.id === id);
     projectConfig = arr[0];
+    if (projectConfig.ambientColor) setAmbientColor(projectConfig.ambientColor);
     onProjectConfigLoaded();
   });
 }
 
 function addHomeButton(url) {
   if (!url) url = "/";
-  let bodyHtml = document.body.innerHTML;
-  let homeButtonHtml = `<a href=${url}>`+
-  `<div id="home" style="height:20px;display:inline-block">`+
-  `<img src="${config.homeIcon}" alt="Home" style="width:20px">`+
+  const topbar = document.getElementById("topbar");
+  const homeButtonHtml = `<a class="ignore-link" href=${url}>`+
+  `<div id="home" style="height:20px;display:inline-block;text-decoration:none;color:${config.colorText}">`+
+  `<img src="${config.homeIcon}" style="width:20px;vertical-align:middle;"> `+
+  `<p1 style="vertical-align:middle;"><b>aliernfrog</b></p1>`+
   `</div>`+
   `</a>`;
-  document.body.innerHTML = "\n"+homeButtonHtml+"<br>"+bodyHtml;
+  topbar.innerHTML = "\n"+homeButtonHtml+"<br>"+topbar.innerHTML;
   setBgRounded(document.getElementById("home"), config.colorBgPrimary);
+}
+
+function setAmbientColor(color) {
+  const topbar = document.getElementById("topbar");
+  document.body.style.backgroundImage = `linear-gradient(${color}, ${config.colorBody} ${topbar.offsetHeight*3}px)`;
+  document.body.style.backgroundRepeat = "no-repeat";
+}
+
+function setHeaderStyle(id = "header") {
+  const header = document.getElementById(id);
+  header.style.fontSize = "30px";
+  header.style.fontWeight = "bold";
 }
 
 function setBgRounded(div, bgColor, hoverEffects) {
@@ -55,27 +67,32 @@ function addHoverEffects(div) {
   }
 }
 
-function setLinkColors(linkColor, exclude) {
+function setLinkColors(linkColor) {
   let as = document.getElementsByTagName("a");
   for (i = 0; i < as.length; i++) {
-    as[i].style.textDecoration = "none";
-    addHoverEffects(as[i]);
-    if (!exclude.includes(as[i])) as[i].style.color = linkColor;
+    const element = as[i];
+    element.style.textDecoration = "none";
+    element.style.fontWeight = "bold";
+    addHoverEffects(element);
+    if (element.className !== "ignore-link") element.style.color = linkColor;
   }
 }
 
 function getActionButtons(root) {
-  let actionsArr = projectConfig.actions;
+  const actionsArr = projectConfig.actions;
   if (actionsArr.length === 0) return;
-  let finalActions = [];
+  const finalActions = [];
   for (i = 0; i < actionsArr.length; i++) {
-    let action = actionsArr[i];
-    let title = action.title;
-    let url = action.url;
-    finalActions.push(`<a href="${url}"><div style="text-align:center;color:${config.colorText}"><h3>${title}</h3></div></a>`);
+    const action = actionsArr[i];
+    finalActions.push([
+      `<a href="${action.url}">`,
+      `<div style="text-align:center;color:${config.colorText};">`,
+      `<p><b>${action.title}</b></p>`,
+      `</div></a>`
+    ].join(""));
   }
-  root.innerHTML = finalActions.join("<br>");
-  let divs = root.getElementsByTagName("div");
+  root.innerHTML = finalActions.join("");
+  const divs = root.getElementsByTagName("div");
   for (i = 0; i < divs.length; i++) {
     let div = divs[i];
     let actionColor = actionsArr[i].color;
@@ -92,12 +109,15 @@ function getSocials(div) {
     let finalSocials = [];
     for (i = 0; i < socials.length; i++) {
       let social = socials[i];
-      finalSocials.push(`<a href="${social.url}" style="text-decoration:none;margin-left:8px;margin-right:8px;"><img src="${social.icon}" alt="${social.name}" style="width:32px;height:32px;"</a>`);
+      finalSocials.push(`<a href="${social.url}" style="text-decoration:none;padding:8px;"><div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;"><img src="${social.icon}" alt="${social.name}" style="width:30px;height:30px;vertical-align:middle;"></div></a>`);
     }
-    div.innerHTML = finalSocials.join("");
-    const elements = div.getElementsByTagName("img");
+    div.innerHTML = finalSocials.join(" ");
+    const elements = div.getElementsByTagName("div");
     for (i = 0; i < elements.length; i++) {
-      addHoverEffects(elements[i]);
+      const element = elements[i];
+      element.style.borderRadius = "25px";
+      element.style.backgroundColor = config.colorBgPrimary;
+      addHoverEffects(element);
     }
   });
 }

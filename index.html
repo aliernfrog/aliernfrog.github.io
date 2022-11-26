@@ -9,15 +9,15 @@
   </head>
   <body style="background-color:black;">
     <div id="topbar" style="text-align:center;">
-      <img src="/assets/images/aliernfrog.png" alt="aliernfrog" style="width:64px;height:64px;">
-      <h1 id="header">aliernfrog</h1>
+      <div style="margin-bottom:8px;">
+        <img src="/assets/images/aliernfrog.png" style="width:64px;height:64px;vertical-align:middle;margin-right:8px;">
+        <p1 id="header" style="vertical-align:middle;">aliernfrog</p1><br>
+      </div>
       <p1 id="description">Please wait..</p1>
-    </div><br><br>
-
-    <div id="bots" style="text-align:center;"></div><br><br>
-    <div id="apps" style="text-align:center;"></div><br><br>
-
-    <div id="socials" style="text-align:center;"></div>
+      <div id="socials" style="text-align:center;"></div>
+    </div>
+    
+    <div id="highlights"></div><br>
     
     <script>
       function onConfigLoaded() {
@@ -39,42 +39,67 @@
       function loadDesign() {
         document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
-        setBgRounded(document.getElementById("topbar"), config.colorBgPrimary, false);
-        document.getElementById("header").style.color = config.colorText;
-        document.getElementById("description").style.color = config.colorText;
-        setBgRounded(document.getElementById("bots"), config.colorBgPrimary, false);
-        document.getElementById("bots").style.color = config.colorText;
-        setBgRounded(document.getElementById("apps"), config.colorBgPrimary, false);
-        document.getElementById("apps").style.color = config.colorText;
-        setBgRounded(document.getElementById("socials"), config.colorBgPrimary, false);
+        document.getElementById("topbar").style.color = config.colorText;
+        document.getElementById("highlights").style.color = config.colorText;
         setLinkColors(config.colorLink, []);
+        setHeaderStyle();
+        setAmbientColor("#4D0001");
       }
 
       function loadProjects() {
         fetch("/assets/values/projects.json").then(async response => {
-          let projects = await response.json();
-          let finalBots = [];
-          let finalApps = [];
+          const projects = await response.json();
+          const highlights = [];
           for (i = 0; i < projects.length; i++) {
-            let project = projects[i];
-            let redirect = "/"+project._id;
-            if (project.disabled) redirect = "/";
-            if (project.disabled) project.description = project.disabled;
-            let str = `<a href="${redirect}/" style="text-decoration:none;"><div id="${project._id}" style="text-align:center;color:${config.colorText}"><img src="${project.icon}" style="width:64px;height:64px;"><h3>${project.name}</h3><p1>${project.description}</p1></div></a>`;
-            if (project.type === "bot") finalBots.push(str);
-            if (project.type === "app") finalApps.push(str);
+            const project = projects[i];
+            const finalHtml = [
+              `<a href="${project.url}" style="text-decoration:none;text-color:${config.colorText}">`,
+              `<div id="${project.id}" style="color:${config.colorText};">`,
+              `<div style="margin-bottom:8px;">`,
+              `<img src="${project.icon}" style="width:40px;height:40px;vertical-align:middle;margin-right:8px;">`,
+              `<p1 style="vertical-align:middle;"><font size="5px"><b>${project.name}</b></font></p1>`,
+              `</div>`,
+              `<p1 style="opacity:70%;">${project.description}</p1><br>`
+            ];
+            if (project.tags) {
+              const tags = [];
+              for (a = 0; a < project.tags.length; a++) {
+                const tagId = project.tags[a];
+                const tag = config.tags.find(t => t.id === tagId);
+                tags.push([
+                  `<div class="tag" id="${tag.id}" style="display:inline-block;vertical-align:middle;">`,
+                  `<p1><font size="2px">${tag.emoji} ${tag.name}</font></p1>`,
+                  `</div>`
+                ].join(""));
+              }
+              finalHtml.push(tags.join(" "));
+            }
+            finalHtml.push(`</div></a>`);
+            highlights.push(finalHtml.join(""));
           }
-          document.getElementById("bots").innerHTML = "<h2>Bots</h2>"+finalBots.join("<br>");
-          document.getElementById("apps").innerHTML = "<h2>Apps</h2>"+finalApps.join("<br>");
-          setDivs(document.getElementById("bots"));
-          setDivs(document.getElementById("apps"));
+          document.getElementById("highlights").innerHTML = highlights.join("");
+          setDivs(document.getElementById("highlights"));
+          setTagDivs(document.getElementById("highlights"));
         });
       }
 
       function setDivs(parent) {
-        let divs = parent.getElementsByTagName("div");
+        const divs = parent.getElementsByTagName("div");
         for (i = 0; i < divs.length; i++) {
-          setBgRounded(divs[i], config.colorBgSecondary, true);
+          const div = divs[i];
+          if (div.id && div.className != "tag") setBgRounded(div, config.colorBgPrimary, true);
+        }
+      }
+
+      function setTagDivs(parent) {
+        const divs = parent.getElementsByClassName("tag");
+        for (i = 0; i < divs.length; i++) {
+          const div = divs[i];
+          div.style.borderRadius = "25px";
+          div.style.marginTop = "8px";
+          div.style.padding = "3px 8px 3px 8px";
+          div.style.backgroundColor = config.colorBgSecondary;
+          div.style.opacity = "90%"
         }
       }
     </script>
