@@ -40,6 +40,12 @@ function setAmbientColor(color) {
   document.body.style.backgroundRepeat = "no-repeat";
 }
 
+function setHeaderStyle(id = "header") {
+  const header = document.getElementById(id);
+  header.style.fontSize = "30px";
+  header.style.fontWeight = "bold";
+}
+
 function setBgRounded(div, bgColor, hoverEffects) {
   div.style.borderRadius = "25px";
   div.style.padding = "8px";
@@ -66,6 +72,7 @@ function setLinkColors(linkColor) {
   for (i = 0; i < as.length; i++) {
     const element = as[i];
     element.style.textDecoration = "none";
+    element.style.fontWeight = "bold";
     addHoverEffects(element);
     if (element.className !== "ignore-link") element.style.color = linkColor;
   }

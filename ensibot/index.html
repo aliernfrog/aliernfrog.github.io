@@ -11,7 +11,7 @@
     <div id="topbar" style="text-align:center;">
       <div style="margin-bottom:8px;">
         <img id="icon" style="width:64px;height:64px;vertical-align:middle;margin-right:8px;">
-        <p1 id="header" style="vertical-align:middle;"><font size="5px"><b>Please wait..</b></font></p1><br>
+        <p1 id="header" style="vertical-align:middle;">Please wait..</p1><br>
       </div>
       <p1 id="description"></p1>
     </div><br>
@@ -40,6 +40,7 @@
         document.body.style.fontFamily = config.font;
         document.getElementById("topbar").style.color = config.colorText;
         addHomeButton();
+        setHeaderStyle();
       }
 
       function onRawFileRead(rawFile) {

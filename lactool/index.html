@@ -37,9 +37,10 @@
       }
 
       function loadDesign() {
-        addHomeButton();
         document.body.style.fontFamily = config.font;
         document.getElementById("topbar").style.color = config.colorText;
+        addHomeButton();
+        setHeaderStyle();
       }
 
       function onRawFileRead(rawFile) {

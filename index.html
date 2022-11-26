@@ -11,7 +11,7 @@
     <div id="topbar" style="text-align:center;">
       <div style="margin-bottom:8px;">
         <img src="/assets/images/aliernfrog.png" style="width:64px;height:64px;vertical-align:middle;margin-right:8px;">
-        <p1 style="vertical-align:middle;"><font size="5px"><b>aliernfrog</b></font></p1><br>
+        <p1 id="header" style="vertical-align:middle;">aliernfrog</p1><br>
       </div>
       <p1 id="description">Please wait..</p1>
       <div id="socials" style="text-align:center;"></div>
@@ -42,6 +42,7 @@
         document.getElementById("topbar").style.color = config.colorText;
         document.getElementById("highlights").style.color = config.colorText;
         setLinkColors(config.colorLink, []);
+        setHeaderStyle();
         setAmbientColor("#4D0001");
       }
 
