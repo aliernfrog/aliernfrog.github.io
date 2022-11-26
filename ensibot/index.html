@@ -9,8 +9,10 @@
   </head>
   <body style="background-color:black;">
     <div id="topbar" style="text-align:center;">
-      <img id="icon" style="width:64px;height:64px;">
-      <h1 id="header">Please wait..</h1>
+      <div style="margin-bottom:8px;">
+        <img id="icon" style="width:64px;height:64px;vertical-align:middle;margin-right:8px;">
+        <p1 id="header" style="vertical-align:middle;"><font size="5px"><b>Please wait..</b></font></p1><br>
+      </div>
       <p1 id="description"></p1>
     </div><br>
 
@@ -29,18 +31,15 @@
         loadDesign();
         document.title = projectConfig.name;
         document.getElementById("icon").src = projectConfig.icon;
-        document.getElementById("header").innerHTML = projectConfig.name;
+        document.getElementById("header").innerHTML = `<b>${projectConfig.name}</b>`;
         readRawFile(projectConfig.readme);
         getSocials(document.getElementById("socials"));
       }
 
       function loadDesign() {
         addHomeButton();
-        document.body.style.background = config.colorBody;
         document.body.style.fontFamily = config.font;
-        setBgRounded(document.getElementById("topbar"), config.colorBgPrimary);
-        document.getElementById("header").style.color = config.colorText;
-        document.getElementById("description").style.color = config.colorText;
+        document.getElementById("topbar").style.color = config.colorText;
       }
 
       function onRawFileRead(rawFile) {

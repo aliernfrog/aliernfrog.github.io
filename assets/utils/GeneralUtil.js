@@ -16,20 +16,28 @@ function loadProjectConfig(id) {
     let json = await response.json();
     let arr = json.filter(project => project.id === id);
     projectConfig = arr[0];
+    if (projectConfig.ambientColor) setAmbientColor(projectConfig.ambientColor);
     onProjectConfigLoaded();
   });
 }
 
 function addHomeButton(url) {
   if (!url) url = "/";
-  let bodyHtml = document.body.innerHTML;
-  let homeButtonHtml = `<a href=${url}>`+
-  `<div id="home" style="height:20px;display:inline-block">`+
-  `<img src="${config.homeIcon}" alt="Home" style="width:20px">`+
+  const topbar = document.getElementById("topbar");
+  const homeButtonHtml = `<a href=${url}>`+
+  `<div id="home" style="height:20px;display:inline-block;">`+
+  `<img src="${config.homeIcon}" style="width:20px;vertical-align:middle;">`+
+  `<p1><b>aliernfrog</b></p1>`,
   `</div>`+
   `</a>`;
-  document.body.innerHTML = "\n"+homeButtonHtml+"<br>"+bodyHtml;
+  topbar.innerHTML = "\n"+homeButtonHtml+"<br>"+topbar.innerHTML;
   setBgRounded(document.getElementById("home"), config.colorBgPrimary);
+}
+
+function setAmbientColor(color) {
+  const topbar = document.getElementById("topbar");
+  document.body.style.backgroundImage = `linear-gradient(${color}, ${config.colorBody} ${topbar.offsetHeight*2}px)`;
+  document.body.style.backgroundRepeat = "no-repeat";
 }
 
 function setBgRounded(div, bgColor, hoverEffects) {

@@ -10,7 +10,7 @@
     { "id": "app", "name": "App", "emoji": "📱" },
     { "id": "opensource", "name": "Open source", "emoji": "📂" }
   ],
-  "homeIcon": "/assets/images/action_back.png",
+  "homeIcon": "/assets/images/aliernfrog.png",
   "colorBody": "black",
   "colorText": "white",
   "colorLink": "#005DFF",
