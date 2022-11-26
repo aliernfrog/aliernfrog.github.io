@@ -1,10 +1,9 @@
 {
   "welcomeWarning": false,
   "welcomeMessages": [
-    "Welcome!",
-    "Welcome! Scroll down to find my bots and apps",
-    "My socials are located at the bottom of the page",
-    "Join my <a href=\"https://discord.gg/SQXqBMs\">Discord</a> to get updates"],
+    "See more on my <a href=\"https://github.com/aliernfrog\">GitHub</a>",
+    "Join my <a href=\"https://discord.gg/SQXqBMs\">Discord</a> to get updates"
+  ],
   "tags": [
     { "id": "bot", "name": "Bot", "emoji": "🤖" },
     { "id": "app", "name": "App", "emoji": "📱" },
