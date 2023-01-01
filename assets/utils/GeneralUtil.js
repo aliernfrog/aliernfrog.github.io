@@ -38,6 +38,7 @@ function setAmbientColor(color) {
   const topbar = document.getElementById("topbar");
   document.body.style.backgroundImage = `linear-gradient(${color}, ${config.colorBody} ${topbar.offsetHeight*3}px)`;
   document.body.style.backgroundRepeat = "no-repeat";
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
 }
 
 function setHeaderStyle(id = "header") {
