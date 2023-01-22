@@ -4,13 +4,13 @@
     "versionName": "v2.0",
     "preRelease": false,
     "body": "Changelog available on GitHub.",
-    "downloadUrl": "https://aliernfrog.github.io/lactool"
+    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/20/LacTool_2.0-github.apk"
   },
   "preRelease": {
     "versionCode": 201,
     "versionName": "v3.0.0-alpha01",
     "preRelease": true,
-    "body": "Not released yet.",
-    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/latest/download/lactool.apk"
+    "body": "# Major changes\n+ Rewritten in Jetpack Compose\n+ Material You theming\n+ Bottom navigation bar\n+ Faster file operations and optimization for newer Android versions\n\n# Map management\n+ Option to filter map objects and remove them\n+ Option to merge multiple maps",
+    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.0.0-alpha01/lactool.apk"
   }
 }
