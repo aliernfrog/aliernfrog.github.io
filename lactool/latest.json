@@ -1,0 +1,16 @@
+{
+  "stable": {
+    "versionCode": 20,
+    "versionName": "v2.0",
+    "preRelease": false,
+    "body": "Changelog available on GitHub.",
+    "downloadUrl": "https://aliernfrog.github.io/lactool"
+  },
+  "preRelease": {
+    "versionCode": 201,
+    "versionName": "v3.0.0-alpha01",
+    "preRelease": true,
+    "body": "Not released yet.",
+    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/latest/download/lactool.apk"
+  }
+}
