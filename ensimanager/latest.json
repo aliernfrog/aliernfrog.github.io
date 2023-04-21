@@ -1,1 +1,16 @@
-{}
+{
+  "stable": {
+    "versionCode": 174,
+    "versionName": "v1.7.4",
+    "preRelease": false,
+    "body": "## Features\n- update TopToast ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/93b7ea40dc20f07c1cf73bb39ea38d29bd5a4f15))\n- add option to post addon ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/a07373c1b42e0805df53631a863f515c29cb6c08))\n- **dashboard**: post addon button alignment ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/396cf63fa1877eddf75c25cfb2ea16e81a5b66a7))\n\n## Code Refactoring\n- use `stringResource` ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/dcabb968421be88def5e8d74174d7423d21665b1))\n\n## Builds\n- migrate to Kotlin DSL ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/987e44abbc6265d710f79266fc99d66c201f294c))\n\n## Continuous Integration\n- release-alpha workflow ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/d0754e86682a1de0156ab4cf990e5d8b7aa24237))\n- some changes ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/ee1c1245a81b4ef4cf236ea726af2abd5060d3f3))\n- **release-artifacts**: do not cancel running flows ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/41e033feb5c36478fb6f172d239a67fd950da567))\n\n## Chores\n- bump version to 1.7.4 ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/500aa6d30eb78f389f7e044e2daa8620c2332da5))\n\n## Commits\n- 3fd8432: Revert \"ci: some changes\" (aliernfrog)\n- 763c4a3: Revert \"ci: release-alpha workflow\" (aliernfrog)\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.7.4)",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.7.4/ensi-manager.apk"
+  },
+  "preRelease": {
+    "versionCode": 174,
+    "versionName": "v1.7.4",
+    "preRelease": false,
+    "body": "## Features\n- update TopToast ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/93b7ea40dc20f07c1cf73bb39ea38d29bd5a4f15))\n- add option to post addon ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/a07373c1b42e0805df53631a863f515c29cb6c08))\n- **dashboard**: post addon button alignment ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/396cf63fa1877eddf75c25cfb2ea16e81a5b66a7))\n\n## Code Refactoring\n- use `stringResource` ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/dcabb968421be88def5e8d74174d7423d21665b1))\n\n## Builds\n- migrate to Kotlin DSL ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/987e44abbc6265d710f79266fc99d66c201f294c))\n\n## Continuous Integration\n- release-alpha workflow ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/d0754e86682a1de0156ab4cf990e5d8b7aa24237))\n- some changes ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/ee1c1245a81b4ef4cf236ea726af2abd5060d3f3))\n- **release-artifacts**: do not cancel running flows ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/41e033feb5c36478fb6f172d239a67fd950da567))\n\n## Chores\n- bump version to 1.7.4 ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/500aa6d30eb78f389f7e044e2daa8620c2332da5))\n\n## Commits\n- 3fd8432: Revert \"ci: some changes\" (aliernfrog)\n- 763c4a3: Revert \"ci: release-alpha workflow\" (aliernfrog)\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.7.4)",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.7.4/ensi-manager.apk"
+  }
+}
