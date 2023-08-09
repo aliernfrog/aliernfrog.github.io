@@ -1,6 +1,6 @@
 {
   "stable": {
-    "versionCode": 0,
+    "versionCode": 140,
     "versionName": "v1.4.0",
     "preRelease": false,
     "body": "• Ability to check updates in app\n• Animations while navigating\n• Adjusted design of some components\n• Optimization",
@@ -9,7 +9,7 @@
     "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.4.0/pftool.apk"
   },
   "preRelease": {
-    "versionCode": 0,
+    "versionCode": 140,
     "versionName": "v1.4.0",
     "preRelease": false,
     "body": "• Ability to check updates in app\n• Animations while navigating\n• Adjusted design of some components\n• Optimization",
