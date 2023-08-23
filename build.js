@@ -7,7 +7,7 @@ import {
 } from "fs";
 import fsExtra from "fs-extra";
 import { parse as parseHTML } from "node-html-parser";
-import prettifyHTML from "html-prettify";
+import prettifyHTML from "pretty";
 import { readdirRecursively } from "./src/utils/FileUtil.js";
 import { parseBuilderConfig, parseHTMLAttrs } from "./src/utils/HTMLParserUtil.js";
 
