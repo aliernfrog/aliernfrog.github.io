@@ -6,6 +6,15 @@
   </head>
 
   <body style="background-color:black;color:white;font-family:Open Sans,sans-serif">
+    <script>
+      function setAmbientColor(color) {
+        const topbar = document.getElementById("topbar");
+        document.body.style.backgroundImage = `linear-gradient(${color}, black ${topbar.offsetHeight*3}px)`;
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
+      }
+    </script>
+    
     <builder-content/>
   </body>
 </html>
