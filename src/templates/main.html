@@ -1,3 +1,8 @@
+<builder
+  primarySurfaceColor="#232323"
+  onPrimarySurfaceColor="#FFFFFF"
+/>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,14 +12,41 @@
 
   <body style="background-color:black;color:white;font-family:Open Sans,sans-serif">
     <script>
+      document.documentElement.style.scrollBehavior = "smooth";
+      document.body.style["-webkit-tap-highlight-color"] = "transparent";
+      
       function setAmbientColor(color) {
         const topbar = document.getElementById("topbar");
         document.body.style.backgroundImage = `linear-gradient(${color}, black ${topbar.offsetHeight*3}px)`;
         document.body.style.backgroundRepeat = "no-repeat";
         document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
       }
+
+      function addHoverEffects(div) {
+        div.style.transitionDuration = "0.2s";
+        div.onmouseover = () => div.style.opacity = "0.3";
+        div.ontouchstart = () => div.style.opacity = "0.3";
+        div.onmouseout = () => div.style.opacity = "1";
+        div.ontouchend = () => div.style.opacity = "1";
+        div.ontouchcancel = () => div.style.opacity = "1";
+        div.onclick = () => {
+          div.style.opacity = "0.3";
+          setTimeout(() => div.style.opacity = "1", 200);
+        }
+      }
     </script>
     
     <builder-content/>
+
+    <script>
+      /* Set links style */
+      const links = document.getElementsByTagName("a");
+      for (let i = 0; i < links.length; i++) {
+        const link = links[i];
+        link.style.textDecoration = "none";
+        link.style.color = "white";
+        addHoverEffects(link);
+      }
+    </script>
   </body>
 </html>
