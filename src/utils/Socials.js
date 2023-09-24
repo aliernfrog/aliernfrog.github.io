@@ -1,9 +1,9 @@
-const IMAGES_DIR = "assets/images";
+const IMAGES_DIR = "/assets/images";
 
 const discord = () => ({
   label: "Discord",
   icon: `${IMAGES_DIR}/social_discord.png`,
-  url: "https://discord.gg/" //TODO
+  url: "https://discord.gg/SQXqBMs"
 });
 
 const github = (repo) => ({

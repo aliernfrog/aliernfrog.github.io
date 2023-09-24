@@ -1,5 +1,6 @@
 import {
   existsSync,
+  lstatSync,
   mkdirSync,
   readFileSync,
   rmSync,
@@ -11,8 +12,10 @@ import prettifyHTML from "pretty";
 import socials from "./src/utils/Socials.js";
 import { readdirRecursively } from "./src/utils/FileUtil.js";
 import { parseBuilderConfig, parseHTMLAttrs } from "./src/utils/HTMLParserUtil.js";
+import projects from "./src/values/projects.json" assert { type: "json" }
 
 const DIST_DIR = "./dist";
+const PROJECT_TEMPLATE_FILE = "./src/misc/project_template.html";
 
 const builder = {
   components: new Map(),
@@ -21,6 +24,11 @@ const builder = {
 
 async function init() {
   console.log("Building..");
+
+  const ctx = {
+    builder: builder,
+    socials: socials
+  }
   
   if (existsSync(DIST_DIR)) {
     rmSync(DIST_DIR, { recursive: true });
@@ -50,14 +58,34 @@ async function init() {
   for (const file of pageFiles) {
     const route = normalizeName(file, "./src/pages/");
     const content = readFileSync(file).toString().replaceAll("\n","");
-    const node = buildPage(parseHTML(content).removeWhitespace());
+    const node = buildPage(parseHTML(content).removeWhitespace(), ctx);
     writeFileSync(`${DIST_DIR}/${route}`, prettifyHTML(node.toString()));
     console.log(`Successfully built: ${route}`);
   }
 
+  const projectTemplate = readFileSync(PROJECT_TEMPLATE_FILE).toString();
+  for (const project of projects) {
+    // TODO maybe there is a better way to do this?
+    const node = buildPage(
+      parseHTML(
+        projectTemplate
+          .replaceAll("{{PROJECT.NAME}}", project.name)
+          .replaceAll("{{PROJECT.DESCRIPTION}}", project.description)
+          .replaceAll("{{PROJECT.ICON}}", project.icon)
+          .replaceAll("{{PROJECT.AMBIENT_COLOR}}", project.ambientColor)
+          .replaceAll("{{PROJECT.README}}", project.readme)
+      ),
+      ctx
+    );
+    const parentPath = `${DIST_DIR}/${project.url}`;
+    mkdirSync(parentPath);
+    const path = `${parentPath}/index.html`;
+    writeFileSync(path, prettifyHTML(node.toString()));
+    console.log(`Succesfully built project: ${project.name} > ${path}`);
+  }
+
   fsExtra.copySync("./src/static", DIST_DIR, { filter: (src, dst) => {
-    if (dst == DIST_DIR) return true;
-    if (existsSync(dst)) {
+    if (existsSync(dst) && lstatSync(dst).isFile()) {
       console.error(`${dst} already exists, can't copy static file!`);
       return false;
     }
@@ -68,12 +96,8 @@ async function init() {
   console.log("Successfully built!");
 }
 
-function buildPage(node) {
-  const ctx = {
-    builder: builder,
-    socials: socials
-  }
-  
+function buildPage(node, globalCtx) {
+  const ctx = { ... globalCtx }
   const builderNode = node.getElementsByTagName("builder")[0];
   const builderConfig = parseBuilderConfig(builderNode);
   builderNode.remove();
@@ -89,6 +113,12 @@ function buildPage(node) {
     node = template;
   }
 
+  buildNode(node, ctx);
+  
+  return node;
+}
+
+function buildNode(node, ctx) {
   const customComponents = node.getElementsByTagName("builder-component");
   customComponents.forEach(element => {
     const options = parseHTMLAttrs(element.rawAttrs);
@@ -96,11 +126,10 @@ function buildPage(node) {
     if (!component) console.error(`No component found with name: ${options.name}!`);
     else {
       const componentNode = parseHTML(component);
+      buildNode(componentNode, ctx);
       element.replaceWith(componentNode);
     }
   });
-                                                                                       
-  return node;
 }
 
 function normalizeName(name, prefix, suffix) {

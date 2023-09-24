@@ -1,0 +1,14 @@
+{
+  "discord-bot": {
+    "label": "Bot",
+    "emoji": "🤖"
+  },
+  "mobile-app": {
+    "label": "App",
+    "emoji": "📱"
+  },
+  "open-source": {
+    "label": "Open source",
+    "emoji": "📂"
+  }
+}
