@@ -61,7 +61,7 @@ async function init() {
   const pageFiles = readdirRecursively("./src/pages").filter(f => f.endsWith(".html"));
   for (const file of pageFiles) {
     const route = normalizeName(file, "./src/pages/");
-    const content = readFileSync(file).toString().replaceAll("\n","");
+    const content = readFileSync(file).toString();
     const node = buildPage(parseHTML(content).removeWhitespace(), ctx);
     writeFileSync(`${DIST_DIR}/${route}`, prettifyHTML(node.toString()));
     console.log(`Successfully built: ${route}`);
@@ -71,7 +71,6 @@ async function init() {
     for (const file of project.files) {
       let finalContent = file.content;
       if (file.path.endsWith(".html")) {
-        finalContent = finalContent.replaceAll("\n","");
         const regex = /{{project\.(.*?)}}/g;
         const matches = finalContent.matchAll(regex);
         
