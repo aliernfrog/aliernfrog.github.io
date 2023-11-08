@@ -1,0 +1,11 @@
+{
+  "id": "ensicord",
+  "name": "Ensicord",
+  "tags": ["mobile-app","open-source"],
+  "icon": "/assets/images/apps_ensicord.png",
+  "ambientColor": "#002668",
+  "description": "Ensi bot, in a separate & offline app",
+  "url": "/ensicord/",
+  "github": "https://github.com/aliernfrog/ensicord",
+  "download": "https://github.com/aliernfrog/ensicord/releases/latest/download/Ensicord.apk"
+}

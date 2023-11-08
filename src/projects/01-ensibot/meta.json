@@ -1,0 +1,10 @@
+{
+  "id": "ensibot",
+  "name": "Ensi",
+  "tags": ["discord-bot"],
+  "icon": "/assets/images/bots_ensi.png",
+  "ambientColor": "#2A3249",
+  "description": "A cursed chatting bot",
+  "url": "/ensibot/",
+  "invite": "https://discord.com/oauth2/authorize?client_id=696151319819321368&permissions=139653925953&scope=bot%20applications.commands"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "gpbot",
+  "name": "Play Store Bot",
+  "tags": ["discord-bot"],
+  "icon": "/assets/images/bots_gpbot.png",
+  "ambientColor": "#163C6D",
+  "description": "Google Play Store™️ scraper Discord bot with many useful features",
+  "url": "/gpbot/",
+  "invite": "https://discord.com/api/oauth2/authorize?client_id=806615704987762759&permissions=412384349249&scope=bot%20applications.commands"
+}

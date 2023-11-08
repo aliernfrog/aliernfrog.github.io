@@ -1,5 +1,11 @@
 import { readdirSync, statSync } from "fs";
 
+export function getParentFilePath(path) {
+  const split = path.split("/");
+  split.pop();
+  return split.join("/");
+}
+
 export function readdirRecursively(path) {
   let files = [];
   readdirSync(path).forEach(file => {

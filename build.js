@@ -10,20 +10,24 @@ import fsExtra from "fs-extra";
 import { parse as parseHTML } from "node-html-parser";
 import prettifyHTML from "pretty";
 import socials from "./src/utils/Socials.js";
-import { readdirRecursively } from "./src/utils/FileUtil.js";
+import { getParentFilePath, readdirRecursively } from "./src/utils/FileUtil.js";
 import { parseBuilderConfig, parseHTMLAttrs } from "./src/utils/HTMLParserUtil.js";
-import projects from "./src/values/projects.json" assert { type: "json" }
+import getProjects from "./src/projects/index.js";
 
 const DIST_DIR = "./dist";
-const PROJECT_TEMPLATE_FILE = "./src/misc/project_template.html";
 
 const builder = {
   components: new Map(),
-  templates: new Map()
+  templates: new Map(),
+  projects: []
 }
 
 async function init() {
   console.log("Building..");
+
+  const projects = await getProjects();
+  builder.projects = projects;
+  console.log(`Loaded ${projects.length} projects`);
 
   const ctx = {
     builder: builder,
@@ -63,25 +67,34 @@ async function init() {
     console.log(`Successfully built: ${route}`);
   }
 
-  const projectTemplate = readFileSync(PROJECT_TEMPLATE_FILE).toString();
   for (const project of projects) {
-    // TODO maybe there is a better way to do this?
-    const node = buildPage(
-      parseHTML(
-        projectTemplate
-          .replaceAll("{{PROJECT.NAME}}", project.name)
-          .replaceAll("{{PROJECT.DESCRIPTION}}", project.description)
-          .replaceAll("{{PROJECT.ICON}}", project.icon)
-          .replaceAll("{{PROJECT.AMBIENT_COLOR}}", project.ambientColor)
-          .replaceAll("{{PROJECT.README}}", project.readme)
-      ),
-      ctx
-    );
-    const parentPath = `${DIST_DIR}/${project.url}`;
-    mkdirSync(parentPath);
-    const path = `${parentPath}/index.html`;
-    writeFileSync(path, prettifyHTML(node.toString()));
-    console.log(`Succesfully built project: ${project.name} > ${path}`);
+    for (const file of project.files) {
+      let finalContent = file.content;
+      if (file.path.endsWith(".html")) {
+        finalContent = finalContent.replaceAll("\n","");
+        const regex = /{{project\.(.*?)}}/g;
+        const matches = finalContent.matchAll(regex);
+        
+        for (const match of matches) {
+          const varName = match[1];
+          const replacement = project[varName];
+          if (!replacement) console.warn(`[${project.id}] ${file.path}: project has no variable '${varName}'`);
+          else finalContent = finalContent.replace(match[0], replacement);
+        }
+        
+        const node = buildPage(
+          parseHTML(finalContent),
+          ctx
+        );
+        finalContent = prettifyHTML(node.toString());
+      }
+      const path = `${DIST_DIR}/${project.url}/${file.path}`;
+      const parentPath = getParentFilePath(path);
+      mkdirSync(parentPath);
+      writeFileSync(path, finalContent);
+    }
+    if (project.files.length) console.log(`Succesfully built project: ${project.id} (${project.files.length} files)`);
+    else console.log(`Project ${project.id} has no files`);
   }
 
   fsExtra.copySync("./src/static", DIST_DIR, { filter: (src, dst) => {
@@ -122,7 +135,7 @@ function buildNode(node, ctx) {
   const customComponents = node.getElementsByTagName("builder-component");
   customComponents.forEach(element => {
     const options = parseHTMLAttrs(element.rawAttrs);
-    const component = builder.components.get(options.name)?.(options, ctx);
+    const component = builder.components.get(options.name)?.(options, ctx, element);
     if (!component) console.error(`No component found with name: ${options.name}!`);
     else {
       const componentNode = parseHTML(component);

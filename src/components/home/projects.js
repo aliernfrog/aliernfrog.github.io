@@ -1,9 +1,10 @@
-import projects from "../../values/projects.json" assert { type: "json" }
 import tags from "../../values/tags.js";
 
 export default function({}, {
+  builder,
   templateConfig
 }) {
+  const { projects } = builder;
   const projectDivs = [];
   
   projects.forEach(project => {

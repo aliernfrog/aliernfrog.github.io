@@ -1,0 +1,11 @@
+{
+  "id": "lactool",
+  "name": "LAC Tool",
+  "tags": ["mobile-app","open-source"],
+  "icon": "/assets/images/apps_lactool.png",
+  "ambientColor": "#252E3D",
+  "description": "Do most LAC related stuff without having to mess with files",
+  "url": "/lactool/",
+  "download": "https://github.com/aliernfrog/lac-tool/releases/tag/20",
+  "downloadAlpha": "https://github.com/aliernfrog/lac-tool/releases"
+}

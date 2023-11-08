@@ -1,0 +1,58 @@
+<builder>
+  <meta
+    title="{{project.name}}"
+    description="{{project.description}}"
+  />
+  <template name="main"/>
+</builder>
+
+<builder-component
+  name="topbar"
+  title="{{project.name}}"
+  description="{{project.description}}"
+  icon="{{project.icon}}"
+/>
+
+<div style="padding:8px;">
+
+  <h1>Main features</h1>
+  <p1>
+    • Tracking updates of apps<br>
+    • Getting useful information about apps, including some information which may not be visible in Google Play client.<br>
+    • Multiple languages: English, Polish and Turkish
+  </p1><br>
+
+  <br>
+  
+  <h1>Tracking app updates</h1>
+  <p1>
+    • App updates can be tracked using <code>/app-track</code> command.<br>
+    • Only 5 apps can be tracked per server.
+  </p1><br>
+
+  <br>
+
+  <h1>Some useful information</h1>
+  <p1>
+    • To search apps, use <code>/app-search</code> command.<br>
+    • To search using app ID, use <code>/app-info</code> command.<br>
+    • To change language, use <code>/options</code> command.
+  </p1><br>
+
+  <br>
+
+  <builder-component
+    name="card"
+    title="Add to server"
+    description="This may not work as the bot has reached the server limit (100).",
+    containerColor="#005DFF"
+    link="{{project.invite}}"
+  />
+
+</div>
+
+<builder-component name="socials"/>
+
+<script>
+  setAmbientColor("{{project.ambientColor}}");
+</script>

@@ -15,39 +15,58 @@
     <script>
       document.documentElement.style.scrollBehavior = "smooth";
       document.body.style["-webkit-tap-highlight-color"] = "transparent";
+
+      let linksColor = "#005DFF";
       
       function setAmbientColor(color) {
         const topbar = document.getElementById("topbar");
         document.body.style.backgroundImage = `linear-gradient(${color}, black ${topbar.offsetHeight*3}px)`;
         document.body.style.backgroundRepeat = "no-repeat";
         document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
+        setLinksStyle(changeColor(color, 100, 150));
+      }
+
+      function setLinksStyle(color = linksColor) {
+        const links = document.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+          const link = links[i];
+          link.style.textDecoration = "none";
+          link.style.color = link.innerHTML.toString().includes("<div") ? "white" : color;
+          addHoverEffects(link);
+        }
+        linksColor = color;
       }
 
       function addHoverEffects(div) {
-        div.style.transitionDuration = "0.2s";
-        div.onmouseover = () => div.style.opacity = "0.3";
-        div.ontouchstart = () => div.style.opacity = "0.3";
-        div.onmouseout = () => div.style.opacity = "1";
-        div.ontouchend = () => div.style.opacity = "1";
-        div.ontouchcancel = () => div.style.opacity = "1";
-        div.onclick = () => {
-          div.style.opacity = "0.3";
-          setTimeout(() => div.style.opacity = "1", 200);
+        const add = () => {
+          div.style.opacity = "0.5";
         }
+        const remove = () => {
+          div.style.opacity = "1";
+        }
+        div.style.transitionDuration = "0.2s";
+        div.onmouseover = add;
+        div.ontouchstart = add;
+        div.onmouseout = remove;
+        div.ontouchend = remove;
+        div.ontouchcancel = remove;
+        div.onclick = () => {
+          add();
+          setTimeout(remove, 200);
+        }
+      }
+
+      function changeColor(color, amount, blueOverride) {
+        const clamp = (val) => Math.min(Math.max(val, 0), 0xFF);
+        const fill = (str) => ('00' + str).slice(-2);
+        const num = parseInt(color.substr(1), 16);
+        const red = clamp((num >> 16) + amount);
+        const green = clamp(((num >> 8) & 0x00FF) + amount);
+        const blue = clamp((num & 0x0000FF) + (blueOverride || amount));
+        return '#' + fill(red.toString(16)) + fill(green.toString(16)) + fill(blue.toString(16));
       }
     </script>
     
     <builder-content/>
-
-    <script>
-      /* Set links style */
-      const links = document.getElementsByTagName("a");
-      for (let i = 0; i < links.length; i++) {
-        const link = links[i];
-        link.style.textDecoration = "none";
-        link.style.color = "white";
-        addHoverEffects(link);
-      }
-    </script>
   </body>
 </html>

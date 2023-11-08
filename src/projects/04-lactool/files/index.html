@@ -1,0 +1,72 @@
+<builder>
+  <meta
+    title="{{project.name}}"
+    description="{{project.description}}"
+  />
+  <template name="main"/>
+</builder>
+
+<builder-component
+  name="topbar"
+  title="{{project.name}}"
+  description="{{project.description}}"
+  icon="{{project.icon}}"
+/>
+
+<div style="text-align:center;">
+  <builder-component
+    name="chip-button"
+    label="Download"
+    icon="/assets/images/download.png"
+    link="{{project.download}}"
+    containerColor="#005DFF"
+  />
+  
+  <builder-component
+    name="chip-button"
+    label="Alpha"
+    icon="/assets/images/download.png"
+    link="{{project.downloadAlpha}}"
+  />
+</div>
+
+<div style="padding:8px;">
+  <div style="text-align:center;">
+    <h2>Requirements</h2>
+    <p1>
+      • Stable: Android 4.3 or above<br>
+      • Alpha: Android 6.0 or above
+    </p1><br><br>
+
+    <br>
+    
+    <img alt="LAC Tool (alpha) screenshot" src="https://github.com/aliernfrog/lac-tool/blob/main/images/maps.jpg?raw=true" width="200px"/><br>
+    <p2 style="opacity:70%;"><i>* Screenshot from LAC Tool v3.0.0-alpha04</i></p2>
+  </div><br>
+
+  <br>
+
+  <h1>Main features</h1>
+  <p1>
+    • Import, export and share maps<br>
+    • Manage options, roles and materials of maps<br>
+    • Merge multiple maps<br>
+    • Manage wallpaper of the in-game cellphone<br>
+    • View screenshots taken using the in-game cellphone
+  </p1><br>
+
+  <br>
+
+  <div style="text-align:center;">
+    <img alt="Download count" src="https://img.shields.io/github/downloads/aliernfrog/lac-tool/total?style=for-the-badge&label=Download%20Count">
+  </div>
+</div>
+
+<builder-component
+  name="socials"
+  path="lactool"
+/>
+
+<script>
+  setAmbientColor("{{project.ambientColor}}");
+</script>
