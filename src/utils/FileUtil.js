@@ -1,4 +1,10 @@
-import { readdirSync, statSync } from "fs";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  statSync,
+  writeFileSync
+} from "fs";
 
 export function getParentFilePath(path) {
   const split = path.split("/");
@@ -17,4 +23,10 @@ export function readdirRecursively(path) {
     else files.push(absolute);
   });
   return files;
+}
+
+export function writeFile(path, content) {
+  const parentPath = getParentFilePath(path);
+  if (!existsSync(parentPath)) mkdirSync(parentPath);
+  writeFileSync(path, content);
 }

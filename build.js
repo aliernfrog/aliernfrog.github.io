@@ -3,14 +3,13 @@ import {
   lstatSync,
   mkdirSync,
   readFileSync,
-  rmSync,
-  writeFileSync
+  rmSync
 } from "fs";
 import fsExtra from "fs-extra";
 import { parse as parseHTML } from "node-html-parser";
 import prettifyHTML from "pretty";
 import socials from "./src/utils/Socials.js";
-import { getParentFilePath, readdirRecursively } from "./src/utils/FileUtil.js";
+import { getParentFilePath, readdirRecursively, writeFile } from "./src/utils/FileUtil.js";
 import { parseBuilderConfig, parseHTMLAttrs } from "./src/utils/HTMLParserUtil.js";
 import getProjects from "./src/projects/index.js";
 
@@ -63,7 +62,7 @@ async function init() {
     const route = normalizeName(file, "./src/pages/");
     const content = readFileSync(file).toString();
     const node = buildPage(parseHTML(content).removeWhitespace(), ctx);
-    writeFileSync(`${DIST_DIR}/${route}`, prettifyHTML(node.toString()));
+    writeFile(`${DIST_DIR}/${route}`, prettifyHTML(node.toString()));
     console.log(`Successfully built: ${route}`);
   }
 
@@ -71,29 +70,29 @@ async function init() {
     for (const file of project.files) {
       let finalContent = file.content;
       if (file.path.endsWith(".html")) {
-        const regex = /{{project\.(.*?)}}/g;
-        const matches = finalContent.matchAll(regex);
-        
-        for (const match of matches) {
-          const varName = match[1];
-          const replacement = project[varName];
-          if (!replacement) console.warn(`[${project.id}] ${file.path}: project has no variable '${varName}'`);
-          else finalContent = finalContent.replace(match[0], replacement);
-        }
-        
+        finalContent = replacePlaceholders(finalContent, "project", project);
         const node = buildPage(
-          parseHTML(finalContent),
-          ctx
+          parseHTML(finalContent), ctx
         );
         finalContent = prettifyHTML(node.toString());
       }
       const path = `${DIST_DIR}/${project.url}/${file.path}`;
-      const parentPath = getParentFilePath(path);
-      mkdirSync(parentPath);
-      writeFileSync(path, finalContent);
+      writeFile(path, finalContent);
     }
     if (project.files.length) console.log(`Succesfully built project: ${project.id} (${project.files.length} files)`);
     else console.log(`Project ${project.id} has no files`);
+  }
+
+  for (const social of socials.socials.aliernfrog) {
+    const node = buildPage(parseHTML([
+      `<builder>`,
+      `<meta title="aliernfrog ${social.label}" icon="${social.icon}" />`,
+      `<template name="redirect" redirect="${social.url}" />`,
+      `</builder>`
+    ].join("")));
+    const finalContent = prettifyHTML(node.toString());
+    writeFile(`${DIST_DIR}/${social.label.toLowerCase()}/index.html`, finalContent);
+    console.log(`Created redirect page for social: ${social.label}`);
   }
 
   let copiedStaticFiles = 0;
@@ -107,7 +106,7 @@ async function init() {
   } });
   console.log(`Copied ${copiedStaticFiles} static files`);
   
-  console.log("Successfully built!");
+  console.log(`Successfully built at: ${DIST_DIR}`);
 }
 
 function buildPage(node, globalCtx) {
@@ -116,14 +115,17 @@ function buildPage(node, globalCtx) {
   const builderConfig = parseBuilderConfig(builderNode);
   builderNode.remove();
 
-  const rawTemplate = builder.templates.get(builderConfig.template?.name);
+  let rawTemplate = builder.templates.get(builderConfig.template?.name);
   if (rawTemplate) {
+    rawTemplate = replacePlaceholders(rawTemplate, "config", builderConfig.template);
     const template = parseHTML(rawTemplate).removeWhitespace();
     const templateBuilderNode = template.getElementsByTagName("builder")[0];
     ctx.templateConfig = parseHTMLAttrs(templateBuilderNode);
-    templateBuilderNode.remove();
+    templateBuilderNode?.remove();
     const body = template.getElementsByTagName("body")[0];
-    body.getElementsByTagName("builder-content")[0].replaceWith(node);
+    body.getElementsByTagName("builder-content")?.forEach?.(
+      element => element.replaceWith(node)
+    );
     const meta = builderConfig.meta;
     if (meta) {
       const head = template.getElementsByTagName("head")[0];
@@ -156,6 +158,18 @@ function buildNode(node, ctx) {
       element.replaceWith(componentNode);
     }
   });
+}
+
+function replacePlaceholders(str, objName, obj) {
+  const regex = new RegExp(`{{${objName}\\.(.*?)}}`, "g");
+  const matches = str.matchAll(regex);
+  for (const match of matches) {
+    const varName = match[1];
+    const replacement = obj[varName];
+    if (!replacement) console.warn(`No such property: ${varName}`);
+    else str = str.replaceAll(match[0], replacement);
+  }
+  return str;
 }
 
 function normalizeName(name, prefix, suffix) {
