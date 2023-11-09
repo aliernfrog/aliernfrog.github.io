@@ -96,14 +96,16 @@ async function init() {
     else console.log(`Project ${project.id} has no files`);
   }
 
+  let copiedStaticFiles = 0;
   fsExtra.copySync("./src/static", DIST_DIR, { filter: (src, dst) => {
     if (existsSync(dst) && lstatSync(dst).isFile()) {
       console.error(`${dst} already exists, can't copy static file!`);
       return false;
     }
-    console.log(`Copying static file.. - ${src} > ${dst}`);
+    copiedStaticFiles++;
     return true;
   } });
+  console.log(`Copied ${copiedStaticFiles} static files`);
   
   console.log("Successfully built!");
 }
