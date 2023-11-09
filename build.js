@@ -122,8 +122,20 @@ function buildPage(node, globalCtx) {
     const templateBuilderNode = template.getElementsByTagName("builder")[0];
     ctx.templateConfig = parseHTMLAttrs(templateBuilderNode);
     templateBuilderNode.remove();
-    const body = template.getElementsByTagName("html")[0].getElementsByTagName("body")[0];
+    const body = template.getElementsByTagName("body")[0];
     body.getElementsByTagName("builder-content")[0].replaceWith(node);
+    const meta = builderConfig.meta;
+    if (meta) {
+      const head = template.getElementsByTagName("head")[0];
+      head.innerHTML += "\n" + [
+        meta.title ? `<title>${meta.title}</title>` : "",
+        meta.title ? `<meta name="og:title" content="${meta.title}" />` : "",
+        meta.description ? `<meta name="description" content="${meta.description}" />` : "",
+        meta.description ? `<meta name="og:description" content="${meta.description}" />` : "",
+        meta.icon ? `<meta name="og:image" content="${meta.icon}" />` : "",
+        meta.icon ? `<link rel="icon" type="image/gif/png" href="${meta.icon}">` : ""
+      ].join("");
+    }
     node = template;
   }
 
