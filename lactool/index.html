@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="">
+    <title>LAC Tool</title>
+    <meta name="og:title" content="LAC Tool">
+    <meta name="description" content="Do most LAC related stuff without having to mess with files">
+    <meta name="og:description" content="Do most LAC related stuff without having to mess with files">
+    <meta name="og:image" content="/assets/images/apps_lactool.png">
+    <link rel="icon" type="image/gif/png" href="/assets/images/apps_lactool.png">
+  </head>
+
+  <body style="background-color:black;color:white;font-family:Open Sans,sans-serif">
+    <script>
+      document.documentElement.style.scrollBehavior = "smooth";
+      document.body.style["-webkit-tap-highlight-color"] = "transparent";
+      let linksColor = "#005DFF";
+
+      function setAmbientColor(color) {
+        const topbar = document.getElementById("topbar");
+        document.body.style.backgroundImage = `linear-gradient(${color}, black ${topbar.offsetHeight*3}px)`;
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
+        setLinksStyle(changeColor(color, 100, 150));
+      }
+
+      function setLinksStyle(color = linksColor) {
+        const links = document.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+          const link = links[i];
+          link.style.textDecoration = "none";
+          link.style.color = link.innerHTML.toString().includes("<div") ? "white" : color;
+          addHoverEffects(link);
+        }
+        linksColor = color;
+      }
+
+      function addHoverEffects(div) {
+        const add = () => {
+          div.style.opacity = "0.5";
+        }
+        const remove = () => {
+          div.style.opacity = "1";
+        }
+        div.style.transitionDuration = "0.2s";
+        div.onmouseover = add;
+        div.ontouchstart = add;
+        div.onmouseout = remove;
+        div.ontouchend = remove;
+        div.ontouchcancel = remove;
+        div.onclick = () => {
+          add();
+          setTimeout(remove, 200);
+        }
+      }
+
+      function changeColor(color, amount, blueOverride) {
+        const clamp = (val) => Math.min(Math.max(val, 0), 0xFF);
+        const fill = (str) => ('00' + str).slice(-2);
+        const num = parseInt(color.substr(1), 16);
+        const red = clamp((num >> 16) + amount);
+        const green = clamp(((num >> 8) & 0x00FF) + amount);
+        const blue = clamp((num & 0x0000FF) + (blueOverride || amount));
+        return '#' + fill(red.toString(16)) + fill(green.toString(16)) + fill(blue.toString(16));
+      }
+    </script>
+
+    <div id="topbar" style="text-align:center;"><a href="/">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#232323;color:#FFFFFF;"><img src="/assets/images/aliernfrog.png" alt="aliernfrog" style="width:22px;height:22px;vertical-align:middle;">
+          <p1 style="padding-left:4px;vertical-align:middle;">aliernfrog</p1>
+        </div>
+      </a>
+      <div style="margin-bottom:8px;"><img src="/assets/images/apps_lactool.png" style="width:64px;height:64px;vertical-align:middle;margin-right:8px;">
+        <p1 style="vertical-align:middle;font-size:30px;font-weight:bold;">LAC Tool</p1><br>
+      </div>
+      <p1>Do most LAC related stuff without having to mess with files</p1>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://github.com/aliernfrog/lac-tool/releases/tag/20">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#005DFF;color:#FFFFFF;"><img src="/assets/images/download.png" alt="Download" style="width:18px;height:18px;vertical-align:middle;">
+          <p1 style="padding-left:4px;vertical-align:middle;">Download</p1>
+        </div>
+      </a>
+
+      <a href="https://github.com/aliernfrog/lac-tool/releases">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#232323;color:#FFFFFF;"><img src="/assets/images/download.png" alt="Alpha" style="width:18px;height:18px;vertical-align:middle;">
+          <p1 style="padding-left:4px;vertical-align:middle;">Alpha</p1>
+        </div>
+      </a>
+    </div>
+
+    <div style="padding:8px;">
+      <a href=#oct2023>
+        <div style="border-radius:25px;padding:8px 16px 8px 16px;background-color:#DF0606;">
+          <div style="margin-bottom:8px;">
+            <p1 style="vertical-align:middle;font-size:20px;font-weight:bold;">⚠️ Warning</p1><br>
+          </div>
+          <p1 style="opacity:70%;">Android 11 and above versions using <b>October 2023 or higher security patches</b> may have issues with the app, click to learn more.</p1><br>
+        </div>
+      </a><br>
+
+      <div style="text-align:center;">
+        <h2>Requirements</h2>
+        <p1>
+          • Stable: Android 4.3 or above<br>
+          • Alpha: Android 6.0 or above
+        </p1><br>
+
+        <br>
+
+        <img alt="LAC Tool (alpha) screenshot" src="https://github.com/aliernfrog/lac-tool/blob/main/images/maps.jpg?raw=true" width="200px"><br>
+        <p2 style="opacity:70%;"><i>* Screenshot from LAC Tool v3.0.0-alpha04</i></p2>
+      </div><br>
+
+      <br>
+
+      <h1>Main features</h1>
+      <p1>
+        • Import, export and share maps<br>
+        • Manage options, roles and materials of maps<br>
+        • Merge multiple maps<br>
+        • Manage wallpaper of the in-game cellphone<br>
+        • View screenshots taken using the in-game cellphone
+      </p1><br>
+
+      <br>
+
+      <h1 id="oct2023">⚠️ October 2023 security patches</h1>
+      <p1>
+        App may not work correctly on Android 11 and above versions using <b>October 2023 or higher security patches</b> as those patches prevent apps from requesting access to files in <code>Android/data</code> folder.<br>
+        If you are affected by this, you can use following methods until a solution is found:<br>
+        <ul>
+          <li>Connect your device to a PC with USB, or use wireless debugging to manually manage files in <code>Android/data/com.MA.LAC/files</code>.
+            <ul>
+              <li><code>editor</code> folder contains maps</li>
+              <li><code>wallpaper</code> folder contains in-game cellphone wallpapers</li>
+              <li><code>screenshots</code> folder contains screenshots taken from the in-game cellphone</li>
+            </ul>
+          </li>
+          <li>Copy <code>.txt</code> link of the map and paste it on map name field upon creating a map, this will download the map.</li>
+          <li>Copy link of your wallpaper and paste it on in-game cellphone settings.</li>
+        </ul>
+      </p1><br>
+
+      <br>
+
+      <div style="text-align:center;">
+        <img alt="Download count" src="https://img.shields.io/github/downloads/aliernfrog/lac-tool/total?style=for-the-badge&label=Download%20Count">
+      </div>
+    </div>
+
+    <div style="text-align:center;"><a href="https://github.com/aliernfrog/lac-tool">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#232323;color:#FFFFFF;"><img src="/assets/images/social_github.png" alt="" style="width:28px;height:28px;vertical-align:middle;"></div>
+      </a><a href="https://discord.gg/SQXqBMs">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#232323;color:#FFFFFF;"><img src="/assets/images/social_discord.png" alt="" style="width:28px;height:28px;vertical-align:middle;"></div>
+      </a></div>
+
+    <script>
+      setAmbientColor("#252E3D");
+    </script>
+  </body>
+
+</html>

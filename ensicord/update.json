@@ -1,0 +1,6 @@
+{
+  "latest": 3,
+  "download": "https://github.com/aliernfrog/ensicord/releases/download/3/Ensicord.apk",
+  "changelog": "<b># Design</b><br>+ Better & centered icon<br>+ Better splash screen<br>+ Better send button<br>+ Rounded chatbox<br>+ New animations & more<br><br><b># Chat</b><br>+ Your chat history no longer resets<br>+ Starboard: save a message separately<br>+ Options for messages: long press a message to access them<br>+ Typing status for Ensi<br><br><b># DLCs</b><br>+ DLCs now have thumbnails<br>+ DLCs can now change Ensi's avatar<br>+ and more<br><br><b># More options</b><br>+ Save chat history, enabled by default<br>+ Updates, checks for Ensicord updates everytime you start Ensicord, enabled by default<br>+ Debug mode, saves logs in a text file, disabled by default<br><br><b># Fixes</b><br>+ All avatars are shown correctly, even the low resolution ones<br>+ New lines and extra messages no longer get removed when sending a message",
+  "changelogVersion": "1.3"
+}
