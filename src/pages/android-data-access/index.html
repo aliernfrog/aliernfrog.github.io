@@ -1,0 +1,77 @@
+<builder>
+  <meta
+    title="Android/data access"
+    description="Information for Android/data folder, which can no longer be easily accessed"
+  />
+  <template name="main"/>
+</builder>
+
+<builder-component
+  name="topbar"
+  title="Android/data access"
+  description="Apps were able to easily access Android/data folder by having the user grant access to it.<br>However, September 2023 update to the Files app made this impossible for Android 12 and above."
+/>
+
+<div style="padding:8px;">
+  <h1 id="current-workaround">The easiest workaround</h1>
+  <p1>Uninstalling updates of the Files app lets apps request access to Android/data.</p1>
+  <h2>How to uninstall updates of Files app?</h2>
+  <p1>
+    <i>Keep in mind that these steps may vary depending on your device</i><br>
+    Device settings > Apps > All apps/Manage apps > Files (app name depends on your language) > Uninstall updates
+  </p1>
+  <h2>Can't find Files app on the list?</h2>
+  <p1>Look for an option which hides the system apps in the list. It might also be in a three-dot menu.</p1>
+  <h2>Can't uninstall updates?</h2>
+  <p1>Check out the workarounds listed <a href="#other-workarounds">here</a>.</p1>
+
+  <br><br>
+
+  <h1 id="other-workarounds">Other workarounds</h1>
+  <ul>
+    <li>Connect your device to a PC with USB, or use ADB wireless debugging</li>
+    <li>Use <a href="https://shizuku.rikka.app/">Shizuku</a> with:<ul>
+      <li><a href="https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver&hl=tr&gl=US">ZArchiver</a> (closed-source) - i couldnt find the option, maybe i missed something?</li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.folderv.file&hl=en_US">FV File Manager</a> (closed-source)</li>
+    </ul></li>
+    <li>For workarounds for LAC or Polyfield, check <a href="#lac-pf">this</a></li>
+  </ul>
+
+  <br><br>
+
+  <h1 id="lac-pf">LAC & Polyfield workarounds</h1>
+  <ul>
+    <li id="lac">LAC:<ul>
+      <li>Copy <code>.txt</code> link of the map you want to download and paste it on map name field, then hit create</li>
+      <li>Copy link of the wallpaper you want to import and paste it on in-game cellphone settings</li>
+      <li>Manually manage files, check <a href="#other-workarounds">these</a> first<ul>
+        <li><code>Android/data/com.MA.LAC/files/editor</code> contains your maps</li>
+        <li><code>Android/data/com.MA.LAC.files/wallpaper</code> contains in-game cellphone wallpapers</li>
+        <li><code>Android/data/com.MA.LAC.files/screenshots</code> contains screensots taken using in-game cellphone</li>
+      </ul></li>
+    </ul></li>
+    <li id="pf">Polyfield:<ul>
+      <li>Download maps from in-game maps list</li>
+      <li>Manually manage files, check <a href="#other-workarounds">these</a> first<ul>
+        <li><code>Android/data/com.MA.Polyfield/files/editor</code> contains your maps</li>
+      </ul></li>
+    </ul></li>
+  </ul>
+
+  <br><br>
+
+  <h1 id="wip-tool">Shizuku for LAC Tool & PF Tool</h1>
+  <p1>
+    A <a href="https://shizuku.rikka.app/">Shizuku</a> support for LAC Tool and PF Tool is being worked on in <a href="https://github.com/aliernfrog/pf-tool/pull/29">this pull request</a>.<br>
+    This will let the app use wireless debugging through Shizuku. Currently figuring out how to make it work™
+  </p1>
+</div>
+
+<builder-component
+  name="socials"
+  showLabels="true"
+/>
+
+<script>
+  setAmbientColor("#222222");
+</script>
