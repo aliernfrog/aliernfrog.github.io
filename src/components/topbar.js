@@ -6,7 +6,7 @@ export default function({
 }) {
   const home = showHomeButton == "true" ? [
     `<builder-component name="chip-button"`,
-    `label="aliernfrog"`,
+    `label="alieRN"`,
     `icon="/assets/images/aliernfrog.png"`,
     `iconSize="22"`,
     `link="/" />`
