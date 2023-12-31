@@ -8,7 +8,7 @@ export default function({}, {
   const projectDivs = [];
   
   projects.forEach(project => {
-    function getTags() {
+    const projectTags = (() => {
       if (!project.tags?.length) return;
       const divs = [];
       project.tags.forEach(tagId => {
@@ -19,18 +19,15 @@ export default function({}, {
         );
       });
       return divs.join(" ");
-    }
+    })();
     
     projectDivs.push([
-      `<a href="${project.url}">`,
-      `<div style="border-radius:25px;padding:8px;margin:8px;background-color:${templateConfig.primarySurfaceColor};">`,
-      `<div style="margin-bottom:8px;">`,
-      `<img src="${project.icon}" style="width:40px;height:40px;vertical-align:middle;margin-right:8px;">`,
-      `<p1 style="vertical-align:middle;font-size:20px;font-weight:bold;">${project.name}</p1><br>`,
-      `</div>`,
-      `<p1 style="opacity:70%;">${project.description}</p1><br>`,
-      getTags() ?? "",
-      `</div></a>`
+      `<builder-component name="card" `,
+      `title="${project.name}" `,
+      `description="${project.description}" `,
+      `icon="${project.icon}" `,
+      `link="${project.url}"`,
+      projectTags ? `> ${projectTags} </builder-component>` : "/>"
     ].join(""));
   });
 

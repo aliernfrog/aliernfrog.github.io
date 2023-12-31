@@ -114,18 +114,19 @@ function buildPage(node, globalCtx) {
   const builderNode = node.getElementsByTagName("builder")[0];
   const builderConfig = parseBuilderConfig(builderNode);
   builderNode.remove();
-
+  
   let rawTemplate = builder.templates.get(builderConfig.template?.name);
   if (rawTemplate) {
     rawTemplate = replacePlaceholders(rawTemplate, "config", builderConfig.template);
     const template = parseHTML(rawTemplate).removeWhitespace();
     const templateBuilderNode = template.getElementsByTagName("builder")[0];
-    ctx.templateConfig = parseHTMLAttrs(templateBuilderNode);
+    ctx.templateConfig = parseHTMLAttrs(templateBuilderNode?.rawAttrs);
     templateBuilderNode?.remove();
     const body = template.getElementsByTagName("body")[0];
     body.getElementsByTagName("builder-content")?.forEach?.(
       element => element.replaceWith(node)
     );
+    body.replaceWith(replacePlaceholders(body.toString(), "template", ctx.templateConfig));
     const meta = builderConfig.meta;
     if (meta) {
       const head = template.getElementsByTagName("head")[0];
@@ -153,7 +154,19 @@ function buildNode(node, ctx) {
     const component = builder.components.get(options.name)?.(options, ctx, element);
     if (!component) console.error(`No component found with name: ${options.name}!`);
     else {
+      const childNodes = element.childNodes;
       const componentNode = parseHTML(component);
+      const componentContent = componentNode.getElementsByTagName("component-content")[0];
+      let removeComponentContent = true;
+      if (childNodes.length) {
+        if (componentContent) {
+          componentContent.replaceWith(childNodes.join(""));
+          removeComponentContent = false;
+        } else {
+          console.warn(`Component ${options.name} has no content node!`);
+        }
+      }
+      if (removeComponentContent) componentContent?.remove?.();
       buildNode(componentNode, ctx);
       element.replaceWith(componentNode);
     }

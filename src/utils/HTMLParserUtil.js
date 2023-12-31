@@ -1,6 +1,6 @@
-export function parseBuilderConfig(node) {
+export function parseBuilderConfig(builderNode) {
   const result = {};
-  node?.childNodes?.filter?.(n => !!n.rawTagName)?.forEach?.(node => {
+  builderNode?.childNodes?.filter?.(n => !!n.rawTagName)?.forEach?.(node => {
     result[node.rawTagName] = parseHTMLAttrs(node.rawAttrs);
   });
   return result;
