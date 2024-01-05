@@ -1,18 +1,18 @@
 {
   "stable": {
-    "versionCode": 19200,
-    "versionName": "v1.9.2",
+    "versionCode": 19300,
+    "versionName": "v1.9.3",
     "preRelease": false,
-    "body": "## Features\n- update TopToast dependency [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/dff88809029654738be754b00f600b1a64f2a084))\n\n## Continuous Integration\n- update checkout to v4 & ignore release branches in commit workflow [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/2521619ceaad2f4764898144029cd6ab13826bd3))\n- pass GitHub token for packages [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/f938f7c0869c95f3cd61c8b218260c657389f672))\n\n## Chores\n- update version to v1.9.2 (19200) [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/ddb22ac6800f9dcde2a825afdc677ecbd8f3b8f1))\n- merge `dev` branch into `main` [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/da3a0824e94889817266d14aeaee30b648f57fab))\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.2)",
-    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.2",
-    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.2/ensi-manager.apk"
+    "body": "## Bug Fixes\n- allow HTTP [#15](https://github.com/aliernfrog/ensi-manager/pull/15) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/0411795a9852c8347c7eb4bb3614fb86194dbde5))\n\n## Chores\n- update app version to v1.9.3 (19300) [#15](https://github.com/aliernfrog/ensi-manager/pull/15) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/4f614f90df7cb63647edcd81b6aad73369f7b839))\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.3)",
+    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.3",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.3/ensi-manager.apk"
   },
   "preRelease": {
-    "versionCode": 19200,
-    "versionName": "v1.9.2",
+    "versionCode": 19300,
+    "versionName": "v1.9.3",
     "preRelease": false,
-    "body": "## Features\n- update TopToast dependency [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/dff88809029654738be754b00f600b1a64f2a084))\n\n## Continuous Integration\n- update checkout to v4 & ignore release branches in commit workflow [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/2521619ceaad2f4764898144029cd6ab13826bd3))\n- pass GitHub token for packages [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/f938f7c0869c95f3cd61c8b218260c657389f672))\n\n## Chores\n- update version to v1.9.2 (19200) [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/ddb22ac6800f9dcde2a825afdc677ecbd8f3b8f1))\n- merge `dev` branch into `main` [#14](https://github.com/aliernfrog/ensi-manager/pull/14) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/da3a0824e94889817266d14aeaee30b648f57fab))\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.2)",
-    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.2",
-    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.2/ensi-manager.apk"
+    "body": "## Bug Fixes\n- allow HTTP [#15](https://github.com/aliernfrog/ensi-manager/pull/15) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/0411795a9852c8347c7eb4bb3614fb86194dbde5))\n\n## Chores\n- update app version to v1.9.3 (19300) [#15](https://github.com/aliernfrog/ensi-manager/pull/15) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/4f614f90df7cb63647edcd81b6aad73369f7b839))\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.3)",
+    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.3",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.3/ensi-manager.apk"
   }
 }
