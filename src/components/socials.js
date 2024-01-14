@@ -13,6 +13,7 @@ export default function({
     `icon="${social.icon}"`,
     `link="${social.url}"`,
     `iconSize="28"`,
+    `iconBorderRadius="0"`,
     "/>"
   ].join(" ")).join("");
 
