@@ -1,6 +1,6 @@
 {
   "stable": {
-    "versionCode": 0,
+    "versionCode": 30010,
     "versionName": "v3.0.0",
     "preRelease": false,
     "body": "This update requires at least Android 6.0.\r\nFor older versions, [LAC Tool Legacy](https://github.com/aliernfrog/lac-tool-legacy) is now available.\r\n\r\n# Major changes\r\n- Rewritten in Jetpack Compose & Kotlin\r\n- Faster file operations and optimizations for latest Android versions\r\n- Material You theming\r\n- Bottom navigation bar\r\n- Wide screen & RTL layout support\r\n\r\n# Map management\r\n- Manage downloadable materials\r\n- Filter map objects by name, optionally remove matches\r\n- Merge multiple maps\r\n\r\n# Changes since v3.0.0-alpha05\r\n- Warning for September 2023 Files app updates\r\n- Accessibility improvements\r\n- Wide screen support\r\n- RTL layout fixes\r\n- Fixes for overlapping navigation bar & device notch\n\nView this release on [GitHub](https://github.com/aliernfrog/lac-tool/releases/tag/v3.0.0)",
@@ -8,7 +8,7 @@
     "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.0.0/lactool.apk"
   },
   "preRelease": {
-    "versionCode": 0,
+    "versionCode": 30010,
     "versionName": "v3.0.0",
     "preRelease": false,
     "body": "This update requires at least Android 6.0.\r\nFor older versions, [LAC Tool Legacy](https://github.com/aliernfrog/lac-tool-legacy) is now available.\r\n\r\n# Major changes\r\n- Rewritten in Jetpack Compose & Kotlin\r\n- Faster file operations and optimizations for latest Android versions\r\n- Material You theming\r\n- Bottom navigation bar\r\n- Wide screen & RTL layout support\r\n\r\n# Map management\r\n- Manage downloadable materials\r\n- Filter map objects by name, optionally remove matches\r\n- Merge multiple maps\r\n\r\n# Changes since v3.0.0-alpha05\r\n- Warning for September 2023 Files app updates\r\n- Accessibility improvements\r\n- Wide screen support\r\n- RTL layout fixes\r\n- Fixes for overlapping navigation bar & device notch\n\nView this release on [GitHub](https://github.com/aliernfrog/lac-tool/releases/tag/v3.0.0)",
