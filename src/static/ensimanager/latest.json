@@ -1,18 +1,18 @@
 {
   "stable": {
-    "versionCode": 19400,
-    "versionName": "v1.9.4",
+    "versionCode": 19500,
+    "versionName": "v1.9.5",
     "preRelease": false,
-    "body": "## Features\n- add monochrome icon [#17](https://github.com/aliernfrog/ensi-manager/pull/17) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/321140677a765a19ae09626985255dfd1fbe4ef2))\n\n## Bug Fixes\n- properly align icon [#17](https://github.com/aliernfrog/ensi-manager/pull/17) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/b5e2ef7d384340cf05adfac9e422c64d38b581c9))\n\n## Chores\n- update dependencies [#17](https://github.com/aliernfrog/ensi-manager/pull/17) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/bdc433ccdea1ec77b49caf2de2a3f633e358fb71))\n- update app version to v1.9.4 (19400) [#17](https://github.com/aliernfrog/ensi-manager/pull/17) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/e5666480c2ec5aac980f80789ea8c57238e5c354))\n- update compose dependencies, downgrade compose-markdown [#18](https://github.com/aliernfrog/ensi-manager/pull/18) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/8a4674785f359fdc5c586bac1978af63abf7931f))\n- merge branch `dev` into `main` [#18](https://github.com/aliernfrog/ensi-manager/pull/18) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/29034479ebcdee8023ffb4ffc7c9706ba648afa1))\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.4)",
-    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.4",
-    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.4/ensi-manager.apk"
+    "body": "## Features\n- update TopToast (new design) [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/56f0ec9a7c52684c351268a53a1e962d34f53bf4))\n\n## Chores\n- update dependencies [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/1e279a52d5de38720dbf8379a2a700321fc90602))\n- update app version to v1.9.5 (19500) [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/9571158d8b79dddecdfea91d933322ef96d283ad))\n- merge branch `dev` into `main` [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/794efa214824135ca7c0a081dbf7100b087272c0))\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.5)",
+    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.5",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.5/ensi-manager.apk"
   },
   "preRelease": {
-    "versionCode": 19400,
-    "versionName": "v1.9.4",
+    "versionCode": 19500,
+    "versionName": "v1.9.5",
     "preRelease": false,
-    "body": "## Features\n- add monochrome icon [#17](https://github.com/aliernfrog/ensi-manager/pull/17) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/321140677a765a19ae09626985255dfd1fbe4ef2))\n\n## Bug Fixes\n- properly align icon [#17](https://github.com/aliernfrog/ensi-manager/pull/17) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/b5e2ef7d384340cf05adfac9e422c64d38b581c9))\n\n## Chores\n- update dependencies [#17](https://github.com/aliernfrog/ensi-manager/pull/17) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/bdc433ccdea1ec77b49caf2de2a3f633e358fb71))\n- update app version to v1.9.4 (19400) [#17](https://github.com/aliernfrog/ensi-manager/pull/17) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/e5666480c2ec5aac980f80789ea8c57238e5c354))\n- update compose dependencies, downgrade compose-markdown [#18](https://github.com/aliernfrog/ensi-manager/pull/18) ([aliernfrog](https://github.com/aliernfrog/ensi-manager/commit/8a4674785f359fdc5c586bac1978af63abf7931f))\n- merge branch `dev` into `main` [#18](https://github.com/aliernfrog/ensi-manager/pull/18) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/29034479ebcdee8023ffb4ffc7c9706ba648afa1))\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.4)",
-    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.4",
-    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.4/ensi-manager.apk"
+    "body": "## Features\n- update TopToast (new design) [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/56f0ec9a7c52684c351268a53a1e962d34f53bf4))\n\n## Chores\n- update dependencies [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/1e279a52d5de38720dbf8379a2a700321fc90602))\n- update app version to v1.9.5 (19500) [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/9571158d8b79dddecdfea91d933322ef96d283ad))\n- merge branch `dev` into `main` [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/794efa214824135ca7c0a081dbf7100b087272c0))\n\nView this release on [GitHub](https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.5)",
+    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.5",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.5/ensi-manager.apk"
   }
 }
