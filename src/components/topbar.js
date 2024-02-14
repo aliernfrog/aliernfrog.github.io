@@ -10,6 +10,7 @@ export default function({
     `label="alieRN"`,
     `icon="/assets/images/aliernfrog.png"`,
     `iconSize="22"`,
+    `iconBorderRadius="50"`,
     `link="/" />`
   ].join(" ") : "";
   

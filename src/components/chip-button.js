@@ -4,7 +4,7 @@ export default function({
   containerColor,
   contentColor,
   iconSize = "18",
-  iconBorderRadius = "50",
+  iconBorderRadius = "0",
   link
 }, {
   templateConfig
