@@ -75,27 +75,20 @@
       <p1>Apps were able to easily access Android/data folder by having the user grant access to it.<br>However, September 2023 update to the Files app made this impossible for Android 12 and above.</p1>
     </div>
     <div style="padding:8px;">
-      <h1 id="current-workaround">The easiest workaround</h1>
-      <p1>Uninstalling updates of the Files app lets apps request access to Android/data.</p1>
-      <h2>How to uninstall updates of Files app?</h2>
-      <p1><i>Keep in mind that these steps may vary depending on your device</i><br> Device settings > Apps > All apps/Manage apps > Files (app name depends on your language) > Uninstall updates</p1>
-      <h2>Can't find Files app on the list?</h2>
-      <p1>Look for an option which hides the system apps in the list. It might also be in a three-dot menu.</p1>
-      <h2>Can't uninstall updates?</h2>
-      <p1>Check out the workarounds listed <a href="#other-workarounds">here</a>.</p1><br><br>
-      <h1 id="other-workarounds">Other workarounds</h1>
+      <h1 id="solutions">Solutions</h1>
       <ul>
-        <li>Connect your device to a PC with USB, or use ADB wireless debugging</li>
-        <li>Use <a href="https://shizuku.rikka.app/">Shizuku</a> with:<ul>
-            <li><a href="https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver&hl=tr&gl=US">ZArchiver</a> (closed-source) (recommended)</li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.folderv.file&hl=en_US">FV File Manager</a> (closed-source)</li>
-          </ul>
-        </li>
-        <li>For workarounds for LAC or Polyfield, check <a href="#lac-pf">this</a></li>
+        <li>Try uninstalling updates of the Files app following the instructions <a href="#uninstall-files-updates">here</a></li>
+        <li>Use <a href="https://shizuku.rikka.app/">Shizuku</a> with <a href="https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver">ZArchiver (closed-source): ZArchiver Settings > Root > Root type > Shizuku</a></li>
+        <li>Connect your device to a PC with USB, enable file management and manage files</li>
+        <li>Use ADB and manage files using its commands</li>
+        <li>For Polyfield or LAC, check <a href="#lac-pf">this</a></li>
       </ul><br><br>
+      <h1 id="uninstall-files-updates">Uninstalling Files app updates</h1>
+      <p1> Uninstalling updates of the Files app might let other apps request explicit access to Android/data again.<br> To uninstall these updates: <code>Device Settings > Apps > All apps/Manage apps > Files (the one with the blue icon, name depends on your language) > Uninstall updates</code>. This app will most likely be hidden from the list by default, in this case look for an option to un-hide system apps. Note that these steps may vary depending on your device.<br> If you are unable to do this, use other solutions listed <a href="#solutions">here</a>.</p1><br><br>
       <h1 id="lac-pf">LAC & Polyfield workarounds</h1>
       <ul>
         <li id="lac">LAC:<ul>
+            <li><a href="https://github.com/aliernfrog/lac-tool">LAC Tool</a> will soon have Shizuku support. Until it arrives check out other solutions lsited below</li>
             <li>Copy <code>.txt</code> link of the map you want to download and paste it on map name field, then hit create</li>
             <li>Copy link of the wallpaper you want to import and paste it on in-game cellphone settings</li>
             <li>Manually manage files, check <a href="#other-workarounds">these</a> first<ul>
@@ -107,6 +100,7 @@
           </ul>
         </li>
         <li id="pf">Polyfield:<ul>
+            <li>Use <a href="https://github.com/aliernfrog/pf-tool">PF Tool</a>, it has Shizuku support</li>
             <li>Download maps from in-game maps list</li>
             <li>Manually manage files, check <a href="#other-workarounds">these</a> first<ul>
                 <li><code>Android/data/com.MA.Polyfield/files/editor</code> contains your maps</li>
@@ -114,9 +108,7 @@
             </li>
           </ul>
         </li>
-      </ul><br><br>
-      <h1 id="wip-tool">Shizuku for LAC Tool & PF Tool</h1>
-      <p1> A <a href="https://shizuku.rikka.app/">Shizuku</a> support for LAC Tool and PF Tool is being worked on in <a href="https://github.com/aliernfrog/pf-tool/pull/29">this pull request</a>.<br> This will let the app use wireless debugging through Shizuku. Currently figuring out how to make it work™</p1>
+      </ul>
     </div>
     <div style="text-align:center;"><a href="https://github.com/aliernfrog">
         <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#232323;color:#FFFFFF;"><img src="/assets/images/social_github.png" alt="GitHub" style="width:28px;height:28px;border-radius:0%;vertical-align:middle;"><b>
