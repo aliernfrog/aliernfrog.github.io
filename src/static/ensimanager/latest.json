@@ -1,0 +1,18 @@
+{
+  "stable": {
+    "versionCode": 19500,
+    "versionName": "v1.9.5",
+    "preRelease": false,
+    "body": "## Features\n- update TopToast (new design) [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/56f0ec9a7c52684c351268a53a1e962d34f53bf4))\n\n## Chores\n- update dependencies [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/1e279a52d5de38720dbf8379a2a700321fc90602))\n- update app version to v1.9.5 (19500) [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/9571158d8b79dddecdfea91d933322ef96d283ad))\n- merge branch `dev` into `main` [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/794efa214824135ca7c0a081dbf7100b087272c0))",
+    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.5",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.5/ensi-manager.apk"
+  },
+  "preRelease": {
+    "versionCode": 19500,
+    "versionName": "v1.9.5",
+    "preRelease": false,
+    "body": "## Features\n- update TopToast (new design) [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/56f0ec9a7c52684c351268a53a1e962d34f53bf4))\n\n## Chores\n- update dependencies [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/1e279a52d5de38720dbf8379a2a700321fc90602))\n- update app version to v1.9.5 (19500) [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/9571158d8b79dddecdfea91d933322ef96d283ad))\n- merge branch `dev` into `main` [#19](https://github.com/aliernfrog/ensi-manager/pull/19) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/794efa214824135ca7c0a081dbf7100b087272c0))",
+    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.9.5",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.9.5/ensi-manager.apk"
+  }
+}
