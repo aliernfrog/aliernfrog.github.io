@@ -1,4 +1,5 @@
-import { writeFileSync } from "fs";
+import { existsSync, writeFileSync, mkdirSync } from "fs";
+import { dirname } from "path";
 
 const repos = [
   {
@@ -29,9 +30,11 @@ const repos = [
 
 async function main() {
   for (const repo of repos) {
-    console.log(`Generating releases info for ${repo.repo}`);
+    console.log(`Generating release info for ${repo.repo}`);
     const info = await generateReleasesInfo(repo);
     const jsonPath = `./src/static/${repo.jsonPath}`;
+    const parent = dirname(jsonPath);
+    if (!existsSync(parent)) mkdirSync(parent);
     writeFileSync(jsonPath, JSON.stringify(info, null, 2));
     console.log(`Wrote info for ${repo.repo} to ${jsonPath}`);
   }
