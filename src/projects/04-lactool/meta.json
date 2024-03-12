@@ -4,7 +4,7 @@
   "tags": ["mobile-app","open-source"],
   "icon": "/assets/images/apps_lactool.png",
   "ambientColor": "#252E3D",
-  "description": "Do most LAC related stuff without having to mess with files",
+  "description": "Easily manage LAC maps, wallpapers and screenshots",
   "url": "/lactool/",
   "download": "https://github.com/aliernfrog/lac-tool/releases/latest/download/lactool.apk",
   "downloadLegacy": "https://github.com/aliernfrog/lac-tool-legacy/releases/latest/download/lactool-legacy.apk"
