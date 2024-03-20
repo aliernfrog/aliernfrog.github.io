@@ -1,18 +1,18 @@
 {
   "stable": {
-    "versionCode": 110000,
-    "versionName": "v1.10.0",
+    "versionCode": 110100,
+    "versionName": "v1.10.1",
     "preRelease": false,
-    "body": "## Features\r\n- **settings**: categories & move to top bar ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/49c8ea362f9f51d340b7c56939b6f94df1963298))\r\n\r\n## Chores\r\n- update dependencies ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/434cdb25d9f42b2c2b900a561a2548798dcf3888))\r\n- update app version to v1.10.0 (110000) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/148992d4622bd3ab65e1d17c3885d50c16f2c685))",
-    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.10.0",
-    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.10.0/ensi-manager.apk"
+    "body": "## Features\n- **form-header**: update design [#21](https://github.com/aliernfrog/ensi-manager/pull/21) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/f3e55f5796a92a2c8695f79c59506ab146ae229a))\n\n## Chores\n- update app version to v1.10.1 (110100) [#21](https://github.com/aliernfrog/ensi-manager/pull/21) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/081f0a79ad2b371aa6590419075028ce52f6ec60))\n- merge branch `dev` into `main` [#21](https://github.com/aliernfrog/ensi-manager/pull/21) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/70082f9d0d8d399736cbfdfdae0eee0113387c3b))",
+    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.10.1",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.10.1/ensi-manager.apk"
   },
   "preRelease": {
-    "versionCode": 110000,
-    "versionName": "v1.10.0",
+    "versionCode": 110100,
+    "versionName": "v1.10.1",
     "preRelease": false,
-    "body": "## Features\r\n- **settings**: categories & move to top bar ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/49c8ea362f9f51d340b7c56939b6f94df1963298))\r\n\r\n## Chores\r\n- update dependencies ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/434cdb25d9f42b2c2b900a561a2548798dcf3888))\r\n- update app version to v1.10.0 (110000) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/148992d4622bd3ab65e1d17c3885d50c16f2c685))",
-    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.10.0",
-    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.10.0/ensi-manager.apk"
+    "body": "## Features\n- **form-header**: update design [#21](https://github.com/aliernfrog/ensi-manager/pull/21) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/f3e55f5796a92a2c8695f79c59506ab146ae229a))\n\n## Chores\n- update app version to v1.10.1 (110100) [#21](https://github.com/aliernfrog/ensi-manager/pull/21) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/081f0a79ad2b371aa6590419075028ce52f6ec60))\n- merge branch `dev` into `main` [#21](https://github.com/aliernfrog/ensi-manager/pull/21) ([alieRN](https://github.com/aliernfrog/ensi-manager/commit/70082f9d0d8d399736cbfdfdae0eee0113387c3b))",
+    "htmlUrl": "https://github.com/aliernfrog/ensi-manager/releases/tag/v1.10.1",
+    "downloadUrl": "https://github.com/aliernfrog/ensi-manager/releases/download/v1.10.1/ensi-manager.apk"
   }
 }
