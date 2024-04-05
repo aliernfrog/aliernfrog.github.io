@@ -1,8 +1,5 @@
 name: "Sync releases"
 on:
-  schedule:
-    - cron: "19 * * * *"
-
   workflow_dispatch:
 
 jobs:
