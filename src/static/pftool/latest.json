@@ -1,20 +1,20 @@
 {
   "stable": {
-    "versionCode": 17200,
-    "versionName": "v1.7.2",
+    "versionCode": 17300,
+    "versionName": "v1.7.3",
     "preRelease": false,
     "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
-    "bodyMarkdown": "## Features\r\n- **themes**: `Pitch black` option, overhaul [#50](https://github.com/aliernfrog/pf-tool/pull/50) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/10f504102cd1e64100997713ace2d5dbb078a346))\r\n- overhaul settings [#50](https://github.com/aliernfrog/pf-tool/pull/50) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/9586eaa2e69b23e2118d7910c167eff34e4352a1))\r\n- **l10n**: update Turkish translations [#51](https://github.com/aliernfrog/pf-tool/pull/51) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/7792819068f7a523d04e3dc0cd974436e1b945d3))\r\n\r\n## Bug Fixes\r\n- **map-button**: correct height [#50](https://github.com/aliernfrog/pf-tool/pull/50) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/4eec10e9e9840fb9bdef8e065d7a9bec5491a95c))",
-    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.7.2",
-    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.7.2/pftool.apk"
+    "bodyMarkdown": "## Features\r\n- **l10n**: update Chinese translations [#52](https://github.com/aliernfrog/pf-tool/pull/52) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/d09995f6aa4dde76d0a990d9ab896c5c7fb82135))",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.7.3",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.7.3/pftool.apk"
   },
   "preRelease": {
-    "versionCode": 17200,
-    "versionName": "v1.7.2",
+    "versionCode": 17300,
+    "versionName": "v1.7.3",
     "preRelease": false,
     "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
-    "bodyMarkdown": "## Features\r\n- **themes**: `Pitch black` option, overhaul [#50](https://github.com/aliernfrog/pf-tool/pull/50) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/10f504102cd1e64100997713ace2d5dbb078a346))\r\n- overhaul settings [#50](https://github.com/aliernfrog/pf-tool/pull/50) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/9586eaa2e69b23e2118d7910c167eff34e4352a1))\r\n- **l10n**: update Turkish translations [#51](https://github.com/aliernfrog/pf-tool/pull/51) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/7792819068f7a523d04e3dc0cd974436e1b945d3))\r\n\r\n## Bug Fixes\r\n- **map-button**: correct height [#50](https://github.com/aliernfrog/pf-tool/pull/50) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/4eec10e9e9840fb9bdef8e065d7a9bec5491a95c))",
-    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.7.2",
-    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.7.2/pftool.apk"
+    "bodyMarkdown": "## Features\r\n- **l10n**: update Chinese translations [#52](https://github.com/aliernfrog/pf-tool/pull/52) ([alieRN](https://github.com/aliernfrog/pf-tool/commit/d09995f6aa4dde76d0a990d9ab896c5c7fb82135))",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.7.3",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.7.3/pftool.apk"
   }
 }
