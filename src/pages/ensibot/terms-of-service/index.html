@@ -1,0 +1,26 @@
+<builder>
+  <meta
+    title="Ensi - Terms of Service"
+    description="Terms of Service of Ensi, a randomized chatting app for Discord"
+  />
+  <template name="main"/>
+</builder>
+
+<builder-component
+  name="topbar"
+  title="Terms of Service"
+  icon="/assets/images/bots_ensi.png"
+  iconLink="/ensibot"
+  description="<b>Last updated:</b> July 4, 2024"
+/>
+
+<builder-component
+  name="markdown"
+  fromFile="./src/static/ensibot/tos.txt"
+/>
+
+<builder-component name="socials" />
+
+<script>
+  setAmbientColor("#2A3249");
+</script>

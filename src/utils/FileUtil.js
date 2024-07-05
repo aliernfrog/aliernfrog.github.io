@@ -27,6 +27,6 @@ export function readdirRecursively(path) {
 
 export function writeFile(path, content) {
   const parentPath = getParentFilePath(path);
-  if (!existsSync(parentPath)) mkdirSync(parentPath);
+  if (!existsSync(parentPath)) mkdirSync(parentPath, { recursive: true });
   writeFileSync(path, content);
 }

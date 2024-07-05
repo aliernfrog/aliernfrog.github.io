@@ -14,6 +14,26 @@
   icon="{{project.icon}}"
 />
 
+<div style="text-align:center;">
+  <builder-component
+   name="chip-button"
+   label="Add Ensi"
+   link="{{project.invite}}"
+   icon="/assets/images/plus.png"
+   containerColor="#005DFF"/>
+  <br>
+  <i>by adding Ensi to a server or profile, you agree with:</i>
+  <br>
+   <builder-component
+    name="chip-button"
+    label="Terms of Service"
+    link="terms-of-service"/>
+  <builder-component
+    name="chip-button"
+    label="Privacy Policy"
+    link="privacy-policy"/>
+</div>
+
 <div style="padding:8px;">
 
   <h1>Main features</h1>
@@ -31,17 +51,6 @@
     • By default, Ensi will automatically respond to messages which mentions him, or if it was sent in a thread Ensi is in.<br>
     • There are also some random interactions such as washing and feeding Ensi. You can earn <b>Ensipoints</b> when interacting, but they currently don't have any use.
   </p1><br>
-
-  <br>
-
-  <builder-component
-    name="card"
-    title="Adding to servers is temporarily disabled"
-    description="You can still use Ensi on existing servers.",
-    containerColor="#DF0606"
-    link="{{project.invite}}"
-  />
-
 </div>
 
 <builder-component name="socials"/>

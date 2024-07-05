@@ -7,7 +7,7 @@ export default function({
   margin = "8px"
 }, {
   templateConfig
-}) {
+}, element) {
   const _containerColor = containerColor ?? templateConfig.primarySurfaceColor;
   
   return [
@@ -18,6 +18,7 @@ export default function({
     `<p1 style="vertical-align:middle;font-size:20px;font-weight:bold;">${title}</p1><br>`,
     `</div>`,
     description ? `<p1 style="opacity:70%;">${description}</p1><br>` : "",
+    element?.childNodes?.[0]?._rawText ?? "",
     `<component-content/>`,
     `</div>`,
     link ? `</a>` : ""
