@@ -14,6 +14,26 @@
   icon="{{project.icon}}"
 />
 
+<div style="text-align:center;">
+  <builder-component
+   name="chip-button"
+   label="Add the bot"
+   link="{{project.invite}}"
+   icon="/assets/images/plus.png"
+   containerColor="#005DFF"/>
+  <br>
+  <i>by adding the bot to a server or profile, you agree to:</i>
+  <br>
+   <builder-component
+    name="chip-button"
+    label="Terms of Service"
+    link="terms-of-service"/>
+  <builder-component
+    name="chip-button"
+    label="Privacy Policy"
+    link="privacy-policy"/>
+</div>
+
 <div style="padding:8px;">
 
   <h1>Main features</h1>
@@ -39,17 +59,6 @@
     • To search using app ID, use <code>/app-info</code> command.<br>
     • To change language, use <code>/options</code> command.
   </p1><br>
-
-  <br>
-
-  <builder-component
-    name="card"
-    title="Add to server"
-    description="This may not work as the bot has reached the server limit (100).",
-    containerColor="#005DFF"
-    link="{{project.invite}}"
-  />
-
 </div>
 
 <builder-component name="socials"/>
