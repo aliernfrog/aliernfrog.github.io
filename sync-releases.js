@@ -66,9 +66,9 @@ async function generateReleaseInfo(repo, release) {
   if (!apkFile) return {};
   const versionCode = await getVersionCode(repo, release);
   const bodyMarkdown = release.body
-    .replaceAll(":boom:", 💥) // breaking changes
-    .replaceAll(":sparkles:", ✨) // feat
-    .replaceAll(":bug:", 🐛); // fix
+    .replaceAll(":boom:", "💥") // breaking changes
+    .replaceAll(":sparkles:", "✨") // feat
+    .replaceAll(":bug:", "🐛"); // fix
   const obj = {
     versionCode: versionCode,
     versionName: release.name.toString(),
