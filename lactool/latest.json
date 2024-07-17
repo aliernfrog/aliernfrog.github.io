@@ -1,18 +1,18 @@
 {
   "stable": {
-    "versionCode": 32100,
-    "versionName": "v3.2.1",
+    "versionCode": 32200,
+    "versionName": "v3.2.2",
     "preRelease": false,
-    "body": "## Features\r\n- automatically detect Files app restrictions [#81](https://github.com/aliernfrog/lac-tool/pull/81) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/05176beb302b05bbf0eb48863e549f4cee83f25f))\r\n- **ui**: minor improvements [#82](https://github.com/aliernfrog/lac-tool/pull/82) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/97817dd6e7dc5dab7f6857946e2c4dd9cc4bea8e))\r\n- **themes**: `Pitch black` option, overhaul [#83](https://github.com/aliernfrog/lac-tool/pull/83) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/aa12675441931786a53ca4dbb47a29a61046e6f9))\r\n- overhaul settings [#84](https://github.com/aliernfrog/lac-tool/pull/84) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/c2e9dd3389a44a0a4e7b2a44beb0450b7a7605b4))\r\n- **l10n**: update Turkish translations [#80](https://github.com/aliernfrog/lac-tool/pull/80) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/a43240183a254fbaf8d9e890036c1bdf7f286438))\r\n\r\n## Bug Fixes\r\n- **l10n**: get device language correctly [#82](https://github.com/aliernfrog/lac-tool/pull/82) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/232446abafc2ef73827cb9569b9d79c6c9c3d6ae))\r\n- **map-button**: correct height [#82](https://github.com/aliernfrog/lac-tool/pull/82) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/fa02e5152665236bcbbd24ea8dea9daf1f4e65b7))",
-    "htmlUrl": "https://github.com/aliernfrog/lac-tool/releases/tag/v3.2.1",
-    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.2.1/lactool.apk"
+    "body": "### ✨ New Features\n- [`d535294`](https://github.com/aliernfrog/lac-tool/commit/d535294c777726d6c320eb05ca9b7135e3b8fa08) - **l10n**: update Persian translations *(commit by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/lac-tool/releases/tag/v3.2.2",
+    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.2.2/lactool.apk"
   },
   "preRelease": {
-    "versionCode": 32100,
-    "versionName": "v3.2.1",
+    "versionCode": 32200,
+    "versionName": "v3.2.2",
     "preRelease": false,
-    "body": "## Features\r\n- automatically detect Files app restrictions [#81](https://github.com/aliernfrog/lac-tool/pull/81) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/05176beb302b05bbf0eb48863e549f4cee83f25f))\r\n- **ui**: minor improvements [#82](https://github.com/aliernfrog/lac-tool/pull/82) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/97817dd6e7dc5dab7f6857946e2c4dd9cc4bea8e))\r\n- **themes**: `Pitch black` option, overhaul [#83](https://github.com/aliernfrog/lac-tool/pull/83) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/aa12675441931786a53ca4dbb47a29a61046e6f9))\r\n- overhaul settings [#84](https://github.com/aliernfrog/lac-tool/pull/84) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/c2e9dd3389a44a0a4e7b2a44beb0450b7a7605b4))\r\n- **l10n**: update Turkish translations [#80](https://github.com/aliernfrog/lac-tool/pull/80) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/a43240183a254fbaf8d9e890036c1bdf7f286438))\r\n\r\n## Bug Fixes\r\n- **l10n**: get device language correctly [#82](https://github.com/aliernfrog/lac-tool/pull/82) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/232446abafc2ef73827cb9569b9d79c6c9c3d6ae))\r\n- **map-button**: correct height [#82](https://github.com/aliernfrog/lac-tool/pull/82) ([alieRN](https://github.com/aliernfrog/lac-tool/commit/fa02e5152665236bcbbd24ea8dea9daf1f4e65b7))",
-    "htmlUrl": "https://github.com/aliernfrog/lac-tool/releases/tag/v3.2.1",
-    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.2.1/lactool.apk"
+    "body": "### ✨ New Features\n- [`d535294`](https://github.com/aliernfrog/lac-tool/commit/d535294c777726d6c320eb05ca9b7135e3b8fa08) - **l10n**: update Persian translations *(commit by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/lac-tool/releases/tag/v3.2.2",
+    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.2.2/lactool.apk"
   }
 }
