@@ -1,0 +1,10 @@
+{
+  "id": "pftool",
+  "name": "PF Tool",
+  "tags": ["mobile-app","open-source"],
+  "icon": "/assets/images/apps_pftool.png",
+  "ambientColor": "#323A49",
+  "description": "Easily import and share Polyfield maps",
+  "url": "/pftool/",
+  "download": "https://github.com/aliernfrog/pf-tool/releases/latest/download/pftool.apk"
+}
