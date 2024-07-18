@@ -3,6 +3,6 @@
   as accessing it from build output might be needed.
 */
 
-import tags from "../static/values/tags.json" assert { type: "json" }
+import tags from "../static/values/tags.json" with { type: "json" }
 
 export default tags;

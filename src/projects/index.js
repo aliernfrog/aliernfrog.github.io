@@ -12,7 +12,7 @@ export default async function() {
   const data = [];
 
   for (const root of projectsRoot) {
-    const meta = await import(`./${root}/meta.json`, { assert: { type: "json" } });
+    const meta = await import(`./${root}/meta.json`, { with: { type: "json" } });
     const filePaths = readdirRecursively(`./src/projects/${root}/files`);
     const project = { ...meta.default }
     project.files = filePaths.map(path => ({
