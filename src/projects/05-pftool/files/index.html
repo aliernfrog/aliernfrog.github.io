@@ -1,0 +1,59 @@
+<builder>
+  <meta
+    title="{{project.name}}"
+    description="{{project.description}}"
+    icon="{{project.icon}}"
+  />
+  <template name="main"/>
+</builder>
+
+<builder-component
+  name="topbar"
+  title="{{project.name}}"
+  description="{{project.description}}"
+  icon="{{project.icon}}"
+/>
+
+<div style="text-align:center;">
+  <builder-component
+    name="chip-button"
+    label="Download (Android 6.0+)"
+    icon="/assets/images/download.png"
+    link="{{project.download}}"
+    containerColor="#005DFF"
+  />
+</div>
+
+<div style="padding:8px;">
+  <div style="text-align:center;">
+    <img alt="PF Tool screenshot" src="https://github.com/aliernfrog/pf-tool/blob/main/images/maps.jpg?raw=true" width="200px"/><br>
+  </div><br>
+
+  <h1>Features</h1>
+  <p1>
+    • Import, export and share maps with ease<br>
+    • Multiple language support (translate on <a href="https://crowdin.com/project/pf-tool">Crowdin</a>)<br>
+    • <a href="#shizuku">Shizuku support</a>
+  </p1><br>
+  
+  <h1 id="shizuku">🦝 Shizuku support</h1>
+  <p1>
+    <a href="https://shizuku.rikka.app">Shizuku</a> is an app which lets other apps elevate their permissions using wireless debugging or root access.<br>
+    Because of restrictions to Android/data folder on Android 11 and above, usage of Shizuku may be needed to access Polyfield data. Learn more about these restrictions <a href="../android-data-access">here</a>.
+  </p1><br>
+  
+  <br>
+
+  <div style="text-align:center;">
+    <img alt="Download count" src="https://img.shields.io/github/downloads/aliernfrog/pf-tool/total?style=for-the-badge&label=Download%20Count">
+  </div>
+</div>
+
+<builder-component
+  name="socials"
+  path="pftool"
+/>
+
+<script>
+  setAmbientColor("{{project.ambientColor}}");
+</script>

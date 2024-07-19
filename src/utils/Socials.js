@@ -25,6 +25,10 @@ export default {
     lactool: [
       github("lac-tool"),
       discord()
+    ],
+    pftool: [
+      github("pf-tool"),
+      discord()
     ]
   }
 }
