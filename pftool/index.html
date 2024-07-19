@@ -3,15 +3,122 @@
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Download PF Tool</title>
-    <meta name="og:title" content="Download PF Tool">
+    <meta name="theme-color" content="">
+    <title>PF Tool</title>
+    <meta name="og:title" content="PF Tool">
+    <meta name="description" content="Easily import and share Polyfield maps">
+    <meta name="og:description" content="Easily import and share Polyfield maps">
+    <meta name="og:image" content="/assets/images/apps_pftool.png">
+    <link rel="icon" type="image/gif/png" href="/assets/images/apps_pftool.png">
   </head>
 
-  <body style="font-family:Open Sans,sans-serif">
-    <h1>Redirecting..</h1>
-    <p1 id="description">You will be redirected to <a href="https://github.com/aliernfrog/pf-tool/releases/latest/download/pftool.apk">https://github.com/aliernfrog/pf-tool/releases/latest/download/pftool.apk</a></p1>
+  <body style="background-color:black;color:white;font-family:Open Sans,sans-serif">
     <script>
-      window.location = "https://github.com/aliernfrog/pf-tool/releases/latest/download/pftool.apk";
+      document.documentElement.style.scrollBehavior = "smooth";
+      document.body.style["-webkit-tap-highlight-color"] = "transparent";
+      let linksColor = "#005DFF";
+
+      function setAmbientColor(color) {
+        const topbar = document.getElementById("topbar");
+        document.body.style.backgroundImage = `linear-gradient(${color}, black ${topbar.offsetHeight*3}px)`;
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
+        setLinksStyle(changeColor(color, 100, 150));
+      }
+
+      function setLinksStyle(color = linksColor) {
+        const links = document.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+          const link = links[i];
+          link.style.textDecoration = "none";
+          link.style.color = link.innerHTML.toString().includes("<div") ? "white" : color;
+          addHoverEffects(link);
+        }
+        linksColor = color;
+      }
+
+      function addHoverEffects(div) {
+        const add = () => {
+          div.style.opacity = "0.5";
+        }
+        const remove = () => {
+          div.style.opacity = "1";
+        }
+        div.style.transitionDuration = "0.2s";
+        div.onmouseover = add;
+        div.ontouchstart = add;
+        div.onmouseout = remove;
+        div.ontouchend = remove;
+        div.ontouchcancel = remove;
+        div.onclick = () => {
+          add();
+          setTimeout(remove, 200);
+        }
+      }
+
+      function changeColor(color, amount, blueOverride) {
+        const clamp = (val) => Math.min(Math.max(val, 0), 0xFF);
+        const fill = (str) => ('00' + str).slice(-2);
+        const num = parseInt(color.substr(1), 16);
+        const red = clamp((num >> 16) + amount);
+        const green = clamp(((num >> 8) & 0x00FF) + amount);
+        const blue = clamp((num & 0x0000FF) + (blueOverride || amount));
+        return '#' + fill(red.toString(16)) + fill(green.toString(16)) + fill(blue.toString(16));
+      }
+    </script>
+
+    <div id="topbar" style="text-align:center;"><a href="/">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#232323;color:#FFFFFF;"><img src="/assets/images/aliernfrog.png" alt="alieRN" style="width:22px;height:22px;border-radius:50%;vertical-align:middle;"><b>
+            <p1 style="padding-left:4px;vertical-align:middle;">alieRN</p1>
+          </b></div>
+      </a>
+      <div style="margin-bottom:8px;"><img src="/assets/images/apps_pftool.png" style="width:64px;height:64px;border-radius:50%;vertical-align:middle;margin-right:8px;">
+        <p1 style="vertical-align:middle;font-size:30px;font-weight:bold;">PF Tool</p1><br>
+      </div>
+      <p1>Easily import and share Polyfield maps</p1>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://github.com/aliernfrog/pf-tool/releases/latest/download/pftool.apk">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#005DFF;color:#FFFFFF;"><img src="/assets/images/download.png" alt="Download (Android 6.0+)" style="width:18px;height:18px;border-radius:0%;vertical-align:middle;"><b>
+            <p1 style="padding-left:4px;vertical-align:middle;">Download (Android 6.0+)</p1>
+          </b></div>
+      </a>
+    </div>
+
+    <div style="padding:8px;">
+      <div style="text-align:center;">
+        <img alt="PF Tool screenshot" src="https://github.com/aliernfrog/pf-tool/blob/main/images/maps.jpg?raw=true" width="200px"><br>
+      </div><br>
+
+      <h1>Features</h1>
+      <p1>
+        • Import, export and share maps with ease<br>
+        • Multiple language support (translate on <a href="https://crowdin.com/project/pf-tool">Crowdin</a>)<br>
+        • <a href="#shizuku">Shizuku support</a>
+      </p1><br>
+
+      <h1 id="shizuku">🦝 Shizuku support</h1>
+      <p1>
+        <a href="https://shizuku.rikka.app">Shizuku</a> is an app which lets other apps elevate their permissions using wireless debugging or root access.<br>
+        Because of restrictions to Android/data folder on Android 11 and above, usage of Shizuku may be needed to access Polyfield data. Learn more about these restrictions <a href="../android-data-access">here</a>.
+      </p1><br>
+
+      <br>
+
+      <div style="text-align:center;">
+        <img alt="Download count" src="https://img.shields.io/github/downloads/aliernfrog/pf-tool/total?style=for-the-badge&label=Download%20Count">
+      </div>
+    </div>
+
+    <div style="text-align:center;"><a href="https://github.com/aliernfrog/pf-tool">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#232323;color:#FFFFFF;"><img src="/assets/images/social_github.png" alt="" style="width:28px;height:28px;border-radius:0%;vertical-align:middle;"></div>
+      </a><a href="https://discord.gg/SQXqBMs">
+        <div style="display:inline-block;padding:8px;margin:16px 0px 16px 0px;border-radius:25px;background-color:#232323;color:#FFFFFF;"><img src="/assets/images/social_discord.png" alt="" style="width:28px;height:28px;border-radius:0%;vertical-align:middle;"></div>
+      </a></div>
+
+    <script>
+      setAmbientColor("#323A49");
     </script>
   </body>
 
