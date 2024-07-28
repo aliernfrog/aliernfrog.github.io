@@ -1,20 +1,20 @@
 {
   "stable": {
-    "versionCode": 18000,
-    "versionName": "v1.8.0",
+    "versionCode": 18100,
+    "versionName": "v1.8.1",
     "preRelease": false,
     "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
-    "bodyMarkdown": "### ✨ New Features\n- [`73a321f`](https://github.com/aliernfrog/pf-tool/commit/73a321f7cab26f8ea689ef942a54527a969bf1d6) - add support for Android 5.0 *(commit by @aliernfrog)*\n- [`d3bb609`](https://github.com/aliernfrog/pf-tool/commit/d3bb6096c1eae2dccbf085baeef238ed681f2594) - **settings/about**: redesign credits & add libraries *(commit by @aliernfrog)*\n- [`32dec82`](https://github.com/aliernfrog/pf-tool/commit/32dec8275f44cde913ab80419a0310178ded0b13) - predictive back gesture support *(commit by @aliernfrog)*\n- [`d26e4a8`](https://github.com/aliernfrog/pf-tool/commit/d26e4a848ca5f40ea4e5351f6eeb43aa49550c87) - **settings/about**: add option to copy debug info *(commit by @aliernfrog)*\n- [`119e590`](https://github.com/aliernfrog/pf-tool/commit/119e590c27ceaec8c06cd7ebe0055aa1bde37435) - **l10n**: update translations *(commit by @aliernfrog)*\n\n### 🐛 Bug Fixes\n- [`13f87ba`](https://github.com/aliernfrog/pf-tool/commit/13f87ba5d47802f2678c25577e326d3c1cbe12d8) - **l10n**: hide on Android 6 and below as it has no effect *(commit by @aliernfrog)*\n- [`52639bd`](https://github.com/aliernfrog/pf-tool/commit/52639bd88c4cb6c087288ffc2066dac91a18ada1) - navigation bar contrast on Android 6.0 *(commit by @aliernfrog)*\n- [`a9f28ff`](https://github.com/aliernfrog/pf-tool/commit/a9f28ff3a2eb3d3cfcaf82349d02b15ea8702356) - adjust navigation transitions *(commit by @aliernfrog)*",
-    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.8.0",
-    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.8.0/pftool.apk"
+    "bodyMarkdown": "### 🐛 Bug Fixes\n- [`ecfe326`](https://github.com/aliernfrog/pf-tool/commit/ecfe326b76499b42376eb8190d6c5068d9b51dd4) - support Android 5.0 (previously only supported 5.1) *(commit by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.8.1",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.8.1/pftool.apk"
   },
   "preRelease": {
-    "versionCode": 18000,
-    "versionName": "v1.8.0",
+    "versionCode": 18100,
+    "versionName": "v1.8.1",
     "preRelease": false,
     "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
-    "bodyMarkdown": "### ✨ New Features\n- [`73a321f`](https://github.com/aliernfrog/pf-tool/commit/73a321f7cab26f8ea689ef942a54527a969bf1d6) - add support for Android 5.0 *(commit by @aliernfrog)*\n- [`d3bb609`](https://github.com/aliernfrog/pf-tool/commit/d3bb6096c1eae2dccbf085baeef238ed681f2594) - **settings/about**: redesign credits & add libraries *(commit by @aliernfrog)*\n- [`32dec82`](https://github.com/aliernfrog/pf-tool/commit/32dec8275f44cde913ab80419a0310178ded0b13) - predictive back gesture support *(commit by @aliernfrog)*\n- [`d26e4a8`](https://github.com/aliernfrog/pf-tool/commit/d26e4a848ca5f40ea4e5351f6eeb43aa49550c87) - **settings/about**: add option to copy debug info *(commit by @aliernfrog)*\n- [`119e590`](https://github.com/aliernfrog/pf-tool/commit/119e590c27ceaec8c06cd7ebe0055aa1bde37435) - **l10n**: update translations *(commit by @aliernfrog)*\n\n### 🐛 Bug Fixes\n- [`13f87ba`](https://github.com/aliernfrog/pf-tool/commit/13f87ba5d47802f2678c25577e326d3c1cbe12d8) - **l10n**: hide on Android 6 and below as it has no effect *(commit by @aliernfrog)*\n- [`52639bd`](https://github.com/aliernfrog/pf-tool/commit/52639bd88c4cb6c087288ffc2066dac91a18ada1) - navigation bar contrast on Android 6.0 *(commit by @aliernfrog)*\n- [`a9f28ff`](https://github.com/aliernfrog/pf-tool/commit/a9f28ff3a2eb3d3cfcaf82349d02b15ea8702356) - adjust navigation transitions *(commit by @aliernfrog)*",
-    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.8.0",
-    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.8.0/pftool.apk"
+    "bodyMarkdown": "### 🐛 Bug Fixes\n- [`ecfe326`](https://github.com/aliernfrog/pf-tool/commit/ecfe326b76499b42376eb8190d6c5068d9b51dd4) - support Android 5.0 (previously only supported 5.1) *(commit by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.8.1",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.8.1/pftool.apk"
   }
 }
