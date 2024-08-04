@@ -1,18 +1,18 @@
 {
   "stable": {
-    "versionCode": 32200,
-    "versionName": "v3.2.2",
+    "versionCode": 33000,
+    "versionName": "v3.3.0",
     "preRelease": false,
-    "body": "### ✨ New Features\n- [`d535294`](https://github.com/aliernfrog/lac-tool/commit/d535294c777726d6c320eb05ca9b7135e3b8fa08) - **l10n**: update Persian translations *(commit by @aliernfrog)*",
-    "htmlUrl": "https://github.com/aliernfrog/lac-tool/releases/tag/v3.2.2",
-    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.2.2/lactool.apk"
+    "body": "### ✨ New Features\n- [`a785a62`](https://github.com/aliernfrog/lac-tool/commit/a785a6295739cf74f31cca363dfced4dc5eb38f9) - add support for Android 5.0 *(PR #89 by @aliernfrog)*\n- [`d07c411`](https://github.com/aliernfrog/lac-tool/commit/d07c411d777a345182f366191f7d97a884a1d751) - **settings/about**: redesign credits & add libraries *(commit by @aliernfrog)*\n- [`5721c1f`](https://github.com/aliernfrog/lac-tool/commit/5721c1fca56b96d1cc3b866e427000e815e0e50e) - predictive back gesture support *(commit by @aliernfrog)*\n- [`f5a97ac`](https://github.com/aliernfrog/lac-tool/commit/f5a97ac01818f647f1d327553630809437dd6198) - **settings/about**: add option to copy debug info *(commit by @aliernfrog)*\n- [`3620cc4`](https://github.com/aliernfrog/lac-tool/commit/3620cc44844fd3163376f1f0985c2d8a16b94d90) - **l10n**: partial Chinese translations & updates *(commit by @aliernfrog)*\n\n### 🐛 Bug Fixes\n- [`b1abf36`](https://github.com/aliernfrog/lac-tool/commit/b1abf3657880782ce9cd4b3e5c24ddb26672e4e8) - **l10n**: hide on Android 6 and below as it has no effect *(commit by @aliernfrog)*\n- [`4af780d`](https://github.com/aliernfrog/lac-tool/commit/4af780dbb8b9c5cec681d3679fc07a3cd548c8c8) - navigation bar contrast on Android 6 *(commit by @aliernfrog)*\n- [`512f69d`](https://github.com/aliernfrog/lac-tool/commit/512f69db8f30446d2760511acd66e203e982cf16) - **shizuku**: crash when processing +~1MB files *(commit by @aliernfrog)*\n- [`36b623b`](https://github.com/aliernfrog/lac-tool/commit/36b623b05a54813419f4611ce91d27d3c176173e) - adjust navigation transitions *(commit by @aliernfrog)*\n- [`4fdf115`](https://github.com/aliernfrog/lac-tool/commit/4fdf1152f75e1f4d310e8a853760deb843d2efa4) - **shizuku**: crash when writing +~1MB of data *(commit by @aliernfrog)*\n- [`71909a4`](https://github.com/aliernfrog/lac-tool/commit/71909a42447162c508e9ad93e09ced6ee06c1783) - **shizuku**: create non-existing directories *(commit by @aliernfrog)*\n- [`061b3e3`](https://github.com/aliernfrog/lac-tool/commit/061b3e3a3b16850aa88936a0abbb9b524e399a91) - **uri/to-path**: return as is if not an uri *(commit by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/lac-tool/releases/tag/v3.3.0",
+    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.3.0/lactool.apk"
   },
   "preRelease": {
-    "versionCode": 32200,
-    "versionName": "v3.2.2",
+    "versionCode": 33000,
+    "versionName": "v3.3.0",
     "preRelease": false,
-    "body": "### ✨ New Features\n- [`d535294`](https://github.com/aliernfrog/lac-tool/commit/d535294c777726d6c320eb05ca9b7135e3b8fa08) - **l10n**: update Persian translations *(commit by @aliernfrog)*",
-    "htmlUrl": "https://github.com/aliernfrog/lac-tool/releases/tag/v3.2.2",
-    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.2.2/lactool.apk"
+    "body": "### ✨ New Features\n- [`a785a62`](https://github.com/aliernfrog/lac-tool/commit/a785a6295739cf74f31cca363dfced4dc5eb38f9) - add support for Android 5.0 *(PR #89 by @aliernfrog)*\n- [`d07c411`](https://github.com/aliernfrog/lac-tool/commit/d07c411d777a345182f366191f7d97a884a1d751) - **settings/about**: redesign credits & add libraries *(commit by @aliernfrog)*\n- [`5721c1f`](https://github.com/aliernfrog/lac-tool/commit/5721c1fca56b96d1cc3b866e427000e815e0e50e) - predictive back gesture support *(commit by @aliernfrog)*\n- [`f5a97ac`](https://github.com/aliernfrog/lac-tool/commit/f5a97ac01818f647f1d327553630809437dd6198) - **settings/about**: add option to copy debug info *(commit by @aliernfrog)*\n- [`3620cc4`](https://github.com/aliernfrog/lac-tool/commit/3620cc44844fd3163376f1f0985c2d8a16b94d90) - **l10n**: partial Chinese translations & updates *(commit by @aliernfrog)*\n\n### 🐛 Bug Fixes\n- [`b1abf36`](https://github.com/aliernfrog/lac-tool/commit/b1abf3657880782ce9cd4b3e5c24ddb26672e4e8) - **l10n**: hide on Android 6 and below as it has no effect *(commit by @aliernfrog)*\n- [`4af780d`](https://github.com/aliernfrog/lac-tool/commit/4af780dbb8b9c5cec681d3679fc07a3cd548c8c8) - navigation bar contrast on Android 6 *(commit by @aliernfrog)*\n- [`512f69d`](https://github.com/aliernfrog/lac-tool/commit/512f69db8f30446d2760511acd66e203e982cf16) - **shizuku**: crash when processing +~1MB files *(commit by @aliernfrog)*\n- [`36b623b`](https://github.com/aliernfrog/lac-tool/commit/36b623b05a54813419f4611ce91d27d3c176173e) - adjust navigation transitions *(commit by @aliernfrog)*\n- [`4fdf115`](https://github.com/aliernfrog/lac-tool/commit/4fdf1152f75e1f4d310e8a853760deb843d2efa4) - **shizuku**: crash when writing +~1MB of data *(commit by @aliernfrog)*\n- [`71909a4`](https://github.com/aliernfrog/lac-tool/commit/71909a42447162c508e9ad93e09ced6ee06c1783) - **shizuku**: create non-existing directories *(commit by @aliernfrog)*\n- [`061b3e3`](https://github.com/aliernfrog/lac-tool/commit/061b3e3a3b16850aa88936a0abbb9b524e399a91) - **uri/to-path**: return as is if not an uri *(commit by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/lac-tool/releases/tag/v3.3.0",
+    "downloadUrl": "https://github.com/aliernfrog/lac-tool/releases/download/v3.3.0/lactool.apk"
   }
 }
