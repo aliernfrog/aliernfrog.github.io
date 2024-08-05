@@ -1,9 +1,9 @@
 {
-  "latest": 21000,
-  "latestFdroid": 21000,
+  "latest": 21100,
+  "latestFdroid": 21100,
   "download": "https://aliernfrog.github.io/lactool",
   "downloadFdroid": "https://aliernfrog.github.io/lactool",
-  "changelog": "# v3.0.0 (Android 6.0 or above)<br>- Rewritten in Jetpack Compose & Kotlin<br>- Faster file operations and optimizations for latest Android versions<br>- Material You theming<br>- Bottom navigation bar<br>- Wide screen & RTL layout support<br>- Manage downloadable materials<br>- Filter map objects by name, optionally remove matches<br>- Merge multiple maps<br><br># v2.1.0 - Legacy (Android 4.3 or above)<br>- Filter objects by name, optionally remove matches",
-  "changelogVersion": "v3.0.0 & v2.1.0 (Legacy)",
+  "changelog": "# v3.3.0 (Android 5.0 or above)<br>- Rewritten in Jetpack Compose & Kotlin<br>- Faster file operations and optimizations for latest Android versions<br>- Material You theming<br>- Bottom navigation bar<br>- Wide screen & RTL layout support<br>- Manage downloadable materials<br>- Filter map objects by name, optionally remove matches<br>- Merge multiple maps<br>- Shizuku support<br>- Translations<br><br># v2.1.1 - Legacy (Android 4.3 or above)<br>- Filter objects by name, optionally remove matches",
+  "changelogVersion": "v3.3.0 & v2.1.1 (Legacy)",
   "notes": ""
 }
