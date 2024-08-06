@@ -1,20 +1,20 @@
 {
   "stable": {
-    "versionCode": 18100,
-    "versionName": "v1.8.1",
+    "versionCode": 18200,
+    "versionName": "v1.8.2",
     "preRelease": false,
     "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
-    "bodyMarkdown": "### 🐛 Bug Fixes\n- [`ecfe326`](https://github.com/aliernfrog/pf-tool/commit/ecfe326b76499b42376eb8190d6c5068d9b51dd4) - support Android 5.0 (previously only supported 5.1) *(commit by @aliernfrog)*",
-    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.8.1",
-    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.8.1/pftool.apk"
+    "bodyMarkdown": "### 🐛 Bug Fixes\r\n- [`7b25a84`](https://github.com/aliernfrog/pf-tool/commit/7b25a84c08d3b1903814a99c5a32f20dca33729e) - **shizuku**: crash when processing +~1MB thumbnail files *(commit by @aliernfrog)*\r\n- [`0558f98`](https://github.com/aliernfrog/pf-tool/commit/0558f98b2b67dd7aba9e3178fc43ae7b9966a2fa) - **shizuku**: automatically create non-existing directories *(commit by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.8.2",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.8.2/pftool.apk"
   },
   "preRelease": {
-    "versionCode": 18100,
-    "versionName": "v1.8.1",
+    "versionCode": 18200,
+    "versionName": "v1.8.2",
     "preRelease": false,
     "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
-    "bodyMarkdown": "### 🐛 Bug Fixes\n- [`ecfe326`](https://github.com/aliernfrog/pf-tool/commit/ecfe326b76499b42376eb8190d6c5068d9b51dd4) - support Android 5.0 (previously only supported 5.1) *(commit by @aliernfrog)*",
-    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.8.1",
-    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.8.1/pftool.apk"
+    "bodyMarkdown": "### 🐛 Bug Fixes\r\n- [`7b25a84`](https://github.com/aliernfrog/pf-tool/commit/7b25a84c08d3b1903814a99c5a32f20dca33729e) - **shizuku**: crash when processing +~1MB thumbnail files *(commit by @aliernfrog)*\r\n- [`0558f98`](https://github.com/aliernfrog/pf-tool/commit/0558f98b2b67dd7aba9e3178fc43ae7b9966a2fa) - **shizuku**: automatically create non-existing directories *(commit by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.8.2",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.8.2/pftool.apk"
   }
 }
