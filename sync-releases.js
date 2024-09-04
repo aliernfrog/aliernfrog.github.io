@@ -68,7 +68,8 @@ async function generateReleaseInfo(repo, release) {
   const bodyMarkdown = release.body
     .replaceAll(":boom:", "💥") // breaking changes
     .replaceAll(":sparkles:", "✨") // feat
-    .replaceAll(":bug:", "🐛"); // fix
+    .replaceAll(":bug:", "🐛") // fix
+    .replaceAll(":recycle:", "♻️"); // refactor
   const obj = {
     versionCode: versionCode,
     versionName: release.name.toString(),
