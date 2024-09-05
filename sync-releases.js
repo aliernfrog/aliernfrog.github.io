@@ -28,6 +28,8 @@ const repos = [
   }
 ];
 
+const CHANGELOG_EXPIRE_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days
+
 async function main() {
   for (const repo of repos) {
     console.log(`Generating release info for ${repo.repo}`);
@@ -44,32 +46,40 @@ main();
 
 async function generateReleasesInfo(repo) {
   const releases = await (await fetch(`https://api.github.com/repos/${repo.repo}/releases`)).json();
-  const alpha = releases[0];
-  const alphaObject = await generateReleaseInfo(repo, alpha);
-  let stable = alpha;
-  let stableObject = alphaObject;
+  const latest = releases[0];
+  const latestObject = await generateReleaseInfo(repo, latest, releases);
+  let stable = latest;
+  let stableObject = latestObject;
   if (stable.prerelease) {
     const latestStable = releases.find(r => !r.prerelease);
     if (latestStable) {
       stable = latestStable;
-      stableObject = await generateReleaseInfo(repo, stable);
+      stableObject = await generateReleaseInfo(repo, stable, releases.filter(r => !r.prerelease));
     }
   }
   return {
     stable: stableObject,
-    preRelease: alphaObject
+    preRelease: latestObject
   };
 }
 
-async function generateReleaseInfo(repo, release) {
+async function generateReleaseInfo(repo, release, releases) {
+  releases = releases.filter(r => r != release);
+  if (releases.length) {
+    const currentReleaseDate = Date.parse(release.created_at);
+    releases = releases.filter(r => {
+      const releaseDate = Date.parse(r.created_at);
+      const diff = currentReleaseDate-releaseDate;
+      return diff < CHANGELOG_EXPIRE_DURATION;
+    });
+  }
   const apkFile = release.assets.find(a => a.name.endsWith(".apk"));
   if (!apkFile) return {};
   const versionCode = await getVersionCode(repo, release);
-  const bodyMarkdown = release.body
-    .replaceAll(":boom:", "💥") // breaking changes
-    .replaceAll(":sparkles:", "✨") // feat
-    .replaceAll(":bug:", "🐛") // fix
-    .replaceAll(":recycle:", "♻️"); // refactor
+  let bodyMarkdown = fixReleaseBody(release.body);
+  releases.forEach(r => {
+    bodyMarkdown += `\n\n# ${r.name.toString()}\n${fixReleaseBody(r.body)}`;
+  });
   const obj = {
     versionCode: versionCode,
     versionName: release.name.toString(),
@@ -81,6 +91,14 @@ async function generateReleaseInfo(repo, release) {
   }
   if (!repo.body) delete obj.bodyMarkdown;
   return obj;
+}
+
+function fixReleaseBody(body) {
+ return body
+    .replaceAll(":boom:", "💥") // breaking changes
+    .replaceAll(":sparkles:", "✨") // feat
+    .replaceAll(":bug:", "🐛") // fix
+    .replaceAll(":recycle:", "♻️"); // refactor
 }
 
 async function getVersionCode(repo, release) {
