@@ -28,7 +28,7 @@ const repos = [
   }
 ];
 
-const CHANGELOG_EXPIRE_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days
+const CHANGELOG_EXPIRE_DURATION = 20 * 24 * 60 * 60 * 1000; // 30 days
 
 async function main() {
   for (const repo of repos) {
@@ -48,19 +48,12 @@ async function generateReleasesInfo(repo) {
   const releases = await (await fetch(`https://api.github.com/repos/${repo.repo}/releases`)).json();
   const latest = releases[0];
   const latestObject = await generateReleaseInfo(repo, latest, releases);
-  let stable = latest;
-  let stableObject = latestObject;
-  if (stable.prerelease) {
-    const latestStable = releases.find(r => !r.prerelease);
-    if (latestStable) {
-      stable = latestStable;
-      stableObject = await generateReleaseInfo(repo, stable, releases.filter(r => !r.prerelease));
-    }
-  }
+  const stable = releases.find(r => !r.prerelease) ?? latest;
+  const stableObject = await generateReleaseInfo(repo, stable, releases.filter(r => !r.prerelease));
   return {
     stable: stableObject,
     preRelease: latestObject
-  };
+  }
 }
 
 async function generateReleaseInfo(repo, release, releases) {
@@ -101,18 +94,24 @@ function fixReleaseBody(body) {
     .replaceAll(":recycle:", "♻️"); // refactor
 }
 
+const versionCodeCache = new Map();
 async function getVersionCode(repo, release) {
+  const cacheKey = `${repo.repo}/${release.tag_name}`;
+  let cached = versionCodeCache.get(cacheKey);
+  if (cached) return cached;
   const tagInt = tryParseInt(release.tag_name);
-  if (tagInt) return tagInt;
-  try {
+  if (tagInt) cached = tagInt;
+  else try {
     const gradleFileResponse = await fetch(`https://raw.githubusercontent.com/${repo.repo}/${release.tag_name}/app/build.gradle.kts`);
     const gradleFileLines = (await gradleFileResponse.text()).split("\n");
     const versCodeLine = gradleFileLines.find(l => l.includes("versionCode = "));
     const versCode = tryParseInt(versCodeLine.trim().replace("versionCode = ", ""));
-    return versCode ?? 0;
-  } catch (e) {
-    return 0;
+    cached = versCode ?? 0;
+  } catch (_) {
+    cached = 0;
   }
+  versionCodeCache.set(cacheKey, cached);
+  return cached;
 }
 
 function tryParseInt(str) {
