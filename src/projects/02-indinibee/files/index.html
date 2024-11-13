@@ -1,0 +1,69 @@
+<builder>
+  <meta
+    title="{{project.name}}"
+    description="{{project.description}}"
+    icon="{{project.icon}}"
+  />
+  <template name="main"/>
+</builder>
+
+<builder-component
+  name="topbar"
+  title="{{project.name}}"
+  description="{{project.description}}"
+  icon="{{project.icon}}"
+/>
+
+<div style="text-align:center;">
+  <builder-component
+   name="chip-button"
+   label="Add Ms. Indinibee"
+   link="{{project.invite}}"
+   icon="/assets/images/plus.png"
+   containerColor="#CCBF00"/>
+  <br>
+  <i>by adding Ms. Indinibee to a server or profile, you agree to:</i>
+  <br>
+   <builder-component
+    name="chip-button"
+    label="Terms of Service"
+    link="terms-of-service"
+    opacity="0.9"/>
+  <builder-component
+    name="chip-button"
+    label="Privacy Policy"
+    link="privacy-policy"
+    opacity="0.9"/>
+</div>
+
+<div style="padding:8px;">
+  
+  <p1>
+    Ms. Indinibee (or just Indinibee) is a bee farming themed Discord economy bot.<br>
+    <br>
+    Currently the bot is pretty simple and does not have much features. Start finding items using <code>/find</code>, sell items you do not need using <code>/shop sell</code>, collect products of your bees using <code>/collect</code> and access shop using <code>/shop view</code>. To get more information about commands, you can use Discord's app launcher.
+  </p1><br>
+  
+  <br>
+
+  <h1>📋 Planned features</h1>
+  <p1>
+    - Localization<br>
+    - Robbing<br>
+    - More interactions with other players
+  </p1><br>
+  
+  <br>
+  
+  <h1>🌥️ Background</h1>
+  <p1>
+    Ms. Indinibee was actually created back in 2020 and it had mostly same features with the current one. However, I couldn't find more time to maintain it, after I decided to a progress reset and a rewrite on the "next update™️", eventually I decided to stop the bot.<br>
+    It stayed offline since then. Until in 2024, when I finally got more time to continue an outdated rewrite which was created in late 2022.
+  </p1>
+</div>
+
+<builder-component name="socials"/>
+
+<script>
+  setAmbientColor("{{project.ambientColor}}");
+</script>

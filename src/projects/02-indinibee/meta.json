@@ -1,0 +1,11 @@
+{
+  "id": "indinibee",
+  "name": "Ms. Indinibee",
+  "tags": ["discord-bot"],
+  "icon": "/assets/images/bots_indinibee.png",
+  "ambientColor": "#DDCF00",
+  "description": "Bee themed economy bot",
+  "url": "/indinibee/",
+  "invite": "https://discord.com/oauth2/authorize?client_id=698531260284534864",
+  "showInHome": false
+}

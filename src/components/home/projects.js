@@ -7,7 +7,7 @@ export default function({}, {
   const { projects } = builder;
   const projectDivs = [];
   
-  projects.forEach(project => {
+  projects.filter(p => p.showInHome != false).forEach(project => {
     const projectTags = (() => {
       if (!project.tags?.length) return;
       const divs = [];
