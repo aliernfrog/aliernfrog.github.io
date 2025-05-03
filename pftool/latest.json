@@ -1,20 +1,20 @@
 {
   "stable": {
-    "versionCode": 110000,
-    "versionName": "v1.10.0",
+    "versionCode": 110100,
+    "versionName": "v1.10.1",
     "preRelease": false,
     "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
-    "bodyMarkdown": "### ✨ New Features\n- [`4e9ead4`](https://github.com/aliernfrog/pf-tool/commit/4e9ead45ca7eb3a98436194a19a9d275f75b8a47) - **switch-row**: minor ui improvement *(commit by @aliernfrog)*\n- [`892dbed`](https://github.com/aliernfrog/pf-tool/commit/892dbedeaef79bf4c382be8050930f07dee960d9) - **update-sheet**: improve version name visibility *(commit by @aliernfrog)*\n- [`84dba4f`](https://github.com/aliernfrog/pf-tool/commit/84dba4f86adf973f7a0326981c0909be94e8fe09) - **settings**: rename `Map thumbnails` to `Maps` *(commit by @aliernfrog)*\n- [`f37a3dd`](https://github.com/aliernfrog/pf-tool/commit/f37a3ddc315a0cc531173edfdc429b566cba9fba) - **map-list**: add horizontally scrollable pager *(commit by @aliernfrog)*\n- [`460426e`](https://github.com/aliernfrog/pf-tool/commit/460426ec483ff7e6eea8b76e9edee3bf4c29d69d) - **l10n**: update translations *(commit by @aliernfrog)*\n\n### 🐛 Bug Fixes\n- [`e7f6637`](https://github.com/aliernfrog/pf-tool/commit/e7f6637f7d0ff2bc1a307926b1c84ac587477208) - draw behind navigation bar in landscape mode *(commit by @aliernfrog)*\n- [`31f06db`](https://github.com/aliernfrog/pf-tool/commit/31f06db3af2d7a83ea35899c5595f312b0e8f83d) - disable large top bar on compact height *(commit by @aliernfrog)*\n- [`29c1d5a`](https://github.com/aliernfrog/pf-tool/commit/29c1d5a1e66e6f0d39a54a09344e71188effd42f) - apply navigation bar padding in all screens *(commit by @aliernfrog)*",
-    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.10.0",
-    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.10.0/pftool.apk"
+    "bodyMarkdown": "### ✨ New Features\n- [`46d685a`](https://github.com/aliernfrog/pf-tool/commit/46d685a54deb61c68727a9d867d5213968fe5a02) - **l10n**: update Chinese translations *(PR #70 by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.10.1",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.10.1/pftool.apk"
   },
   "preRelease": {
-    "versionCode": 110000,
-    "versionName": "v1.10.0",
+    "versionCode": 110100,
+    "versionName": "v1.10.1",
     "preRelease": false,
     "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
-    "bodyMarkdown": "### ✨ New Features\n- [`4e9ead4`](https://github.com/aliernfrog/pf-tool/commit/4e9ead45ca7eb3a98436194a19a9d275f75b8a47) - **switch-row**: minor ui improvement *(commit by @aliernfrog)*\n- [`892dbed`](https://github.com/aliernfrog/pf-tool/commit/892dbedeaef79bf4c382be8050930f07dee960d9) - **update-sheet**: improve version name visibility *(commit by @aliernfrog)*\n- [`84dba4f`](https://github.com/aliernfrog/pf-tool/commit/84dba4f86adf973f7a0326981c0909be94e8fe09) - **settings**: rename `Map thumbnails` to `Maps` *(commit by @aliernfrog)*\n- [`f37a3dd`](https://github.com/aliernfrog/pf-tool/commit/f37a3ddc315a0cc531173edfdc429b566cba9fba) - **map-list**: add horizontally scrollable pager *(commit by @aliernfrog)*\n- [`460426e`](https://github.com/aliernfrog/pf-tool/commit/460426ec483ff7e6eea8b76e9edee3bf4c29d69d) - **l10n**: update translations *(commit by @aliernfrog)*\n\n### 🐛 Bug Fixes\n- [`e7f6637`](https://github.com/aliernfrog/pf-tool/commit/e7f6637f7d0ff2bc1a307926b1c84ac587477208) - draw behind navigation bar in landscape mode *(commit by @aliernfrog)*\n- [`31f06db`](https://github.com/aliernfrog/pf-tool/commit/31f06db3af2d7a83ea35899c5595f312b0e8f83d) - disable large top bar on compact height *(commit by @aliernfrog)*\n- [`29c1d5a`](https://github.com/aliernfrog/pf-tool/commit/29c1d5a1e66e6f0d39a54a09344e71188effd42f) - apply navigation bar padding in all screens *(commit by @aliernfrog)*",
-    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.10.0",
-    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.10.0/pftool.apk"
+    "bodyMarkdown": "### ✨ New Features\n- [`46d685a`](https://github.com/aliernfrog/pf-tool/commit/46d685a54deb61c68727a9d867d5213968fe5a02) - **l10n**: update Chinese translations *(PR #70 by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.10.1",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.10.1/pftool.apk"
   }
 }
