@@ -1,0 +1,12 @@
+:root {
+	--surface: #200019;
+	--surface-filter: brightness(0) saturate(100%) invert(8%) sepia(8%) saturate(7218%) hue-rotate(272deg) brightness(98%) contrast(111%);
+	--onSurface: #fa9df4;
+	--onSurface-filter: brightness(0) saturate(100%) invert(92%) sepia(76%) saturate(4704%) hue-rotate(266deg) brightness(96%) contrast(103%);
+	--surfaceContainer: #300029;
+	--surfaceContainer-filter: brightness(0) saturate(100%) invert(12%) sepia(8%) saturate(4677%) hue-rotate(261deg) brightness(94%) contrast(110%);
+	--primary: #ff97cd;
+	--primary-filter: brightness(0) saturate(100%) invert(84%) sepia(7%) saturate(4340%) hue-rotate(286deg) brightness(100%) contrast(102%);
+	--onPrimary: #593347;
+	--onPrimary-filter: brightness(0) saturate(100%) invert(23%) sepia(12%) saturate(1490%) hue-rotate(276deg) brightness(96%) contrast(95%);
+}

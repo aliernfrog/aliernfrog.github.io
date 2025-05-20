@@ -1,0 +1,12 @@
+body {
+  background-color: var(--surface);
+  color: var(--onSurface);
+  
+  font-family: "Gabarito", sans-serif;
+  
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
