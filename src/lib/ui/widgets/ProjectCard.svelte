@@ -7,13 +7,14 @@
     description,
     icon,
     tags = [],
-    url
+    url,
+    children
   } = $props();
 </script>
 
 <ClickableCard url={url}>
   <div style="display: flex; align-items: center;">
-    <div style="margin-right: 8px;">
+    <div style="margin-right: 12px;">
       <LargeIcon src={icon} />
     </div>
     <div style="flex-grow: 1; display: flex; flex-direction: column">
@@ -38,4 +39,7 @@
       </div>
     </div>
   </div>
+  {#if children}
+    {@render children()}
+  {/if}
 </ClickableCard>

@@ -6,7 +6,9 @@ const colors = {
   onSurface: "#fa9df4",
   surfaceContainer: "#300029",
   primary: "#ff97cd",
-  onPrimary: "#593347"
+  onPrimary: "#593347",
+  error: "#dd0101",
+  onError: "#ffffff",
 }
 
 async function generateCss() {

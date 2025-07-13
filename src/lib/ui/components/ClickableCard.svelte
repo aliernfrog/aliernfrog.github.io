@@ -1,5 +1,6 @@
 <script>
   let {
+    display = "block",
     url,
     containerColor = "var(--surfaceContainer)",
     contentColor = "var(--onSurface)",
@@ -12,6 +13,7 @@
 {#snippet card()}
   <div
     class="card"
+    style:display={display}
     style="--default-container-color: {containerColor}; --default-content-color: {contentColor}; --hovered-container-color: {hoveredContainerColor}; --hovered-content-color: {hoveredContentColor}">
     {@render children()}
   </div>
