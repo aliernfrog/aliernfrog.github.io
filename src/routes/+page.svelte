@@ -4,6 +4,7 @@
   import LargeIcon from "$lib/ui/components/LargeIcon.svelte";
   import GitHubRepo from "$lib/ui/widgets/GitHubRepo.svelte";
   import ProjectCard from "$lib/ui/widgets/ProjectCard.svelte";
+  import FancyTopBar from "$lib/ui/widgets/FancyTopBar.svelte";
   import TopBarButton from "$lib/ui/widgets/TopBarButton.svelte";
   import socials from "$lib/values/socials.ts";
   
@@ -19,17 +20,12 @@
   });
 </script>
 
-<div
-  class="topbar"
-  style:background-color="var(--surfaceContainer)"
-  style:color="var(--onSurface)"
-  style:border-radius="20px"
-  style:padding="12px">
-  <LargeIcon src="favicon.png" />
-  <p1 style:margin-left="8px" style:font-size="2rem" style:vertical-align="middle"><b>alieRN</b></p1>
-  <p1 style:font-size="0.8rem" style:opacity="70%" style:vertical-align="middle">frog</p1>
-  <div style:margin-top="8px" />
-  <p1>Someone with a few hobby projects running on the internet</p1>
+<FancyTopBar
+  title="alieRN"
+  sideTitle="frog"
+  icon="favicon.png"
+  description="Someone with a few hobby projects running on the internet"
+  colors={[ "#5c151a", "#5a4b4d" ]}>
   <div style:margin-top="8px" style:text-align="right">
     {#each Object.values(socials) as social, index}
       <a
@@ -42,7 +38,7 @@
       </a>
     {/each}
   </div>
-</div>
+</FancyTopBar>
 
 <h1>
   My projects
@@ -116,9 +112,9 @@
   url="https://aliernfrog.github.io/vd-plugins" />
 
 {#if repos?.length}
-  <h1 style:vertical-align="middle">
-    <img style:filter="var(--onSurface-filter)" src="icons/construction.svg">
-    Recent work took place in:
+  <h1>
+    <img style:filter="var(--onSurface-filter)" src="icons/construction.svg" style:width="2rem" style:height="2rem" style:vertical-align="middle">
+    <font style:vertical-align="middle">Recent work took place in:</font>
   </h1>
   <div style:overflow-x="scroll" style:white-space="nowrap">
     {#each repos as repo, index}
@@ -132,17 +128,3 @@
 {/if}
 
 <BottomSpacer />
-
-<style>
-  .topbar {
-    background: linear-gradient(70deg, #5C151A, #5A4B4D);
-    background-size: 200% 200%;
-    animation: rotateGradient 3s infinite linear;
-  }
-  
-  @keyframes rotateGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-</style>
