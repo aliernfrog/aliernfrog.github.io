@@ -2,7 +2,7 @@
   import { onDestroy, onMount } from "svelte";
   import { scale, slide } from "svelte/transition";
   import LargeIcon from "../components/LargeIcon.svelte";
-  import TopBarButton from "../widgets/TopBarButton.svelte";
+  import OutlinedButton from "../components/OutlinedButton.svelte";
 
   let {
     title,
@@ -15,7 +15,8 @@
     children
   } = $props();
   
-  if (colors?.length === 1) colors = [ colors[0], colors[0] ];
+  if (!colors) colors = [ containerColor, containerColor ];
+  if (colors.length === 1) colors = [ colors[0], colors[0] ];
   
   let currentScrollY = $state(0);
   let largeTopBarHeight = $state(0);
@@ -28,8 +29,6 @@
   onMount(() => {
     const largeTopBarEl = document.getElementById("large-topbar");
     if (largeTopBarEl) largeTopBarHeight = largeTopBarEl.offsetHeight;
-    console.log(largeTopBarEl);
-    console.log(largeTopBarHeight);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
@@ -75,7 +74,7 @@
       style:padding="12px">
       <LargeIcon src={icon} />
       <p1 style:font-size="1.8rem" style:margin="0px 24px 0px 24px" style:vertical-align="middle"><b>{title}</b></p1>
-      <TopBarButton label="" icon="icons/arrow_upward.svg" on:click={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
+      <OutlinedButton label="" icon="/icons/arrow_upward.svg" on:click={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
     </div>
   </div>
 {/if}

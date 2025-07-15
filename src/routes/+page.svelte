@@ -2,10 +2,10 @@
   import { onMount } from "svelte";
   import BottomSpacer from "$lib/ui/components/BottomSpacer.svelte";
   import LargeIcon from "$lib/ui/components/LargeIcon.svelte";
+  import OutlinedButton from "$lib/ui/components/OutlinedButton.svelte";
   import GitHubRepo from "$lib/ui/widgets/GitHubRepo.svelte";
   import ProjectCard from "$lib/ui/widgets/ProjectCard.svelte";
   import FancyTopBar from "$lib/ui/widgets/FancyTopBar.svelte";
-  import TopBarButton from "$lib/ui/widgets/TopBarButton.svelte";
   import socials from "$lib/values/socials.ts";
   
   let repos;
@@ -32,7 +32,7 @@
         href={social.url}
         style:text-decoration="none"
         style:margin-left={index != 0 ? "8px" : "0px"}>
-        <TopBarButton
+        <OutlinedButton
           label={social.name}
           icon={social.icon} />
       </a>

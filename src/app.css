@@ -10,3 +10,32 @@ body {
 a {
   text-decoration: none;
 }
+
+code {
+  background-color: var(--surfaceContainer);
+  color: var(--secondary);
+  padding: 0.1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+code:hover {
+  background-color: var(--secondary);
+  color: var(--onSecondary);
+}
+
+a.fancya, .fancya a {
+  text-decoration: underline;
+  background-color: var(--primary);
+  color: var(--onPrimary);
+  padding: 0.1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+a.fancya:hover, .fancya a:hover {
+  background-color: var(--onPrimary);
+  color: var(--primary);
+}
