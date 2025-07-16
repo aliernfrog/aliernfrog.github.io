@@ -8,7 +8,7 @@
   export let showFullName;
   
   let loading = !json;
-  let error = (!json && !url) ? "No data provided" : null;
+  let error = (!json && !repo) ? "No data provided" : null;
   
   onMount(async () => {
     if (repo && !json) {

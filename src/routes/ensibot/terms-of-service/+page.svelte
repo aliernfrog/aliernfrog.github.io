@@ -9,9 +9,15 @@
 <FancyTopBar
   title="Terms of Service"
   sideTitle="of Ensi"
-  description="Last updated: July 4th, 2024"
+  description="Last updated: July 5th, 2024"
   icon="/icons/projects/ensi.png"
-  iconLink="/ensibot" />
+  iconLink="/ensibot"
+  backButton={{
+    label: "Ensi",
+    icon: "/icons/projects/ensi.png",
+    url: "/ensibot"
+  }}
+  showHomeButton />
 
 <div class="fancya">
   <Markdown text={terms} />

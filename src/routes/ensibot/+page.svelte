@@ -20,6 +20,7 @@
   title="Ensi"
   icon="icons/projects/ensi.png"
   description="Randomized chatting & utility bot for Discord"
+  showHomeButton
   colors={[ "#3f4a59", "#1e461f" ]}>
   <div style:margin-top="12px" style:text-align="right">
     <a href={addLink}>
