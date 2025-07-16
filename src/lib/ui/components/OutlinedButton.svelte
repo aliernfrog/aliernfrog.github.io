@@ -1,9 +1,13 @@
 <script>
   export let label;
   export let icon;
+  export let unhoveredOpacity = "100%";
 </script>
 
-<div class="button" on:click >
+<div
+  class="button"
+  style={`--unhovered-opacity: ${unhoveredOpacity}`}
+  on:click >
   <img class="icon" src={icon}> <p1 style:vertical-align="middle">{label}</p1>
 </div>
 
@@ -13,9 +17,9 @@
     padding: 8px;
     background-color: transparent;
     color: var(--onSurface);
-    border: 1.7px solid var(--onSurface);
+    border: 1px solid var(--onSurface);
     border-radius: 15px;
-    opacity: 70%;
+    opacity: var(--unhovered-opacity);
     transition: background-color 0.3s ease-in-out,
       color 0.3s ease-in-out,
       border-radius 0.3s ease-in-out,

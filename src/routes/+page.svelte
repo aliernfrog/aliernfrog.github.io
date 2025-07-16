@@ -34,7 +34,8 @@
         style:margin-left={index != 0 ? "8px" : "0px"}>
         <OutlinedButton
           label={social.name}
-          icon={social.icon} />
+          icon={social.icon}
+          unhoveredOpacity="70%" />
       </a>
     {/each}
   </div>

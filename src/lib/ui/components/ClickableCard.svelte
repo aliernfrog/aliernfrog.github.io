@@ -50,6 +50,15 @@
   
   .card :global(.card-component) {
     transition: color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
+      background-color 0.3s ease-in-out;
+  }
+  
+  .card :global(.card-icon) {
+    filter: var(--onSurface-filter);
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .card:hover :global(.card-icon) {
+    filter: var(--onPrimary-filter);
   }
 </style>

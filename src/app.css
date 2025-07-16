@@ -14,7 +14,7 @@ a {
 code {
   background-color: var(--surfaceContainer);
   color: var(--secondary);
-  padding: 0.1rem;
+  padding: 0rem 0.2rem 0rem 0.2rem;
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
@@ -29,7 +29,7 @@ a.fancya, .fancya a {
   text-decoration: underline;
   background-color: var(--primary);
   color: var(--onPrimary);
-  padding: 0.1rem;
+  padding: 0rem 0.2rem 0rem 0.2rem;
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
