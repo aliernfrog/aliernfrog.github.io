@@ -11,7 +11,7 @@
   const legacyDownloadLink = "https://github.com/aliernfrog/lac-tool-legacy/releases/latest/download/lactool-legacy.apk";
   const legacySource = "aliernfrog/lac-tool-legacy";
   
-  const lacLink = "";
+  const lacLink = "https://play.google.com/store/apps/details?id=com.MA.LAC";
 </script>
 
 <FancyTopBar
@@ -33,8 +33,8 @@
     </a><br />
     <div style:margin-top="12px">
       <p1 style:font-size="0.7rem">
-        At least Android 5 is required.<br />
-        For Android 4.3 ONLY, use Legacy version.
+        At least Android 5 is required for the latest version<br />
+        Legacy version only supports Android 4.3
       </p1>
     </div>
   </div>
@@ -66,8 +66,6 @@
   <li>📷 View screenshots taken using the in-game cellphone</li>
   <li>🎨 Adaptive design with Material You theming</li>
 </ul>
-
-<div style:margin-top="16px" />
 
 <div style:margin-top="16px" />
 

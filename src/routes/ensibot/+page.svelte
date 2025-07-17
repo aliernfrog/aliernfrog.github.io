@@ -1,7 +1,6 @@
 <script>
   import BottomSpacer from "$lib/ui/components/BottomSpacer.svelte";
   import FilledButton from "$lib/ui/components/FilledButton.svelte";
-  import OutlinedButton from "$lib/ui/components/OutlinedButton.svelte";
   import DiscordSupport from "$lib/ui/widgets/DiscordSupport.svelte";
   import FancyTopBar from "$lib/ui/widgets/FancyTopBar.svelte";
   

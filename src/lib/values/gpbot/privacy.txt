@@ -1,6 +1,6 @@
 This privacy policy governs your use of the Discord Application `@Play Store Bot#5070` (with the user ID `806615704987762759`, referred as "bot") provided by `aliernfrog` ("we", "us", "our").
 <br>
-By adding to a Discord Server ("server") or User Profile ("profile") or using commands of (all referred as "interacting with") the bot, you agree to the [Terms of Service](../terms-of-service) ("terms") and this Privacy Policy ("policy").
+By adding to a Discord Server ("server") or User Profile ("profile") or using commands of (all referred as "interacting with") the bot, you agree to the [Terms of Service](/gpbot/terms-of-service) ("terms") and this Privacy Policy ("policy").
 <br>
 If you disagree with any parts of the terms and/or the policy, **stop using the bot immediately**.
 
