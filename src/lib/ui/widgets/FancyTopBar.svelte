@@ -47,6 +47,15 @@
   });
 </script>
 
+<svelte:head>
+  <title>{title}</title>
+  <meta name="og:title" content={title}>
+  <meta name="og:description" content={description}>
+  <meta name="og:image" content={icon}>
+  <meta name="description" content={description}>
+  <link rel="icon" type="image/gif/png" href={icon}>
+</svelte:head>
+
 {#if topActions.length}
   <div style:text-align="center" style:margin-bottom="8px">
     {#each topActions as action, index}
