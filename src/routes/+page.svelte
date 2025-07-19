@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import BottomSpacer from "$lib/ui/components/BottomSpacer.svelte";
+  import ClickableCard from "$lib/ui/components/ClickableCard.svelte";
   import LargeIcon from "$lib/ui/components/LargeIcon.svelte";
   import OutlinedButton from "$lib/ui/components/OutlinedButton.svelte";
   import GitHubRepo from "$lib/ui/widgets/GitHubRepo.svelte";
@@ -8,6 +9,9 @@
   import FancyTopBar from "$lib/ui/widgets/FancyTopBar.svelte";
   import socials from "$lib/values/socials.ts";
   
+  export let data;
+  
+  const { posts } = data;
   let repos;
   
   onMount(async () => {
@@ -111,6 +115,27 @@
   icon="icons/projects/vdplugins.png"
   tags={[ "Open source" ]}
   url="https://aliernfrog.github.io/vd-plugins" />
+
+<div style:margin-top="8px" />
+
+<h1>My posts</h1>
+{#each posts as post}
+  <a style:margin-top="8px" href={`/posts/${post.id}`}>
+    <ClickableCard>
+      <p1 style:font-size="1.5rem">{post.title}</p1><br />
+      <p1>{post.description}</p1><br />
+      <p1 style:font-size="0.8rem" style:opacity="70%">{(new Date(post.date)).toLocaleString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      })}</p1>
+    </ClickableCard>
+  </a>
+{/each}
+
+<div style:margin-top="8px" />
 
 {#if repos?.length}
   <h1>
