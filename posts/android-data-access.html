@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+		
+		<link href="../_app/immutable/assets/0.QLXsjWWT.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/ChipButton.D9tt3BwQ.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/FancyTopBar.DOaf9DzF.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.BpNnrIA5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_WtJSa3s.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/C-vpoeSO.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DkJEZ29O.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.AoCgIjC1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CBE9JO-2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/C9H4jhqy.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BU0BrvLW.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Cl8WMKNV.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Cv-LMhVa.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CltgQ5jN.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/19.hbx9riLU.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DvOh9q9g.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Dc2MH8nZ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/vnCglEJs.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CuVHFSZ9.js"><!--[--><meta name="og:title" content="Android/data access" class="svelte-14ctir7"> <meta name="og:description" content="Solutions for accessing Android/data folder on Android 11+" class="svelte-14ctir7"> <meta name="og:image" content="/favicon.png" class="svelte-14ctir7"> <meta name="description" content="Solutions for accessing Android/data folder on Android 11+" class="svelte-14ctir7"> <link rel="icon" type="image/gif/png" href="/favicon.png" class="svelte-14ctir7"><!--]--><title>Android/data access</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><!----><!----><!--[--><div class="svelte-14ctir7" style="text-align: center; margin-bottom: 8px;"><!--[--><a href="/" class="svelte-14ctir7" style="margin-left: 0px;"><div class="button svelte-w2cvxs"><img class="icon svelte-w2cvxs" src="/favicon.png"> <p1 style="vertical-align: middle;">alieRN</p1></div><!----></a><!--]--></div><!--]--> <div class="topbar svelte-14ctir7" id="large-topbar" style="--color-a: var(--surfaceContainer); --color-b: var(--surfaceContainer); background-color: var(--surfaceContainer); color: var(--onSurface); border-radius: 20px; padding: 12px;"><a href="/" class="svelte-14ctir7"><img src="/favicon.png" style="width: 60px; height: 60px; border-radius: 20px; vertical-align: middle;"><!----></a> <p1 class="svelte-14ctir7" style="margin-left: 8px; font-size: 2rem; vertical-align: middle;"><b class="svelte-14ctir7">Android/data access</b></p1> <!--[!--><!--]--> <div class="svelte-14ctir7" style="margin-top: 8px;"></div> <p1 class="svelte-14ctir7">Solutions for accessing Android/data folder on Android 11+</p1> <!--[--><div style="margin-top: 8px; text-align: right;"><p1 style="font-size: 0.8rem; opacity: 80%;">December 10, 2023 at 12:00 PM <!--[--><br> Updated: July 19, 2025 at 09:00 PM<!--]--></p1></div><!----><!--]--></div> <!--[!--><!--]--><!----> <div class="fancya"><div><!----><h1>Summary</h1>
+<ul>
+<li>On Android 11 and later, access to <code>Android/data</code> using <code>java.io.File</code> was made impossible.</li>
+<li>A loophole in DocumentsUI allowed apps to get access to Android/data, if the app set the initial URI to that folder.</li>
+<li>A patch was made later, which prevented apps from getting access to Android/data. However, it was still possible to set the initial URI to specific folders inside this folder and get access to them.</li>
+<li>In September 2023, a new version of DocumentsUI started rolling out. Which made it impossible to get access to anything inside <code>Android/data</code>.</li>
+</ul>
+<h1>Solutions</h1>
+<h2>Method 1: Custom ROMs</h2>
+<p>Some custom ROMs allow users to disable <code>Android/data</code> restrictions from DocumentsUI, allowing file explorers to request access to folders and files inside.</p>
+<h2>Method 2: Uninstall updates of Files app (temporary, might not work)</h2>
+<p>In some cases, users can uninstall updates of the Files (DocumentsUI) app, and revert to a version which has partial restrictions.
+To do this: <code>Device settings &gt; Apps &gt; All apps/Manage apps &gt; Files (the one with the blue icon, name depends on language)</code> &gt; Uninstall updates`. The app may be hidden from this list by default, in this case look for an option to un-hide system apps.
+Note that these steps may vary depending on your device.</p>
+<h2>Method 3: Use <a href="https://shizuku.rikka.app/">Shizuku</a> with <a href="https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver">ZArchiver (proprietary)</a></h2>
+<p><a href="https://shizuku.rikka.app/">Shizuku</a> is an app which lets other apps elevate their permissions with ADB Wireless Debugging or Root access.
+<a href="https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver">ZArchiver</a> can be configured to use permissions from Shizuku: <code>ZArchiver settings &gt; Root &gt; Root type &gt; Shizuku</code>.</p>
+<h2>Method 4: Connect device to a PC with USB or ADB</h2>
+<p>Android/data can be accessed on a PC when the device is connected via ADB or USB.
+For USB, selecting &quot;file management&quot; option is required after connecting the device.
+For ADB, commands such as <code>adb pull</code> and <code>adb push</code> can be used. I do not know if there are GUI apps for this.</p>
+<h1>For LAC or Polyfield</h1>
+<h3>LAC</h3>
+<ul>
+<li>Use <a href="https://github.com/aliernfrog/lac-tool">LAC Tool</a>, it has Shizuku support.</li>
+<li>Use in-game community tab to share &amp; download maps.</li>
+<li>Copy <code>.txt</code> link of the map you want to download, and paste it to map name field when creating map. This will download the map.</li>
+<li>Copy link of the wallpaper you want to use, and paste it on in-game cellphone settings.</li>
+<li>Manually manage files using the previous methods</li>
+<li><code>Android/data/com.MA.LAC/files/editor</code> for maps</li>
+<li><code>Android/data/com.MA.LAC/files/wallpapers</code> for wallpapers</li>
+<li><code>Android/data/com.MA.LAC/files/screenshots</code> for screenshots</li>
+</ul>
+<h3>Polyfield</h3>
+<ul>
+<li>Use <a href="https://github.com/aliernfrog/pf-tool">PF Tool</a>, it has Shizuku support.</li>
+<li>Download maps from the in-game maps list.</li>
+<li>Manually manage files using the previous methods</li>
+<li><code>Android/data/com.MA.Polyfield/files/editor</code> for maps</li>
+</ul>
+<!----></div><!----></div> <div style="margin-top: 12px; padding-top: env(safe-area-max-inset-bottom, 0px);"></div><!----><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1icp5cj = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.BpNnrIA5.js"),
+						import("../_app/immutable/entry/app.AoCgIjC1.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 19],
+							data: [null,{type:"data",data:{post:{id:"android-data-access",title:"Android/data access",date:"2023-12-10T12:00Z",updated:"2025-07-19T21:00Z",description:"Solutions for accessing Android/data folder on Android 11+",content:"\n# Summary\n- On Android 11 and later, access to `Android/data` using `java.io.File` was made impossible.\n- A loophole in DocumentsUI allowed apps to get access to Android/data, if the app set the initial URI to that folder.\n- A patch was made later, which prevented apps from getting access to Android/data. However, it was still possible to set the initial URI to specific folders inside this folder and get access to them.\n- In September 2023, a new version of DocumentsUI started rolling out. Which made it impossible to get access to anything inside `Android/data`.\n\n# Solutions\n## Method 1: Custom ROMs\nSome custom ROMs allow users to disable `Android/data` restrictions from DocumentsUI, allowing file explorers to request access to folders and files inside.\n\n## Method 2: Uninstall updates of Files app (temporary, might not work)\nIn some cases, users can uninstall updates of the Files (DocumentsUI) app, and revert to a version which has partial restrictions.\nTo do this: `Device settings > Apps > All apps/Manage apps > Files (the one with the blue icon, name depends on language)` > Uninstall updates`. The app may be hidden from this list by default, in this case look for an option to un-hide system apps.\nNote that these steps may vary depending on your device.\n\n## Method 3: Use [Shizuku](https://shizuku.rikka.app/) with [ZArchiver (proprietary)](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)\n[Shizuku](https://shizuku.rikka.app/) is an app which lets other apps elevate their permissions with ADB Wireless Debugging or Root access.\n[ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) can be configured to use permissions from Shizuku: `ZArchiver settings > Root > Root type > Shizuku`.\n\n## Method 4: Connect device to a PC with USB or ADB\nAndroid/data can be accessed on a PC when the device is connected via ADB or USB.\nFor USB, selecting \"file management\" option is required after connecting the device.\nFor ADB, commands such as `adb pull` and `adb push` can be used. I do not know if there are GUI apps for this.\n\n# For LAC or Polyfield\n### LAC\n- Use [LAC Tool](https://github.com/aliernfrog/lac-tool), it has Shizuku support.\n- Use in-game community tab to share & download maps.\n- Copy `.txt` link of the map you want to download, and paste it to map name field when creating map. This will download the map.\n- Copy link of the wallpaper you want to use, and paste it on in-game cellphone settings.\n- Manually manage files using the previous methods\n - `Android/data/com.MA.LAC/files/editor` for maps\n - `Android/data/com.MA.LAC/files/wallpapers` for wallpapers\n - `Android/data/com.MA.LAC/files/screenshots` for screenshots\n\n### Polyfield\n- Use [PF Tool](https://github.com/aliernfrog/pf-tool), it has Shizuku support.\n- Download maps from the in-game maps list.\n- Manually manage files using the previous methods\n - `Android/data/com.MA.Polyfield/files/editor` for maps"}},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
