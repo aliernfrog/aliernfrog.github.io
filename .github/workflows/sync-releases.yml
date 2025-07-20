@@ -1,0 +1,33 @@
+name: "Sync releases"
+on:
+  workflow_dispatch:
+
+jobs:
+  sync-releases:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+    
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "23"
+    
+      - name: Run sync
+        run: node sync-releases.js
+    
+      - name: Check for changes
+        uses: tj-actions/verify-changed-files@v19
+        id: changes
+    
+      - name: Push changes
+        if: steps.changes.outputs.files_changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "chore: sync releases information"
+          git push

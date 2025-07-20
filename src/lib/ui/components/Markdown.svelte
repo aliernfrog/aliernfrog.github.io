@@ -7,7 +7,7 @@
   
   const parsed = parseMarkdown(
     // Remove indentation and leading/trailing whitespace
-    text.trim().replace(/^\s+/gm, "").replaceAll("\\n","<br>")
+    text/*.replace(/^\s+/gm, "")*/.replaceAll("\\n", "<br />")
   );
 </script>
 

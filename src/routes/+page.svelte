@@ -120,7 +120,8 @@
 
 <h1>My posts</h1>
 {#each posts as post}
-  <a style:margin-top="8px" href={`/posts/${post.id}`}>
+  <div style:margin-top="8px" />
+  <a href={`/posts/${post.id}`}>
     <ClickableCard>
       <p1 style:font-size="1.5rem">{post.title}</p1><br />
       <p1>{post.description}</p1><br />

@@ -1,0 +1,20 @@
+{
+  "stable": {
+    "versionCode": 110100,
+    "versionName": "v1.10.1",
+    "preRelease": false,
+    "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
+    "bodyMarkdown": "### ✨ New Features\n- [`46d685a`](https://github.com/aliernfrog/pf-tool/commit/46d685a54deb61c68727a9d867d5213968fe5a02) - **l10n**: update Chinese translations *(PR #70 by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.10.1",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.10.1/pftool.apk"
+  },
+  "preRelease": {
+    "versionCode": 110100,
+    "versionName": "v1.10.1",
+    "preRelease": false,
+    "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
+    "bodyMarkdown": "### ✨ New Features\n- [`46d685a`](https://github.com/aliernfrog/pf-tool/commit/46d685a54deb61c68727a9d867d5213968fe5a02) - **l10n**: update Chinese translations *(PR #70 by @aliernfrog)*",
+    "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v1.10.1",
+    "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v1.10.1/pftool.apk"
+  }
+}

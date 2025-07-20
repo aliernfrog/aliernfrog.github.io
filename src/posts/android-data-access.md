@@ -42,6 +42,6 @@ For ADB, commands such as `adb pull` and `adb push` can be used. I do not know i
 
 ### Polyfield
 - Use [PF Tool](https://github.com/aliernfrog/pf-tool), it has Shizuku support.
-- Download maps from the in-game maps list
+- Download maps from the in-game maps list.
 - Manually manage files using the previous methods
  - `Android/data/com.MA.Polyfield/files/editor` for maps
