@@ -9,7 +9,7 @@
 <FancyTopBar
   title="Terms of Service"
   sideTitle="of Ms. Indinibee"
-  description="Last updated: November 13th, 2024"
+  description="Last updated: August 1st, 2025"
   icon="/icons/projects/indinibee.png"
   iconLink="/indinibee"
   backButton={{

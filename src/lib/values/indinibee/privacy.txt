@@ -1,6 +1,6 @@
 This privacy policy governs your use of the Discord Application `@Ms. Indinibee#6482` (with the user ID `Ms. Indinibee#6482`, referred as "Indinibee") provided by `aliernfrog` ("we", "us", "our").
 <br>
-By adding to a Discord Server ("server") or User Profile ("profile"), mentioning in a chat or using commands of (all referred as "interacting with") Indinibee, you agree to the [Terms of Service](/indinibee/terms-of-service) ("terms") and this Privacy Policy ("policy").
+By adding to a Discord Server ("server") or User Profile ("profile"), mentioning in a chat or using commands, message components, modals of (all referred as "interacting with") Indinibee, you agree to the [Terms of Service](/indinibee/terms-of-service) ("terms") and this Privacy Policy ("policy").
 <br>
 If you disagree with any parts of the terms and/or the policy, **stop using Indinibee immediately**.
 

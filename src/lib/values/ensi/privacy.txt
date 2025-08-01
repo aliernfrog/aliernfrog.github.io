@@ -1,13 +1,13 @@
 This privacy policy governs your use of the Discord Application `@Ensi#4062` (with the user ID `696151319819321368`, referred as "Ensi") provided by `aliernfrog` ("we", "us", "our").
 <br>
-By adding to a Discord Server ("server") or User Profile ("profile"), mentioning in a chat or using commands of (all referred as "interacting with") Ensi, you agree to the [Terms of Service](/ensibot/terms-of-service) ("terms") and this Privacy Policy ("policy").
+By adding to a Discord Server ("server") or User Profile ("profile"), mentioning in a chat or using commands, message components, modals of (all referred as "interacting with") Ensi, you agree to the [Terms of Service](/ensibot/terms-of-service) ("terms") and this Privacy Policy ("policy").
 <br>
 If you disagree with any parts of the terms and/or the policy, **stop using Ensi immediately**.
 
 ## Information we collect
 - **For configurations, preferences and identification purposes;** we may store your Discord User ID and ID of the channel or the server where you interacted with the bot.
 - **For chatting feature,** if you specifically mention or reply to Ensi, we may store a part of your message's content (randomly picked from content splitted by " "), these strings are reviewed to make sure we do not store personal or malicious information.
-- **To make `/snipe` work,** Ensi temporarily stores the content, author name and avatar URL of the last deleted message (if it is not older than 2 minutes), this data is stored on memory so it gets deleted after a short while, and it can be viewed if someone runs `/snipe` in the same channel in 2 minutes. Servers can opt-out of this by running the command `/server-options`, or `/channel-options` to opt-out/opt-in for a specific channel.
+- **To make `/snipe` work,** Ensi temporarily stores the content, author name and avatar URL of the last deleted message (if it is not older than 2 minutes) and it can be viewed if someone runs `/snipe` in the same channel in 2 minutes. This data is completely removed 2 minutes after its creation. Servers can opt-out of this by running the command `/server-options`, or `/channel-options` to opt-out/opt-in for a specific channel.
 
 ## Children's privacy
 We do not aim any of our products or services directly at children under the age of 13 and we do not knowingly collect information about children under 13.

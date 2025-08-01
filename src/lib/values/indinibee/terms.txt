@@ -13,7 +13,7 @@ Indinibee CANNOT be used for or with the intent of:
 - finding or sharing exploits
 
 ## Removal/limitation of access
-An user or a server's access to Indinibee can be limited or removed completely at any time, without notice or reason (reasons include violating the terms).
+Access of a user or server to Indinibee can be limited or removed completely at any time, without notice or reason (reasons include violating the terms).
 
 ## Liability
 YOUR USE OF INDINIBEE IS SOLELY AT YOUR OWN RISK. INDINIBEE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITH NO WARRANTIES OF ANY KIND. INDINIBEE IS OFFERED ONLY FOR ENTERTAINMENT PURPOSES AND ACCURACY, USEFULNESS, COMPLETENESS OR TIMELINESS OF ANY INFORMATION IT PROVIDES CANNOT BE WARRANTED. THEREFORE, IN NO EVENT WILL INDINIBEE, DISCORD OR WE BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, INDIRECT OR SPECIAL DAMAGES WHATSOEVER (INCLUDING LOSS OF DATA) ARISING OUT OF THE USE OR INABILITY TO USE INDINIBEE.

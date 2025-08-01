@@ -61,7 +61,7 @@
   
 <ProjectCard
   name="GPBot"
-  description="Google Play Store™️ scraper bot for Discord"
+  description="Google Play Store™ scraper bot for Discord"
   icon="icons/projects/gpbot.png"
   tags={[ "Discord bot", "Utility" ]}
   url="./gpbot" />
