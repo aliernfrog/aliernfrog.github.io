@@ -5,9 +5,8 @@
     text
   } = $props();
   
-  const parsed = parseMarkdown(
-    // Remove indentation and leading/trailing whitespace
-    text/*.replace(/^\s+/gm, "")*/.replaceAll("\\n", "<br />")
+  let parsed = $derived(
+    parseMarkdown(text.replaceAll("\\n", "<br />"))
   );
 </script>
 

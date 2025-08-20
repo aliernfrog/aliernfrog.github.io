@@ -5,7 +5,7 @@
   
   export let data;
   
-  const { post } = data;
+  $: ({ post } = data);
   
   function readableTime(date) {
     return new Date(date).toLocaleString(undefined, {
