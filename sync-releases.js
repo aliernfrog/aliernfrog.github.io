@@ -91,7 +91,8 @@ function fixReleaseBody(body) {
     .replaceAll(":boom:", "💥") // breaking changes
     .replaceAll(":sparkles:", "✨") // feat
     .replaceAll(":bug:", "🐛") // fix
-    .replaceAll(":recycle:", "♻️"); // refactor
+    .replaceAll(":recycle:", "♻️") // refactor
+    .replaceAll(":zap:", "⚡"); // perf
 }
 
 const versionCodeCache = new Map();
