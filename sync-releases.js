@@ -10,15 +10,16 @@ const repos = [
     repo: "aliernfrog/pf-tool",
     jsonPath: "pftool/latest.json",
     body: [
+      "• Material 3 Expressive design",
+      "• New map list with searching, sorting and grid style options",
       "• Shizuku support",
       "• Full support for scoped storage & folder configuration",
-      "• New map list with searching and sorting options",
       "• Multi-selection and batch actions for maps",
       "• Show thumbnail of chosen map",
       "• Quickly open/download maps from .zip files and URLs",
       "• Improved UI for wide screens and RTL layouts",
-      "• Various UI improvements",
-      "• Various bug fixes",
+      "• Many visual overhauls & redesigns",
+      "• Many bug fixes",
       "• Monochrome icon"
     ].join("\n")
   },
