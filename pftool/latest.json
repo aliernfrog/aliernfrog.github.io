@@ -3,7 +3,7 @@
     "versionCode": 200100,
     "versionName": "v2.0.1",
     "preRelease": false,
-    "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
+    "body": "• Material 3 Expressive design\n• New map list with searching, sorting and grid style options\n• Shizuku support\n• Full support for scoped storage & folder configuration\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Many visual overhauls & redesigns\n• Many bug fixes\n• Monochrome icon",
     "bodyMarkdown": "### ✨ New Features\n- [`74cd8dd`](https://github.com/aliernfrog/pf-tool/commit/74cd8dd60c76a27c5486f42f4c5a9f2e8fa37f8a) - **l10n**: update translations *(PR #85 by @aliernfrog)*\n\n### 🐛 Bug Fixes\n- [`4464150`](https://github.com/aliernfrog/pf-tool/commit/4464150677ee6863ac9ceaeb94d76e3532f9da45) - **shizuku**: recommend downgrading to Shizuku v13.5.4 *(PR #83 by @aliernfrog)*",
     "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v2.0.1",
     "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v2.0.1/pftool.apk"
@@ -12,7 +12,7 @@
     "versionCode": 200100,
     "versionName": "v2.0.1",
     "preRelease": false,
-    "body": "• Shizuku support\n• Full support for scoped storage & folder configuration\n• New map list with searching and sorting options\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Various UI improvements\n• Various bug fixes\n• Monochrome icon",
+    "body": "• Material 3 Expressive design\n• New map list with searching, sorting and grid style options\n• Shizuku support\n• Full support for scoped storage & folder configuration\n• Multi-selection and batch actions for maps\n• Show thumbnail of chosen map\n• Quickly open/download maps from .zip files and URLs\n• Improved UI for wide screens and RTL layouts\n• Many visual overhauls & redesigns\n• Many bug fixes\n• Monochrome icon",
     "bodyMarkdown": "### ✨ New Features\n- [`74cd8dd`](https://github.com/aliernfrog/pf-tool/commit/74cd8dd60c76a27c5486f42f4c5a9f2e8fa37f8a) - **l10n**: update translations *(PR #85 by @aliernfrog)*\n\n### 🐛 Bug Fixes\n- [`4464150`](https://github.com/aliernfrog/pf-tool/commit/4464150677ee6863ac9ceaeb94d76e3532f9da45) - **shizuku**: recommend downgrading to Shizuku v13.5.4 *(PR #83 by @aliernfrog)*",
     "htmlUrl": "https://github.com/aliernfrog/pf-tool/releases/tag/v2.0.1",
     "downloadUrl": "https://github.com/aliernfrog/pf-tool/releases/download/v2.0.1/pftool.apk"
