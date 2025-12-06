@@ -1,1 +1,0 @@
-import"../chunks/BK_Ujt1A.js";import"../chunks/CQGjECdP.js";import{p as t,a as i}from"../chunks/DxcSraTB.js";import{i as p}from"../chunks/BFop87Nm.js";import{R as m}from"../chunks/BmYnCs8C.js";import{s}from"../chunks/HDMyP1Rn.js";function l(o,r){t(r,!1),p(),m(o,{get url(){return s.github.url}}),i()}export{l as component};

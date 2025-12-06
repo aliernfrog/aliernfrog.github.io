@@ -1,0 +1,1 @@
+import"../chunks/BhYY4eDt.js";import"../chunks/CYJvkKSp.js";import{R as t}from"../chunks/DiXYJNC9.js";function a(o){t(o,{url:"https://github.com/aliernfrog/pf-tool/releases/latest/download/pftool.apk"})}export{a as component};
