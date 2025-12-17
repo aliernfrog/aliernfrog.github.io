@@ -50,11 +50,16 @@
     All in a single app!
   </p1><br />
   <img
-    alt="Screenshot from LAC Tool"
+    alt="LAC Tool screenshot (dark)"
     src="https://raw.githubusercontent.com/aliernfrog/lac-tool/refs/heads/main/images/maps.jpg"
     style:margin-top="16px"
-    style:width="200px"
+    style:width="150px"
     style:text-align="center">
+  <img
+    alt="LAC Tool screenshot (light)"
+    src="https://raw.githubusercontent.com/aliernfrog/lac-tool/refs/heads/main/images/maps_light.jpg"
+    style:width="150px"
+    style="margin-left: 16px;">
 </div>
 
 <h1 style:text-align="center">⭐ Feature overview</h1>
@@ -64,7 +69,8 @@
   <li>🔀 Merge multiple maps into one</li>
   <li>📱 Set custom wallpaper for the in-game cellphone</li>
   <li>📷 View screenshots taken using the in-game cellphone</li>
-  <li>🎨 Adaptive design with Material You theming</li>
+  <li>🎨 Material You Expressive design</li>
+  <li>🌐 Multiple language support (translate on <a class="fancya" href="https://crowdin.com/project/lac-tool">Crowdin</a>)</li>
 </ul>
 
 <div style:margin-top="16px" />

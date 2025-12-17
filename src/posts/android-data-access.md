@@ -17,7 +17,7 @@ Some custom ROMs allow users to disable `Android/data` restrictions from Documen
 
 ## Method 2: Uninstall updates of Files app (temporary, might not work)
 In some cases, users can uninstall updates of the Files (DocumentsUI) app, and revert to a version which has partial restrictions.
-To do this: `Device settings > Apps > All apps/Manage apps > Files (the one with the blue icon, name depends on language)` > Uninstall updates`. The app may be hidden from this list by default, in this case look for an option to un-hide system apps.
+To do this: `Device settings > Apps > All apps/Manage apps > Files (the one with the blue icon, name depends on language) > Uninstall updates`. The app may be hidden from this list by default, in this case look for an option to un-hide system apps.
 Note that these steps may vary depending on your device.
 
 ## Method 3: Use [Shizuku](https://shizuku.rikka.app/) with [ZArchiver (proprietary)](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)

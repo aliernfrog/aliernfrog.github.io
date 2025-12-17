@@ -40,11 +40,15 @@
     With ease!
   </p1><br />
   <img
-    alt="Screenshot from PF Tool"
+    alt="PF Tool screenshot (dark)"
     src="https://raw.githubusercontent.com/aliernfrog/pf-tool/refs/heads/main/images/maps.jpg"
     style:margin-top="16px"
-    style:width="200px"
-    style:text-align="center">
+    style:width="150px">
+  <img
+    alt="PF Tool screenshot (light)"
+    src="https://raw.githubusercontent.com/aliernfrog/pf-tool/refs/heads/main/images/maps_light.jpg"
+    style:width="150px"
+    style="margin-left: 16px;">
 </div>
 
 <h1 style:text-align="center">⭐ Feature overview</h1>

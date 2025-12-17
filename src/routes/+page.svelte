@@ -128,9 +128,7 @@
       <p1 style:font-size="0.8rem" style:opacity="70%">{(new Date(post.date)).toLocaleString(undefined, {
         year: "numeric",
         month: "long",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit"
+        day: "numeric"
       })}</p1>
     </ClickableCard>
   </a>
