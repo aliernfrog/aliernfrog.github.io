@@ -111,7 +111,7 @@
 
 <ProjectCard
   name="VD Plugins"
-  description="Plugins for Revenge, a modification for Discord Mobile"
+  description="Plugins for Revenge, a modification for Discord Android"
   icon="icons/projects/vdplugins.png"
   tags={[ "Open source" ]}
   url="https://aliernfrog.github.io/vd-plugins" />
