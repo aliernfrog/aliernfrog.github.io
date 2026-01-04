@@ -4,7 +4,7 @@
   import colors from "$lib/values/colors.ts";
   import SnowfallEffect from "$lib/ui/widgets/SnowfallEffect.svelte";
   
-  let snowfallEnabled = $state(true);
+  let snowfallEnabled = $state(false);
 </script>
 
 <svelte:head>
