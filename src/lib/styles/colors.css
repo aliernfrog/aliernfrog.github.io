@@ -1,20 +1,20 @@
 :root {
 	--surface: #200019;
-	--surface-filter: brightness(0) saturate(100%) invert(9%) sepia(41%) saturate(717%) hue-rotate(262deg) brightness(98%) contrast(111%);
+	--surface-filter: brightness(0) saturate(100%) invert(9%) sepia(7%) saturate(6424%) hue-rotate(265deg) brightness(97%) contrast(112%);
 	--onSurface: #fa9df4;
-	--onSurface-filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(7010%) hue-rotate(265deg) brightness(104%) contrast(106%);
+	--onSurface-filter: brightness(0) saturate(100%) invert(84%) sepia(66%) saturate(1758%) hue-rotate(245deg) brightness(102%) contrast(94%);
 	--surfaceContainer: #300029;
-	--surfaceContainer-filter: brightness(0) saturate(100%) invert(12%) sepia(10%) saturate(4410%) hue-rotate(262deg) brightness(92%) contrast(112%);
+	--surfaceContainer-filter: brightness(0) saturate(100%) invert(11%) sepia(9%) saturate(6509%) hue-rotate(268deg) brightness(94%) contrast(112%);
 	--primary: #ff97cd;
-	--primary-filter: brightness(0) saturate(100%) invert(86%) sepia(37%) saturate(3173%) hue-rotate(288deg) brightness(108%) contrast(101%);
+	--primary-filter: brightness(0) saturate(100%) invert(68%) sepia(57%) saturate(490%) hue-rotate(291deg) brightness(101%) contrast(100%);
 	--onPrimary: #593347;
-	--onPrimary-filter: brightness(0) saturate(100%) invert(20%) sepia(13%) saturate(1722%) hue-rotate(277deg) brightness(97%) contrast(88%);
+	--onPrimary-filter: brightness(0) saturate(100%) invert(23%) sepia(19%) saturate(918%) hue-rotate(277deg) brightness(95%) contrast(97%);
 	--secondary: #00bc4a;
-	--secondary-filter: brightness(0) saturate(100%) invert(54%) sepia(45%) saturate(6051%) hue-rotate(117deg) brightness(101%) contrast(101%);
+	--secondary-filter: brightness(0) saturate(100%) invert(42%) sepia(69%) saturate(1182%) hue-rotate(110deg) brightness(100%) contrast(100%);
 	--onSecondary: #d1ffe3;
-	--onSecondary-filter: brightness(0) saturate(100%) invert(94%) sepia(14%) saturate(452%) hue-rotate(77deg) brightness(101%) contrast(100%);
+	--onSecondary-filter: brightness(0) saturate(100%) invert(91%) sepia(18%) saturate(321%) hue-rotate(87deg) brightness(102%) contrast(102%);
 	--error: #dd0101;
-	--error-filter: brightness(0) saturate(100%) invert(12%) sepia(100%) saturate(5461%) hue-rotate(356deg) brightness(82%) contrast(113%);
+	--error-filter: brightness(0) saturate(100%) invert(13%) sepia(59%) saturate(7098%) hue-rotate(357deg) brightness(95%) contrast(114%);
 	--onError: #ffffff;
-	--onError-filter: brightness(0) saturate(100%) invert(91%) sepia(69%) saturate(0%) hue-rotate(9deg) brightness(102%) contrast(103%);
+	--onError-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7499%) hue-rotate(302deg) brightness(106%) contrast(100%);
 }
