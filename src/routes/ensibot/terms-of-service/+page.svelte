@@ -8,7 +8,6 @@
 
 <FancyTopBar
   title="Terms of Service"
-  sideTitle="of Ensi"
   description="Last updated: August 1st, 2025"
   icon="/icons/projects/ensi.png"
   iconLink="/ensibot"
