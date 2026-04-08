@@ -1,1 +1,0 @@
-import{X as e,Z as t,o as n}from"../chunks/CCnBKrcS.js";import"../chunks/S-KyrcF8.js";import"../chunks/DsQJHUD1.js";import{t as r}from"../chunks/Bf4-Gv-y.js";import{t as i}from"../chunks/Pal-z7Sn.js";function a(a,o){t(o,!1),n(),i(a,{get url(){return r.github.url}}),e()}export{a as component};

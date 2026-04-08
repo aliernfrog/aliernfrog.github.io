@@ -1,0 +1,1 @@
+import{X as e,Z as t,o as n}from"../chunks/Cggy47zH.js";import"../chunks/S-KyrcF8.js";import"../chunks/D9EPNQ5C.js";import{t as r}from"../chunks/Bf4-Gv-y.js";import{t as i}from"../chunks/BYdZmZIj.js";function a(a,o){t(o,!1),n(),i(a,{get url(){return r.discord.url}}),e()}export{a as component};

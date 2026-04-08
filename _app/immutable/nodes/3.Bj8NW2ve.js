@@ -1,1 +1,0 @@
-import"../chunks/CCnBKrcS.js";import"../chunks/S-KyrcF8.js";import"../chunks/DsQJHUD1.js";import{t as e}from"../chunks/Pal-z7Sn.js";function t(t){e(t,{url:`/posts/android-data-access`})}export{t as component};
