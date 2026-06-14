@@ -1,1 +1,0 @@
-import"../chunks/Cggy47zH.js";import"../chunks/S-KyrcF8.js";import"../chunks/D9EPNQ5C.js";import{t as e}from"../chunks/BYdZmZIj.js";function t(t){e(t,{url:`https://github.com/aliernfrog/pf-tool/releases/latest/download/pftool.apk`})}export{t as component};
