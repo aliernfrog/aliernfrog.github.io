@@ -109,15 +109,6 @@
 
 <div style:margin-top="8px" />
 
-<ProjectCard
-  name="VD Plugins"
-  description="Plugins for Revenge, a modification for Discord Android"
-  icon="icons/projects/vdplugins.png"
-  tags={[ "Open source" ]}
-  url="https://aliernfrog.github.io/vd-plugins" />
-
-<div style:margin-top="8px" />
-
 <h1>My posts</h1>
 {#each posts as post}
   <div style:margin-top="8px" />
