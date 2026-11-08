@@ -23,4 +23,4 @@ WE DO NOT WARRANT THAT THE SERVICE WILL FUNCTION UNITERRUPTED, SECURE OR AVAILAB
 The terms and the policy can be changed at any time, without notice.
 
 ## Contact us
-If you have any questions regarding the terms or the policy, contact us at [our Discord server](https://aliernfrog.github.io/discord).
+If you have any questions regarding the terms or the policy, contact `@aliernfrog` at [our Discord server](https://aliernfrog.github.io/discord).

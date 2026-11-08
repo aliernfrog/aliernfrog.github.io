@@ -8,7 +8,7 @@
 
 <FancyTopBar
   title="Privacy Policy"
-  description="Last updated: August 1st, 2025"
+  description="Last updated: November 8th, 2026"
   icon="/icons/projects/ensi.png"
   iconLink="/ensibot"
   backButton={{
