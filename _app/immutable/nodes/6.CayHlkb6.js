@@ -6,7 +6,7 @@ If you disagree with any parts of the terms and/or the policy, **stop using Ensi
 
 ## Information we collect
 - **For configurations, preferences and identification purposes;** we may store your Discord User ID and ID of the channel or the server where you interacted with the bot.
-- **For chatting feature,** if you specifically mention or reply to Ensi, we may store a part of your message's content (randomly picked from content splitted by " "), these strings are reviewed to make sure we do not store personal or malicious information.
+- **For chatting feature,** if you specifically mention or reply to Ensi, we may store a part of your message's content (randomly picked from content splitted by " "). These strings are completely anonymized and reviewed to make sure we do not store personal or malicious information.
 - **To make \`/snipe\` work,** Ensi temporarily stores the content, author name and avatar URL of the last deleted message (if it is not older than 2 minutes) and it can be viewed if someone runs \`/snipe\` in the same channel in 2 minutes. This data is completely removed 2 minutes after its creation. Servers can opt-out of this by running the command \`/server-options\`, or \`/channel-options\` to opt-out/opt-in for a specific channel.
 
 ## Children's privacy
@@ -23,5 +23,8 @@ While we do not store any personal information, we try our best to protect the d
 ## Changes to Terms and Policy
 The terms and the policy can be changed at any time, without notice.
 
+## Data removal request
+You can request removal of the data associated with your Discord User or Server ID by contacting \`@aliernfrog\` at [our Discord server](https://aliernfrog.github.io/discord).
+
 ## Contact us
-If you have any questions regarding the terms or the policy, contact us at [our Discord server](https://aliernfrog.github.io/discord).`,d=i(`<!> <div class="fancya"><!></div> <!> <!>`,1);function f(i){var f=d(),p=e(f);s(p,{title:`Privacy Policy`,description:`Last updated: August 1st, 2025`,icon:`/icons/projects/ensi.png`,iconLink:`/ensibot`,backButton:{label:`Ensi`,icon:`/icons/projects/ensi.png`,url:`/ensibot`},showHomeButton:!0});var m=n(p,2);l(a(m),{get text(){return u}}),r(m);var h=n(m,2);c(h,{}),o(n(h,2),{}),t(i,f)}export{f as component};
+If you have any questions regarding the terms or the policy, contact \`@aliernfrog\` at [our Discord server](https://aliernfrog.github.io/discord).`,d=i(`<!> <div class="fancya"><!></div> <!> <!>`,1);function f(i){var f=d(),p=e(f);s(p,{title:`Privacy Policy`,description:`Last updated: November 8th, 2026`,icon:`/icons/projects/ensi.png`,iconLink:`/ensibot`,backButton:{label:`Ensi`,icon:`/icons/projects/ensi.png`,url:`/ensibot`},showHomeButton:!0});var m=n(p,2);l(a(m),{get text(){return u}}),r(m);var h=n(m,2);c(h,{}),o(n(h,2),{}),t(i,f)}export{f as component};
